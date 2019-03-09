@@ -1,0 +1,9 @@
+{
+	"version": 3,
+	"file": "registration_form.css",
+	"sources": [
+		"../../sass/section/registration_form.scss"
+	],
+	"names": [],
+	"mappings": ""
+}
