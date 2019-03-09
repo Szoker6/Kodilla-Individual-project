@@ -11,3 +11,118 @@
 /* Pages / Views */
 @import "pages/registration";
 
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  
+body {
+    background-color: #ccc;
+    position: relative;
+}
+.topbar {
+  width: 100%;
+  margin-left: 188px;
+  background-color: #fff;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  font-size: 18px;
+  height: 2em;
+  line-height: 2em;
+  text-align: center;
+  background-color: #fff;
+  height: 60px;
+  margin-left: 800px;
+  width: 100%
+}
+
+ul a {
+  color: #b6b6b6;
+  text-decoration: none;
+  padding: 0 5px;
+  line-height: 60px;
+}
+
+ul > li:hover {
+
+ .price {
+  color: #000;
+  }
+  .arrowdown {
+    transform:rotate(180deg);
+  }
+}
+
+ul > li > ol {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul > li, ol > li {
+  float: left;
+  background-color: #fff;
+  width: 180px;
+  border-left: 1px solid #a7a7a7;
+  height: 60px;
+  &:hover {
+    background-color: #e3e3e3;
+  }
+}
+
+ol > li {
+  background-color: #e3e3e3;
+  margin: -1px;
+  height: 45px;
+  border-left:  1px solid #a7a7a7;
+  border-right:  1px solid #a7a7a7;
+  border-bottom:  1px solid #a7a7a7;
+  
+  a:hover{
+    color: $paragraph-color;
+  }
+  &:last-child {
+    height: 60px;
+  }
+}
+
+ul > li > ol {
+  display: none;
+}
+
+ul > li:hover > ol {
+  display: block;
+}
+
+.wallet {
+    margin: 0 0 0 1%;
+    width: 8%;   
+}
+
+.price {
+  color: #b6b6b6;
+    display: inline-block;
+    margin: 0 8% 0;
+    
+}
+
+.arrowdown {
+    width: 10%;
+}
+
+.leftmenu {
+  float: left;
+  margin-left: 20px;
+}
+
+.rightmenu {
+  float: right;
+  margin-right: 20px;
+}
+
+
