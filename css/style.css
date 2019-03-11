@@ -379,23 +379,28 @@ ul a {
   text-decoration: none;
   padding: 0 5px;
   line-height: 60px;
+  font-size: 16px;
+}
+
+ul > li:hover .icon-arrow-down-small:before {
+  -moz-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
 ul > li:hover .price {
   color: #000;
 }
 
-ul > li:hover .arrowdown {
-  transform: rotate(180deg);
-}
-
-ul > li > ol {
+ul > li, ol {
   list-style-type: none;
   padding: 0;
   margin: 0;
 }
 
-ul > li, ol > li {
+li {
   float: left;
   background-color: #fff;
   width: 180px;
@@ -403,11 +408,12 @@ ul > li, ol > li {
   height: 60px;
 }
 
-ul > li:hover, ol > li:hover {
+li:hover {
   background-color: #e3e3e3;
 }
 
-ol > li {
+ol > .listOne, ol > .listTwo {
+  width: 181px;
   background-color: #e3e3e3;
   margin: -1px;
   height: 45px;
@@ -416,11 +422,11 @@ ol > li {
   border-bottom: 1px solid #a7a7a7;
 }
 
-ol > li a:hover {
+ol > .listOne a:hover, ol > .listTwo a:hover {
   color: #000000;
 }
 
-ol > li:last-child {
+ol > .listOne:last-child, ol > .listTwo:last-child {
   height: 60px;
 }
 
@@ -432,9 +438,9 @@ ul > li:hover > ol {
   display: block;
 }
 
-.wallet {
+.icon-wallet {
   margin: 0 0 0 1%;
-  width: 8%;
+  width: 10%;
 }
 
 .price {
@@ -443,11 +449,7 @@ ul > li:hover > ol {
   margin: 0 8% 0;
 }
 
-.arrowdown {
-  width: 10%;
-}
-
-.leftmenu {
+.leftmenu, ol > .listTwo a {
   float: left;
   margin-left: 20px;
 }
@@ -455,6 +457,100 @@ ul > li:hover > ol {
 .rightmenu {
   float: right;
   margin-right: 20px;
+}
+
+.circle {
+  display: inline-block;
+  z-index: 1;
+  position: absolute;
+  left: 28px;
+  top: 18px;
+  width: 8px;
+  height: 8px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+  background-color: #f58220;
+}
+
+.secondMenuList {
+  border-left: 1px solid #a7a7a7;
+  width: 234px;
+  position: relative;
+}
+
+.secondMenuList:hover .circle, .secondMenuList:hover .leonardoText, .secondMenuList:hover .rectangle, .secondMenuList:hover .icon-profile {
+  display: none;
+}
+
+.secondMenuList:hover .icon-notification:before {
+  margin: 0 0 0 -58%;
+}
+
+.secondMenuList:hover .icon-close {
+  display: inline-block;
+  color: #000;
+  float: right;
+  margin-right: 15px;
+}
+
+.leonardoText {
+  color: #56819f;
+}
+
+.icon-notification:before {
+  margin-right: 12%;
+  color: #000;
+}
+
+.rectangle {
+  display: inline-block;
+  margin: 0px 3% -10% -6%;
+  width: 1px;
+  height: 60px;
+  background-color: #a7a7a7;
+}
+
+ol > .listTwo {
+  width: 235px;
+}
+
+ol > .listTwo :hover .circleOne, ol > .listTwo :hover .circleTwo {
+  display: inline-block;
+}
+
+ol > .listTwo a {
+  color: #56819f;
+}
+
+.circleOne, .circleTwo {
+  display: none;
+  width: 8px;
+  height: 8px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+  background-color: #f58220;
+  margin-left: 30px;
+}
+
+.circleTwo {
+  margin-left: 38px;
+}
+
+.icon-profile {
+  margin-right: 10px;
+  color: #000;
+}
+
+.icon-close {
+  display: none;
+}
+
+.quit {
+  width: 60px;
 }
 
 /*# sourceMappingURL=style.css.map */
