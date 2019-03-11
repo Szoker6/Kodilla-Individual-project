@@ -35,3 +35,8 @@
   @mixin letters($case-size) {
     text-transform: $case-size;
   }
+
+  @mixin square($size) {
+    width: $size;
+    height: $size;
+}
