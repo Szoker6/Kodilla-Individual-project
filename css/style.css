@@ -403,7 +403,7 @@ ul > li, ol {
 li {
   float: left;
   background-color: #fff;
-  width: 180px;
+  width: 188px;
   border-left: 1px solid #a7a7a7;
   height: 60px;
 }
@@ -413,7 +413,7 @@ li:hover {
 }
 
 ol > .listOne, ol > .listTwo {
-  width: 181px;
+  width: 189px;
   background-color: #e3e3e3;
   margin: -1px;
   height: 45px;
@@ -551,6 +551,98 @@ ol > .listTwo a {
 
 .quit {
   width: 60px;
+}
+
+.asideBar {
+  position: fixed;
+  top: 0;
+  display: inline-block;
+  width: 188px;
+}
+
+.asside {
+  min-height: 700px;
+  background-color: #191919;
+  margin: 0;
+}
+
+.asside li {
+  border: none;
+  text-align: left;
+  background-color: #191919;
+  color: #888888;
+}
+
+.asside li:hover {
+  background-color: #282828;
+}
+
+.asside li:hover .selectionRectangle {
+  display: inline-block;
+}
+
+.asside li a {
+  display: block;
+  margin-bottom: -30px;
+}
+
+.asside li a:last-child {
+  border-bottom: 1px solid #a7a7a7;
+}
+
+.asside li a:hover {
+  color: #fff;
+}
+
+.asside .icon-li {
+  color: #000;
+  margin: 0 20px 0 10px;
+}
+
+.asside h5 {
+  position: absolute;
+  top: 70%;
+  left: 8%;
+  text-transform: uppercase;
+  color: #888888;
+}
+
+.selectionRectangle {
+  float: left;
+  display: none;
+  background-color: #f58220;
+  width: 5px;
+  height: 5px;
+  padding: 40px 0 20px;
+}
+
+.manager {
+  margin: 60px 115px 0 0;
+  position: relative;
+}
+
+.circleOnline {
+  position: absolute;
+  top: 76%;
+  left: 23%;
+  width: 10px;
+  height: 10px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+  background-color: green;
+}
+
+.sectionManager h6 {
+  position: absolute;
+  top: 76%;
+  left: 40%;
+  color: #56819f;
+}
+
+.logo {
+  margin-right: 30px;
 }
 
 /*# sourceMappingURL=style.css.map */
