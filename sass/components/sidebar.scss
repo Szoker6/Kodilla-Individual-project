@@ -1,0 +1,88 @@
+@import "variables";
+@import "mixins";
+
+.asideBar {
+    position: fixed;
+    top: 0;
+    display: inline-block;
+    width: 100%;
+  }
+  
+  .asside {
+    height: 100%;
+    background-color: #191919;
+    margin: 0;
+    li {
+      border: none;
+      text-align: left;
+      background-color: #191919;
+      color: #888888;
+      &:hover {
+        background-color: #282828;      
+      } &:hover .selectionRectangle {
+        display: inline-block;
+      } a {
+        display: block;
+        margin-bottom: -30px;
+      } a:last-child {
+        border-bottom: 1px solid $border-color;
+      } a:hover { 
+        color: #fff;   
+      }
+    } .icon-li {
+      color: #000;
+      margin: 0 20px 0 10px;
+    } h5 {
+      position: absolute;
+      top: 70%;
+      left: 8%;
+      text-transform: uppercase;
+      color: #888888;
+    }
+  } 
+  
+  .selectionRectangle {
+    float: left;
+    display: none;
+    background-color: $global-selection;
+    width: 5px;
+    height: 5px;
+    padding: 40px 0 20px;
+  }
+  
+  .section-manager h6 {
+    position: absolute;
+    top: 76%;
+    left: 40%;
+    color: $global-links;
+  }
+  
+  .manager {
+    margin: 60px 115px 0 0;
+    position: relative;
+  }
+  
+  .circleOnline {
+    position: absolute;
+    top: 76.5%;
+    left: 23.5%;
+    @include square (10px);
+    @include border-radius (50%);
+    background-color: green;
+  }
+  
+  .logo {
+    margin: -10px 0;
+    display: inline-block;
+   }
+  
+   .section-hamburger {
+     display: inline-block;
+     margin-top: 22px;
+    .hamburger {
+      width: 20px;
+      height: 2px;
+      background-color: $border-color;
+      margin: 5px 3px 2px 35px;
+    }
+  }
