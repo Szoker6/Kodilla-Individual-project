@@ -18,7 +18,7 @@
   }
   
 body {
-  background-color: #ccc;
+  background-color: #f5f5f2;
   position: relative;
 }
 
@@ -66,7 +66,7 @@ ul > li, ol {
   float: left;
   background-color: #fff;
   width: 188px;
-  border-left: 1px solid #a7a7a7;
+  border-left: 1px solid $border-color;
   height: 60px;
   &:hover {
     background-color: #e3e3e3;
@@ -78,9 +78,9 @@ ol > .listOne {
   background-color: #e3e3e3;
   margin: -1px;
   height: 45px;
-  border-left:  1px solid #a7a7a7;
-  border-right:  1px solid #a7a7a7;
-  border-bottom:  1px solid #a7a7a7;
+  border-left:  1px solid $border-color;
+  border-right:  1px solid $border-color;
+  border-bottom:  1px solid $border-color;
   a:hover {
     color: $paragraph-color;
   } &:last-child {
@@ -125,11 +125,11 @@ ul > li:hover > ol {
   top: 18px;
   @include square (8px);
   @include border-radius (50%);
-  background-color: #f58220;
+  background-color: $global-selection;
 }
 
 .secondMenuList {
-  border-left:  1px solid #a7a7a7;
+  border-left:  1px solid $border-color;
   width: 234px;
   position: relative;
   &:hover {
@@ -151,7 +151,7 @@ ul > li:hover > ol {
 }
 
 .leonardoText {
-  color: #56819f;
+  color: $global-links;
 }
 
 .icon-notification:before {
@@ -164,7 +164,7 @@ ul > li:hover > ol {
   margin: 0px 3% -10% -6%;
   width: 1px;
   height: 60px;
-  background-color: #a7a7a7;
+  background-color: $border-color;
 }
 
 ol > .listTwo {
@@ -175,7 +175,7 @@ ol > .listTwo {
       display: inline-block;
     }
   } a {
-    color: #56819f;
+    color: $global-links;
     @extend .leftmenu;
   }
 }
@@ -184,7 +184,7 @@ ol > .listTwo {
   display: none;
   @include square (8px);
   @include border-radius (50%);
-  background-color: #f58220;
+  background-color: $global-selection;
   margin-left: 30px;
 }
 
@@ -232,7 +232,7 @@ ol > .listTwo {
       display: block;
       margin-bottom: -30px;
     } a:last-child {
-      border-bottom: 1px solid #a7a7a7;
+      border-bottom: 1px solid $border-color;
     } a:hover { 
       color: #fff;   
     }
@@ -251,33 +251,46 @@ ol > .listTwo {
 .selectionRectangle {
   float: left;
   display: none;
-  background-color: #f58220; 
+  background-color: $global-selection;
   width: 5px;
   height: 5px;
   padding: 40px 0 20px;
+}
+
+.section-manager h6 {
+  position: absolute;
+  top: 76%;
+  left: 40%;
+  color: $global-links;
 }
 
 .manager {
   margin: 60px 115px 0 0;
   position: relative;
 }
+
 .circleOnline {
   position: absolute;
-  top: 76%;
-  left: 23%;
+  top: 76.5%;
+  left: 23.5%;
   @include square (10px);
   @include border-radius (50%);
   background-color: green;
 }
 
-.sectionManager h6 {
-  position: absolute;
-  top: 76%;
-  left: 40%;
-  color: #56819f;
-}
-
 .logo {
-  margin-right: 30px;
+  margin: -10px 0;
+  display: inline-block;
+ }
+
+ .section-hamburger {
+   display: inline-block;
+   margin-top: 22px;
+  .hamburger {
+    width: 20px;
+    height: 2px;
+    background-color: $border-color;
+    margin: 5px 3px 2px 35px;
+  }
 }
 
