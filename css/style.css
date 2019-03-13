@@ -350,7 +350,7 @@ template {
 }
 
 body {
-  background-color: #ccc;
+  background-color: #f5f5f2;
   position: relative;
 }
 
@@ -616,6 +616,13 @@ ol > .listTwo a {
   padding: 40px 0 20px;
 }
 
+.section-manager h6 {
+  position: absolute;
+  top: 76%;
+  left: 40%;
+  color: #56819f;
+}
+
 .manager {
   margin: 60px 115px 0 0;
   position: relative;
@@ -623,8 +630,8 @@ ol > .listTwo a {
 
 .circleOnline {
   position: absolute;
-  top: 76%;
-  left: 23%;
+  top: 76.5%;
+  left: 23.5%;
   width: 10px;
   height: 10px;
   -webkit-border-radius: 50%;
@@ -634,15 +641,21 @@ ol > .listTwo a {
   background-color: green;
 }
 
-.sectionManager h6 {
-  position: absolute;
-  top: 76%;
-  left: 40%;
-  color: #56819f;
+.logo {
+  margin: -10px 0;
+  display: inline-block;
 }
 
-.logo {
-  margin-right: 30px;
+.section-hamburger {
+  display: inline-block;
+  margin-top: 22px;
+}
+
+.section-hamburger .hamburger {
+  width: 20px;
+  height: 2px;
+  background-color: #a7a7a7;
+  margin: 5px 3px 2px 35px;
 }
 
 /*# sourceMappingURL=style.css.map */
