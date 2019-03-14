@@ -1,88 +1,88 @@
-@import "variables";
-@import "mixins";
+.asideBar { 
+  position: fixed;
+  @include flexbox;
+  width: 30%;
+}
 
-.asideBar {
-    position: fixed;
-    top: 0;
-    display: inline-block;
-    width: 100%;
-  }
-  
-  .asside {
-    height: 100%;
+.asside {
+  min-height: 700px;
+  background-color: #191919;
+  margin: 0;
+  li {
+    float: none;
+    border: none;
+    text-align: left;
     background-color: #191919;
-    margin: 0;
-    li {
-      border: none;
-      text-align: left;
-      background-color: #191919;
-      color: #888888;
-      &:hover {
-        background-color: #282828;      
-      } &:hover .selectionRectangle {
-        display: inline-block;
-      } a {
-        display: block;
-        margin-bottom: -30px;
-      } a:last-child {
-        border-bottom: 1px solid $border-color;
-      } a:hover { 
-        color: #fff;   
-      }
-    } .icon-li {
-      color: #000;
-      margin: 0 20px 0 10px;
-    } h5 {
-      position: absolute;
-      top: 70%;
-      left: 8%;
-      text-transform: uppercase;
-      color: #888888;
+    color: #888888;
+    &:hover {
+      background-color: #282828;      
+    } &:hover .selectionRectangle {
+      display: inline-block;
+    } a {
+      display: block;
+      margin-bottom: -30px;
+    } a:last-child {
+      border-bottom: 1px solid $border-color;
+    } a:hover { 
+      color: #fff;   
     }
-  } 
-  
-  .selectionRectangle {
-    float: left;
-    display: none;
-    background-color: $global-selection;
-    width: 5px;
-    height: 5px;
-    padding: 40px 0 20px;
+  } .icon-li {
+    color: #000;
+    margin: 0 20px 0 10px;
   }
-  
-  .section-manager h6 {
+} 
+
+.selectionRectangle {
+  float: left;
+  display: none;
+  background-color: $global-selection;
+  width: 5px;
+  height: 5px;
+  padding: 40px 0 20px;
+}
+
+.sectionManager {
+  @include flexbox;
+  flex-direction: column;
+  width: 180px;
+  h6 {
     position: absolute;
-    top: 76%;
-    left: 40%;
-    color: $global-links;
+    top: 515px;
+    left: 90px;
+  color: $global-links;
   }
-  
+  h5 {
+    text-transform: uppercase;
+    color: #888888;
+  }
   .manager {
-    margin: 60px 115px 0 0;
     position: relative;
-  }
-  
+    margin-left: 20px;
+    width: 50px;
+}
   .circleOnline {
     position: absolute;
-    top: 76.5%;
-    left: 23.5%;
+    top: 540px;
+    left: 56px;;
     @include square (10px);
     @include border-radius (50%);
     background-color: green;
   }
-  
+}
+
+.section-logo {
   .logo {
-    margin: -10px 0;
-    display: inline-block;
-   }
-  
-   .section-hamburger {
-     display: inline-block;
-     margin-top: 22px;
-    .hamburger {
-      width: 20px;
-      height: 2px;
-      background-color: $border-color;
-      margin: 5px 3px 2px 35px;
-    }
+  float: left;
+  margin: -12px 20px;
   }
+
+    .section-hamburger {
+        margin: 16px 0px 0px 103px;
+        .hamburger {
+        width: 20px;
+        height: 2px;
+        background-color: $border-color;
+        margin: 5px 3px 2px 35px;
+        }
+    }
+}
