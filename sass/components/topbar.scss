@@ -1,7 +1,10 @@
 .topbar {
+  z-index: 2;
   width: 100%;
+  width: 1092px;
   margin-left: 188px;
   background-color: #fff;
+  @include flexbox;
 }
 
 ul {
@@ -12,9 +15,8 @@ ul {
   height: 2em;
   line-height: 2em;
   text-align: center;
-  background-color: #fff;
   height: 60px;
-  margin-left: 800px;
+  margin-left: 600px;
   width: 100%;
   a {
     color: #b6b6b6;
@@ -28,18 +30,18 @@ ul {
 ul > li:hover {
   .icon-arrow-down-small:before {
     @include transform(rotate(180deg));
-  }
-  .price {
+  } .price {
     color: #000;
     }
 }
 
 ul > li, ol {
+  float: left;
   list-style-type: none;
   padding: 0;
   margin: 0;
 } li {
-  float: left;
+  
   background-color: #fff;
   width: 188px;
   border-left: 1px solid $border-color;
@@ -50,6 +52,7 @@ ul > li, ol {
 }
 
 ol > .listOne {
+  float: left;
   width: 189px;
   background-color: #e3e3e3;
   margin: -1px;
@@ -179,5 +182,12 @@ ol > .listTwo {
 }
 
 .quit {
-  width: 60px;
+  width: 70px;
 }
+
+@media screen and (max-width: 900px )  {
+  .topbar {
+    margin-left: 50px;
+  }
+}
+
