@@ -350,16 +350,18 @@ template {
   display: -moz-flex;
   display: -ms-flexbox;
   display: flex;
-  width: 30%;
+  width: 188px;
+  z-index: -2;
 }
 
 .asside {
   min-height: 700px;
   background-color: #191919;
-  margin: 0;
+  margin: -60px 0 0 0;
 }
 
 .asside li {
+  width: 100%;
   float: none;
   border: none;
   text-align: left;
@@ -400,40 +402,33 @@ template {
   width: 5px;
   height: 5px;
   padding: 40px 0 20px;
-}
-
-.sectionManager {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: flex;
-  flex-direction: column;
-  width: 180px;
+  position: relative;
 }
 
 .sectionManager h6 {
   position: absolute;
-  top: 515px;
+  top: 450px;
   left: 90px;
   color: #56819f;
 }
 
 .sectionManager h5 {
+  position: absolute;
+  margin: 420px -156px;
   text-transform: uppercase;
   color: #888888;
 }
 
 .sectionManager .manager {
-  position: relative;
-  margin-left: 20px;
+  position: absolute;
+  margin: 460px -174px;
   width: 50px;
 }
 
 .sectionManager .circleOnline {
   position: absolute;
-  top: 540px;
-  left: 56px;
+  top: 460px;
+  left: 50px;
   width: 10px;
   height: 10px;
   -webkit-border-radius: 50%;
@@ -443,26 +438,69 @@ template {
   background-color: green;
 }
 
+.section-logo {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .section-logo .logo {
-  float: left;
-  margin: -12px 20px;
+  margin-top: 5px;
+  justify-content: flex-start;
 }
 
-.section-logo .section-hamburger {
-  margin: 16px 0px 0px 103px;
+.section-logo .fa {
+  margin: 15px 40px 0;
+  color: #a7a7a7;
 }
 
-.section-logo .section-hamburger .hamburger {
-  width: 20px;
-  height: 2px;
-  background-color: #a7a7a7;
-  margin: 5px 3px 2px 35px;
+@media screen and (max-width: 900px) {
+  .asideBarRes {
+    width: 50px;
+  }
+  .logo {
+    display: none;
+  }
+  .section-logo .fa {
+    margin: 15px 18px 0;
+  }
+  .sectionManager h6 {
+    display: none;
+  }
+  .sectionManager h5 {
+    display: none;
+  }
+  .sectionManager .manager {
+    margin: 10px;
+    width: 30px;
+  }
+  .sectionManager .circleOnline {
+    top: 400px;
+    left: 30px;
+    width: 7px;
+    height: 7px;
+  }
+  .text {
+    display: none;
+  }
+  .assideRes .icon-li {
+    color: #a7a7a7;
+  }
 }
 
 .topbar {
+  z-index: 2;
   width: 100%;
+  width: 1092px;
   margin-left: 188px;
   background-color: #fff;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 ul {
@@ -473,9 +511,8 @@ ul {
   height: 2em;
   line-height: 2em;
   text-align: center;
-  background-color: #fff;
   height: 60px;
-  margin-left: 800px;
+  margin-left: 600px;
   width: 100%;
 }
 
@@ -498,13 +535,13 @@ ul > li:hover .price {
 }
 
 ul > li, ol {
+  float: left;
   list-style-type: none;
   padding: 0;
   margin: 0;
 }
 
 li {
-  float: left;
   background-color: #fff;
   width: 188px;
   border-left: 1px solid #a7a7a7;
@@ -516,6 +553,7 @@ li:hover {
 }
 
 ol > .listOne, ol > .listTwo {
+  float: left;
   width: 189px;
   background-color: #e3e3e3;
   margin: -1px;
@@ -562,7 +600,7 @@ ul > li:hover > ol {
   margin-right: 20px;
 }
 
-.circle {
+.circle, .general .contentDate .buttonSubmit {
   display: block;
   z-index: 1;
   position: absolute;
@@ -583,7 +621,7 @@ ul > li:hover > ol {
   position: relative;
 }
 
-.secondMenuList:hover .circle, .secondMenuList:hover .leonardoText, .secondMenuList:hover .rectangle, .secondMenuList:hover .icon-profile {
+.secondMenuList:hover .circle, .secondMenuList:hover .general .contentDate .buttonSubmit, .general .contentDate .secondMenuList:hover .buttonSubmit, .secondMenuList:hover .leonardoText, .secondMenuList:hover .rectangle, .secondMenuList:hover .icon-profile {
   display: none;
 }
 
@@ -653,7 +691,83 @@ ol > .listTwo a {
 }
 
 .quit {
-  width: 60px;
+  width: 70px;
+}
+
+@media screen and (max-width: 900px) {
+  .topbar {
+    margin-left: 50px;
+  }
+}
+
+.general {
+  background-color: #fff;
+  width: 1056px;
+  margin-left: 206px;
+  height: 500px;
+}
+
+.general h3 {
+  padding: 18px;
+  color: #a7a7a7;
+  text-transform: uppercase;
+  border-bottom: 1px solid #a7a7a7;
+}
+
+.general .date {
+  border: 1px solid #a7a7a7;
+  width: 325px;
+  height: 40px;
+  margin-left: 344px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.general p {
+  display: inline-block;
+  position: relative;
+  margin: 0;
+}
+
+.general .dateP {
+  margin: 10px 68px 0 18px;
+}
+
+.general .dateP:after {
+  position: absolute;
+  background-color: #a7a7a7;
+  content: " ";
+  width: 1px;
+  height: 30px;
+  left: 125px;
+  bottom: -6px;
+}
+
+.general .icon {
+  margin: 0 0 -5px 60px;
+}
+
+.general .contentDate {
+  margin-top: 50px;
+  position: relative;
+}
+
+.general .contentDate .buttonSubmit {
+  left: 66%;
+  top: 1%;
+  width: 40px;
+  height: 40px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.general .contentDate .buttonSubmit .vectoricon {
+  margin: 10px;
+  width: 20px;
 }
 
 * {
@@ -668,8 +782,8 @@ ol > .listTwo a {
 }
 
 body {
+  width: 1280px;
   background-color: #f5f5f2;
-  position: relative;
 }
 
 /*# sourceMappingURL=style.css.map */
