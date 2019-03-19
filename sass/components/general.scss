@@ -2,9 +2,9 @@
     background-color: #fff;
     width: 1056px;
     margin-left: 206px;
-    height: 500px;
+    padding-bottom: 20px;
     h3 {
-        padding: 18px;
+        padding: 20px;
         color: $border-color;
         text-transform: uppercase;
         border-bottom: 1px solid $border-color;
@@ -16,16 +16,13 @@
         height: 40px;
         margin-left: 344px;
         @include border-radius (5px);
-    }
-    p {
+    } p {
         display: inline-block;
         position: relative;
         margin: 0;
-    }
-    .dateP {
+    } .dateP {
         margin: 10px 68px 0 18px;
-    }
-    .dateP:after {
+    } .dateP:after {
         position: absolute;
         background-color: $border-color;
         content: " ";
@@ -34,7 +31,6 @@
         left: 125px;
         bottom: -6px;
     }
-
     .icon {
         margin: 0 0 -5px 60px;
     }
@@ -43,14 +39,42 @@
         position: relative;
         .buttonSubmit {
             @extend .circle;
+            background-color: $button-color;
+            cursor: pointer;
             left: 66%;
             top: 1%;
             @include square (40px);
             @include border-radius (5px);
             .vectoricon {
                 margin: 10px;
-                width: 20px;
+                width: 20px;   
             }
+        }.buttonSubmit:hover {
+            background-color: $button-hover;
         }
-    }   
+    } 
+    .borderBottom {
+        border-bottom: 1px solid $border-color;
+        padding-top: 50px;
+    }
+    .statistic {
+        width: 684px;
+        margin: 0 auto;
+        .borderBottom {
+            border-bottom: 1px solid $border-color;
+            padding: 0;
+        } .col-6 {
+            padding: 10px 40px 10px 10px;
+        } h4 {
+            color: $border-color;
+            display: inline-block;
+        } .h4Number {
+            color: #000;
+            float: right;
+            font-weight: 400;
+        } 
+    }
+    .imgchart {
+        cursor: pointer;
+    }
 }
