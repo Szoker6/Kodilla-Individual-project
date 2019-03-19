@@ -355,7 +355,7 @@ template {
 }
 
 .asside {
-  min-height: 700px;
+  min-height: 1700px;
   background-color: #191919;
   margin: -60px 0 0 0;
 }
@@ -600,7 +600,7 @@ ul > li:hover > ol {
   margin-right: 20px;
 }
 
-.circle, .general .contentDate .buttonSubmit {
+.circle, .general .contentDate .buttonSubmit, .links .contentDate .buttonSubmit {
   display: block;
   z-index: 1;
   position: absolute;
@@ -621,7 +621,7 @@ ul > li:hover > ol {
   position: relative;
 }
 
-.secondMenuList:hover .circle, .secondMenuList:hover .general .contentDate .buttonSubmit, .general .contentDate .secondMenuList:hover .buttonSubmit, .secondMenuList:hover .leonardoText, .secondMenuList:hover .rectangle, .secondMenuList:hover .icon-profile {
+.secondMenuList:hover .circle, .secondMenuList:hover .general .contentDate .buttonSubmit, .general .contentDate .secondMenuList:hover .buttonSubmit, .secondMenuList:hover .links .contentDate .buttonSubmit, .links .contentDate .secondMenuList:hover .buttonSubmit, .secondMenuList:hover .leonardoText, .secondMenuList:hover .rectangle, .secondMenuList:hover .icon-profile {
   display: none;
 }
 
@@ -700,21 +700,21 @@ ol > .listTwo a {
   }
 }
 
-.general {
+.general, .links {
   background-color: #fff;
   width: 1056px;
   margin-left: 206px;
-  height: 500px;
+  padding-bottom: 20px;
 }
 
-.general h3 {
-  padding: 18px;
+.general h3, .links h3 {
+  padding: 20px;
   color: #a7a7a7;
   text-transform: uppercase;
   border-bottom: 1px solid #a7a7a7;
 }
 
-.general .date {
+.general .date, .links .date {
   border: 1px solid #a7a7a7;
   width: 325px;
   height: 40px;
@@ -725,17 +725,17 @@ ol > .listTwo a {
   border-radius: 5px;
 }
 
-.general p {
+.general p, .links p {
   display: inline-block;
   position: relative;
   margin: 0;
 }
 
-.general .dateP {
+.general .dateP, .links .dateP {
   margin: 10px 68px 0 18px;
 }
 
-.general .dateP:after {
+.general .dateP:after, .links .dateP:after {
   position: absolute;
   background-color: #a7a7a7;
   content: " ";
@@ -745,16 +745,18 @@ ol > .listTwo a {
   bottom: -6px;
 }
 
-.general .icon {
+.general .icon, .links .icon {
   margin: 0 0 -5px 60px;
 }
 
-.general .contentDate {
+.general .contentDate, .links .contentDate {
   margin-top: 50px;
   position: relative;
 }
 
-.general .contentDate .buttonSubmit {
+.general .contentDate .buttonSubmit, .links .contentDate .buttonSubmit {
+  background-color: #ffa200;
+  cursor: pointer;
   left: 66%;
   top: 1%;
   width: 40px;
@@ -765,9 +767,136 @@ ol > .listTwo a {
   border-radius: 5px;
 }
 
-.general .contentDate .buttonSubmit .vectoricon {
+.general .contentDate .buttonSubmit .vectoricon, .links .contentDate .buttonSubmit .vectoricon {
   margin: 10px;
   width: 20px;
+}
+
+.general .contentDate .buttonSubmit:hover, .links .contentDate .buttonSubmit:hover {
+  background-color: #f58220;
+}
+
+.general .borderBottom, .links .borderBottom {
+  border-bottom: 1px solid #a7a7a7;
+  padding-top: 50px;
+}
+
+.general .statistic, .links .statistic {
+  width: 684px;
+  margin: 0 auto;
+}
+
+.general .statistic .borderBottom, .links .statistic .borderBottom {
+  border-bottom: 1px solid #a7a7a7;
+  padding: 0;
+}
+
+.general .statistic .col-6, .links .statistic .col-6 {
+  padding: 10px 40px 10px 10px;
+}
+
+.general .statistic h4, .links .statistic h4 {
+  color: #a7a7a7;
+  display: inline-block;
+}
+
+.general .statistic .h4Number, .links .statistic .h4Number {
+  color: #000;
+  float: right;
+  font-weight: 400;
+}
+
+.general .imgchart, .links .imgchart {
+  cursor: pointer;
+}
+
+.links .btn-orange {
+  display: block;
+  margin: 0 auto;
+  background-color: #ffa200;
+  color: #fff;
+  border: none;
+  width: 130px;
+  padding: 11px 0;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.links .btn-orange:hover {
+  background-color: #f58220;
+}
+
+.links .table {
+  max-width: 700px;
+  margin: 20px auto;
+  width: 100%;
+  padding: 15px;
+  border-collapse: collapse;
+  line-height: 25px;
+  color: #a7a7a7;
+}
+
+.links .table tr {
+  min-height: 35px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  border-bottom: 1px solid;
+  justify-content: space-between;
+  -webkit-transition: 2s;
+  -moz-transition: 2s;
+  -ms-transition: 2s;
+  -o-transition: 2s;
+  transition: 2s;
+  padding-left: 5px;
+}
+
+.links .table tr a {
+  text-decoration: none;
+  color: #56819f;
+}
+
+.links .table tr a:hover {
+  color: #f58220;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.links .table tr i {
+  float: right;
+  margin-right: 15px;
+  display: none;
+  cursor: pointer;
+}
+
+.links .table tr i:hover {
+  color: #f58220;
+}
+
+.links .table tr:first-child {
+  border-top: 1px solid;
+}
+
+.links .table tr:hover {
+  background-color: #f1f3f3;
+}
+
+.links .table tr:hover i {
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  display: inline-block;
 }
 
 * {
@@ -784,6 +913,108 @@ ol > .listTwo a {
 body {
   width: 1280px;
   background-color: #f5f5f2;
+}
+
+[class*="col-"] {
+  float: left;
+  min-height: 1px;
+  padding: 15px;
+}
+
+.col-1 {
+  width: 8.33%;
+}
+
+.col-2 {
+  width: 16.66%;
+}
+
+.col-3 {
+  width: 25%;
+}
+
+.col-4 {
+  width: 33.33%;
+}
+
+.col-5 {
+  width: 41.66%;
+}
+
+.col-6 {
+  width: 50%;
+}
+
+.col-7 {
+  width: 58.33%;
+}
+
+.col-8 {
+  width: 66.66%;
+}
+
+.col-9 {
+  width: 75%;
+}
+
+.col-10 {
+  width: 83.33%;
+}
+
+.col-11 {
+  width: 91.66%;
+}
+
+.col-12 {
+  width: 100%;
+}
+
+.col-offset-0 {
+  margin-left: 0;
+}
+
+.col-offset-1 {
+  margin-left: 8.33%;
+}
+
+.col-offset-2 {
+  margin-left: 16.66%;
+}
+
+.col-offset-3 {
+  margin-left: 25%;
+}
+
+.col-offset-4 {
+  margin-left: 33.33%;
+}
+
+.col-offset-5 {
+  margin-left: 41.66%;
+}
+
+.col-offset-6 {
+  margin-left: 50%;
+}
+
+.col-offset-7 {
+  margin-left: 58.33%;
+}
+
+.col-offset-8 {
+  margin-left: 66.66%;
+}
+
+.col-offset-9 {
+  margin-left: 75%;
+}
+
+.col-offset-10 {
+  margin-left: 83.33%;
+}
+
+.col-offset-11 {
+  margin-left: 91.66%;
 }
 
 /*# sourceMappingURL=style.css.map */
