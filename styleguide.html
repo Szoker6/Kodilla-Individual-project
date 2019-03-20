@@ -7,13 +7,13 @@
     <link rel="stylesheet" href="vendor/css/Glyphter.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <script src="js/script.js"></script>  
+    
   </head>
     <body>
       <!-- topBar -->
         <nav class="topbar">
           <ul>
-            <li><a href="#"></a><i class="icon-wallet"></i><h3 class="price">$1,500.00</h3><i class="icon-arrow-down-small arrow-small"></i></a>
+            <li><a href="#"></a><i class="icon icon-wallet"></i><h3 class="price">$1,500.00</h3><i class="icon icon-arrow-down-small arrow-small"></i></a>
               <ol>
                 <li class="listOne"><a href="#"><span class="leftmenu">GPA</span><span class="rightmenu">$1000</span></a></li>
                 <li class="listOne"><a href="#"><span class="leftmenu">CPL</span><span class="rightmenu">$1100</span></a></li>
@@ -21,13 +21,13 @@
                 <li class="listOne"><a href="#"><span class="leftmenu">Net deposit</span><span class="rightmenu">$1000</span></a></li>
               </ol>
             </li> 
-            <li class="secondMenuList"><div class="circle"></div><a href="#"><i class="icon-notification"></div></i></a><a href="#"><div class="rectangle"></div><i class="icon-profile"></i><span class="leonardoText">Leonardo Dicaprio</span><i class="icon-close"></i></a>
+            <li class="secondMenuList"><div class="circle"></div><a href="#"><i class="icon icon-notification"><span class="notificationText">Notification</span></div></i></a><a href="#"><div class="rectangle"></div><i class="icon icon-profile"></i><span class="leonardoText">Leonardo Dicaprio</span><i class="icon icon-close"></i></a>
               <ol>
                 <li class="listTwo"><a href="#">You`ve get 100 signups<div class="circleOne"></div></a></li>
                 <li class="listTwo"><a href="#">Banner 03 don`t work<div class="circleTwo"></div></a></li>
               </ol>
             </li>
-            <li class="quit"><a href="#"></a><i class="icon-quit"></i></a></li>
+            <li class="quit"><a href="#"></a><i class="icon icon-quit"><span class="logoutText">Logout</span></i></a></li>
           </ul>
         </nav>
         <!-- End TopBar -->
@@ -36,7 +36,9 @@
           <ul class="asside">
               <div class="section-logo">
                   <img class="logo logoRes" src="images/logo.png">
-                  <i class="fa fa-bars"></i>
+                  <div class="hamburger">
+                    <i class="fa fa-bars"></i>
+                    </div>
               </div>
             <li><div class="selectionRectangle"></div><a href="#"><i class="icon-li icon-general"></i><span class="text">General</span></a></li>
             <li><div class="selectionRectangle"></div><a href="#"><i class="icon-li icon-details"></i><span class="text">Details</span></a></li>
@@ -46,7 +48,7 @@
             <li><div class="selectionRectangle"></div><a href="#"><i class="icon-li icon-payout"></i><span class="text">Payout</span></a></li>
             <li><div class="selectionRectangle"></div><a href="#"><i class="icon-li icon-postback"></i><span class="text">Postback</span></a></li>
           </ul>
-            <div class="sectionManager sectionManagerRes">
+            <div class="sectionManager">
               <h5>your manager</h5>
               <img class="manager managerRes" src="images/manager.png">
               <div class="circleOnline circleOnlineRes"></div>
@@ -167,7 +169,8 @@
         <div class="button">
             <button class="btn-orange">+ add new</button>
         </div>
-      </div>   
+      </div>  
+      <script src="js/script.js"></script>   
     </body>
 </html>
 
