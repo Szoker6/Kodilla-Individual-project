@@ -3,6 +3,7 @@
     width: 1056px;
     margin-left: 206px;
     padding-bottom: 20px;
+    transition: 1s;
     h3 {
         padding: 20px;
         color: $border-color;
@@ -77,4 +78,11 @@
     .imgchart {
         cursor: pointer;
     }
+}
+
+.smallGeneralMarginLeft {
+    @extend .general;
+    margin-left: 70px;
+    width: 1192px;
+    transition: 1s;
 }
