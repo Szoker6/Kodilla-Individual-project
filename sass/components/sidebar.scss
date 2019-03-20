@@ -1,38 +1,52 @@
-.asideBar { 
+
+ .asideBar { 
   position: fixed;
   @include flexbox;
   width: 188px;
-  z-index: -2; 
-}
-
-.asside {
   min-height: 1700px;
   background-color: #191919;
   margin: -60px 0 0 0;
-  li {
+  transition: 1s; 
+  .asside {
+    list-style-type: none;    
+    padding: 0;
+    margin: 0;
+    font-size: 18px;
+    height: 2em;
+    line-height: 2em;
+    text-align: center;
+    height: 60px;
     width: 100%;
-    float: none;
-    border: none;
-    text-align: left;
-    background-color: #191919;
-    color: #888888;
-    &:hover {
-      background-color: #282828;      
-    } &:hover .selectionRectangle {
-      display: inline-block;
-    } a {
-      display: block;
-      margin-bottom: -30px;
-    } a:last-child {
-      border-bottom: 1px solid $border-color;
-    } a:hover { 
-      color: #fff;   
+    li {
+      width: 100%;
+      float: none;
+      border: none;
+      text-align: left;
+      background-color: #191919;
+      color: #888888;
+      &:hover {
+        background-color: #282828;      
+      } &:hover .selectionRectangle {
+        display: inline-block;
+      } a {
+        color: #b6b6b6;
+        text-decoration: none;
+        padding: 0 5px;
+        line-height: 60px;
+        font-size: $paragraph-font-size;
+        display: block;
+        margin-bottom: -30px;
+      } a:last-child {
+        border-bottom: 1px solid $border-color;
+      } a:hover { 
+        color: #fff;   
+      }
+    } .icon-li {
+      color: #000;
+      margin: 0 20px 0 10px;
     }
-  } .icon-li {
-    color: #000;
-    margin: 0 20px 0 10px;
-  }
-} 
+  } 
+}
 
 .selectionRectangle {
   float: left;
@@ -45,23 +59,24 @@
 }
 
 .sectionManager {
+  width: 100%;
   h6 {
     position: absolute;
-    top: 450px;
+    top: 510px;
     left: 90px;
     color: $global-links;
   } h5 {
     position: absolute;
-    margin: 420px -156px;
+    margin: 480px -156px;
     text-transform: uppercase;
     color: #888888;
   } .manager {
     position: absolute;
-    margin: 460px -174px;
+    margin: 510px -174px;
     width: 50px;
 } .circleOnline {
     position: absolute;
-    top: 460px;
+    top: 510px;
     left: 50px;
     @include square (10px);
     @include border-radius (50%);
@@ -77,48 +92,102 @@
   } .fa {
       margin: 15px 40px 0;
       color: $border-color;
+      cursor: pointer;
+  } .fa-bars {
+    color: #888888;
+  } .fa-bars:hover {
+    color: #fff;
+  }
+}
+
+.expanded {
+  transition: 1s;
+  width: 50px; 
+  position: fixed;
+  @include flexbox;
+  min-height: 1700px;
+  background-color: #191919;
+  margin: -60px 0 0 0;
+  .logo {
+    display: none;
+  }
+
+  .section-logo {
+    .fa {
+   margin: 15px 18px 0;
+  }
+ }
+  .sectionManager {
+    h6 {
+      display: none;
+    }
+    h5  {
+      display: none;
+    }
+    .manager { 
+      margin: 480px -40px;
+      width: 30px;
+    }
+    .circleOnline {
+      top: 480px;
+      left: 30px;
+      @include square (7px);
+    }   
+  }
+
+  .text {
+    display: none;
+    }
+
+  .asside .icon-li {
+    color: #a7a7a7;
+  } .asside .icon-li:hover {
+    color: #fff;
   }
 }
 
 @media screen and (max-width: 900px )  {
   
    .asideBarRes {
-     width: 50px;  
-   }
+    width: 188px; 
+    position: fixed;
+    @include flexbox;
+    min-height: 1700px;
+    background-color: #191919;
+    margin: 0 0 0;
+    .logo {
+      margin: 0
+    }
 
-   .logo {
-     display: none;
-   }
-
-   .section-logo {
-     .fa {
+    .section-logo {
+      .fa {
     margin: 15px 18px 0;
-   }
+    }
   }
+    .sectionManager {
+      h6 {
+        display: none;
+      }
+      h5  {
+        display: none;
+      }
+      .manager { 
+        margin: 480px -40px;
+        width: 30px;
+      }
+      .circleOnline {
+        top: 480px;
+        left: 30px;
+        @include square (7px);
+      }   
+    }
 
- .sectionManager {
-   h6 {
-     display: none;
-   }
-   h5  {
-     display: none;
-   }
-   .manager { 
-     margin: 10px;
-     width: 30px;
-   }
-   .circleOnline {
-     top: 400px;
-     left: 30px;
-     @include square (7px);
-   }   
- }
+    .text {
+      display: none;
+      }
 
- .text {
-   display: none;
-   }
- 
- .assideRes .icon-li {
-   color: #a7a7a7;
- }
+    .asside .icon-li {
+      color: #a7a7a7;
+    }
+  }
 }
