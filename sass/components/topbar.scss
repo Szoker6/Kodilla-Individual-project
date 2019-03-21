@@ -47,6 +47,7 @@ ul > li, ol {
   height: 60px;
   &:hover {
     background-color: #e3e3e3;
+    z-index: 1;
   }
 }
 
@@ -206,76 +207,180 @@ ol > .listTwo {
 
 @media screen and (max-width: 900px )  {
   .topbar {
+    
     background-color: #191919;
-    position: absolute;
-    top: 36%;
+    position: fixed;
+    top: 500px;
     left: -0%;
-    width: 188px;
+    width: 50px;
     margin-left: 0;
       ul {
         height: 60px;
         margin-left: 0;
     }
+    ul > li:hover > ol {
+      display: none;
+    }
+    
   }
+
+  .secondMenuList {
+    &:hover .icon-profile {
+      position: absolute;
+      top: 57px;
+      left: 18px;
+    }
+    &:hover {
+      .leonardoText, .rectangle, .icon-profile {
+        display: inline-block;
+      }
+    } &:hover {
+      .icon-notification:before {
+        margin: 0 -34px 0 -42%;
+        color: $border-color;
+      }
+    } &:hover {
+      .icon-close, .rectangle {
+        display: none;
+      }
+    } &:hover .leonardoText {
+      width: 122px;
+      position: absolute;
+      margin: 55px 0 0 35px;
+    }
+  }
+
+  ul > li:hover {
+    .icon-arrow-down-small:before {
+      @include transform(rotate(0deg));
+    } .price {
+      color: $border-color;
+      }
+  }
+
   li { 
     background-color: #191919;
+  } 
+
+  li:hover {
+    background-color: #191919;
   }
+
   .secondMenuList {
-    width: 188px;
+    width: 50px;
     border-left: none;
   }
+
   ol > .listTwo {
-    width: 188px;
-  }
-  .circleTwo {
     display: none;
-  }
+  } 
+
   .rectangle {
     display: none;
   }
+
   .icon {
     color: $border-color;
     margin: 0;
     padding: 0;
   }
+
   .price {
+    float: left;
     font-size: $paragraph-font-size;
+    margin: -50px 0px 0 68px;
   }
+
+  .icon-arrow-down-small {
+    margin: 0px -234px 0 0;
+  }
+
   .icon-notification:before {
     color: $border-color;
-    margin: 0px 72px 0 1px;
+    margin: 0px 117px 0 14px;
+    position: relative;
   }
+
   .notificationText {
     display: inline-block;
-    margin-left: -26px;
+    position: absolute;
+    top: -3px;
+    left: 62px;
   }
+
   .icon-profile {
-    float: left;
-    margin-left: 29px;
+    position: absolute;
+    top: 57px;
+    left: 18px;
   }
+
   .leonardoText {
-    margin-left: 3px;
+    width: 122px;
+    position: absolute;
+    margin: -5px 0 0 18px;
+    display: inline-block;
+    color: $border-color;
+  }
+
+  .icon-wallet {
+    margin: 12px 0 0 40%;
+  }
+
+  .quit {
+    width: 0px;
+    display: inline-block;
+    margin-left: 20px;
+    position: relative;
+  }
+
+  .logoutText {
+    top: 57px;
+    left: 0;
+    position: absolute;
+    margin: 0 0 0 56px;
     display: inline-block;
   }
-  .icon-wallet {
-    margin: 12px 0 0 15%;
-}
-.quit {
-  width: 66px;
-  margin-top: 60px;
-}
 
-.logoutText {
-  margin: 8px -126px 0 73px;
-  display: inline-block;
-}
-.circle {
-  left: 37px;
+  .circle {
+    left: 26px;
     top: 16px;
-}
-ul > li, ol {
-  z-index: -1;
-}
-}
+  }
+
+  .rectangle {
+    display: none;
+  }
+
+  ul > li, ol {
+    z-index: -1;
+    border-left: none;
+    width: 50px;
+  } 
+ 
 
 
+ol > .listTwo a:hover {
+  .circleTwo {
+    display: none;
+    }
+  .circleOne {
+    display: none;
+    }
+  }
+
+  .smalltopBarMarginLeft {
+   
+    .logoutText, .notificationText, .price, .leonardoText, .icon-arrow-down-small {
+      display: none;
+    }
+  }
+  
+
+  .icon-profile {
+    margin-top: 0px;
+  }
+
+    ol > .listTwo {
+      width: 51px;
+    } 
+  }
+  
