@@ -1,9 +1,8 @@
-
  .asideBar { 
   position: fixed;
   @include flexbox;
   width: 188px;
-  min-height: 1700px;
+  min-height: 1620px;
   background-color: #191919;
   margin: -60px 0 0 0;
   transition: 1s; 
@@ -137,7 +136,7 @@
 
   .text {
     display: none;
-    }
+  }
 
   .asside .icon-li {
     color: #a7a7a7;
@@ -148,46 +147,13 @@
 
 @media screen and (max-width: 900px )  {
   
-   .asideBarRes {
-    width: 188px; 
-    position: fixed;
-    @include flexbox;
-    min-height: 1700px;
-    background-color: #191919;
-    margin: 0 0 0;
-    .logo {
-      margin: 0
-    }
-
-    .section-logo {
-      .fa {
-    margin: 15px 18px 0;
-    }
+  .asideBar { 
+    margin: 0;
   }
-    .sectionManager {
-      h6 {
-        display: none;
-      }
-      h5  {
-        display: none;
-      }
-      .manager { 
-        margin: 480px -40px;
-        width: 30px;
-      }
-      .circleOnline {
-        top: 480px;
-        left: 30px;
-        @include square (7px);
-      }   
-    }
 
-    .text {
-      display: none;
-      }
-
-    .asside .icon-li {
-      color: #a7a7a7;
-    }
-  }
+  .sectionManager {
+  display: none;
+  } 
+    
 }
+
