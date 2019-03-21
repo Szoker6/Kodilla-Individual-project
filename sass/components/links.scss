@@ -55,6 +55,12 @@
             @include transition (0.3s);
             display: inline-block;
         }
-    } 
-    
+    }    
+}
+
+.smallLinksMarginLeft {
+    @extend .links;
+    margin-left: 70px;
+    width: 1192px;
+    transition: 1s;
 }
