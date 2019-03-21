@@ -351,7 +351,7 @@ template {
   display: -ms-flexbox;
   display: flex;
   width: 188px;
-  min-height: 1700px;
+  min-height: 1620px;
   background-color: #191919;
   margin: -60px 0 0 0;
   transition: 1s;
@@ -538,45 +538,11 @@ template {
 }
 
 @media screen and (max-width: 900px) {
-  .asideBarRes {
-    width: 188px;
-    position: fixed;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flexbox;
-    display: flex;
-    min-height: 1700px;
-    background-color: #191919;
-    margin: 0 0 0;
-  }
-  .asideBarRes .logo {
+  .asideBar {
     margin: 0;
   }
-  .asideBarRes .section-logo .fa {
-    margin: 15px 18px 0;
-  }
-  .asideBarRes .sectionManager h6 {
+  .sectionManager {
     display: none;
-  }
-  .asideBarRes .sectionManager h5 {
-    display: none;
-  }
-  .asideBarRes .sectionManager .manager {
-    margin: 480px -40px;
-    width: 30px;
-  }
-  .asideBarRes .sectionManager .circleOnline {
-    top: 480px;
-    left: 30px;
-    width: 7px;
-    height: 7px;
-  }
-  .asideBarRes .text {
-    display: none;
-  }
-  .asideBarRes .asside .icon-li {
-    color: #a7a7a7;
   }
 }
 
@@ -640,6 +606,7 @@ li {
 
 li:hover {
   background-color: #e3e3e3;
+  z-index: 1;
 }
 
 ol > .listOne, ol > .listTwo {
@@ -690,7 +657,7 @@ ul > li:hover > ol {
   margin-right: 20px;
 }
 
-.circle, .general .contentDate .buttonSubmit, .smallGeneralMarginLeft .contentDate .buttonSubmit, .links .contentDate .buttonSubmit {
+.circle, .general .contentDate .buttonSubmit, .smallGeneralMarginLeft .contentDate .buttonSubmit, .links .contentDate .buttonSubmit, .smallLinksMarginLeft .contentDate .buttonSubmit {
   display: block;
   z-index: 1;
   position: absolute;
@@ -711,7 +678,7 @@ ul > li:hover > ol {
   position: relative;
 }
 
-.secondMenuList:hover .circle, .secondMenuList:hover .general .contentDate .buttonSubmit, .general .contentDate .secondMenuList:hover .buttonSubmit, .secondMenuList:hover .smallGeneralMarginLeft .contentDate .buttonSubmit, .smallGeneralMarginLeft .contentDate .secondMenuList:hover .buttonSubmit, .secondMenuList:hover .links .contentDate .buttonSubmit, .links .contentDate .secondMenuList:hover .buttonSubmit, .secondMenuList:hover .leonardoText, .secondMenuList:hover .rectangle, .secondMenuList:hover .icon-profile {
+.secondMenuList:hover .circle, .secondMenuList:hover .general .contentDate .buttonSubmit, .general .contentDate .secondMenuList:hover .buttonSubmit, .secondMenuList:hover .smallGeneralMarginLeft .contentDate .buttonSubmit, .smallGeneralMarginLeft .contentDate .secondMenuList:hover .buttonSubmit, .secondMenuList:hover .links .contentDate .buttonSubmit, .links .contentDate .secondMenuList:hover .buttonSubmit, .secondMenuList:hover .smallLinksMarginLeft .contentDate .buttonSubmit, .smallLinksMarginLeft .contentDate .secondMenuList:hover .buttonSubmit, .secondMenuList:hover .leonardoText, .secondMenuList:hover .rectangle, .secondMenuList:hover .icon-profile {
   display: none;
 }
 
@@ -806,27 +773,58 @@ ol > .listTwo a {
 @media screen and (max-width: 900px) {
   .topbar, .smalltopBarMarginLeft {
     background-color: #191919;
-    position: absolute;
-    top: 36%;
+    position: fixed;
+    top: 500px;
     left: -0%;
-    width: 188px;
+    width: 50px;
     margin-left: 0;
   }
   .topbar ul, .smalltopBarMarginLeft ul {
     height: 60px;
     margin-left: 0;
   }
+  .topbar ul > li:hover > ol, .smalltopBarMarginLeft ul > li:hover > ol {
+    display: none;
+  }
+  .secondMenuList:hover .icon-profile {
+    position: absolute;
+    top: 57px;
+    left: 18px;
+  }
+  .secondMenuList:hover .leonardoText, .secondMenuList:hover .rectangle, .secondMenuList:hover .icon-profile {
+    display: inline-block;
+  }
+  .secondMenuList:hover .icon-notification:before {
+    margin: 0 -34px 0 -42%;
+    color: #a7a7a7;
+  }
+  .secondMenuList:hover .icon-close, .secondMenuList:hover .rectangle {
+    display: none;
+  }
+  .secondMenuList:hover .leonardoText {
+    width: 122px;
+    position: absolute;
+    margin: 55px 0 0 35px;
+  }
+  ul > li:hover .icon-arrow-down-small:before {
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  ul > li:hover .price {
+    color: #a7a7a7;
+  }
   li {
     background-color: #191919;
   }
+  li:hover {
+    background-color: #191919;
+  }
   .secondMenuList {
-    width: 188px;
+    width: 50px;
     border-left: none;
   }
   ol > .listTwo {
-    width: 188px;
-  }
-  .circleTwo {
     display: none;
   }
   .rectangle {
@@ -838,45 +836,82 @@ ol > .listTwo a {
     padding: 0;
   }
   .price {
+    float: left;
     font-size: 16px;
+    margin: -50px 0px 0 68px;
+  }
+  .icon-arrow-down-small {
+    margin: 0px -234px 0 0;
   }
   .icon-notification:before {
     color: #a7a7a7;
-    margin: 0px 72px 0 1px;
+    margin: 0px 117px 0 14px;
+    position: relative;
   }
   .notificationText {
     display: inline-block;
-    margin-left: -26px;
+    position: absolute;
+    top: -3px;
+    left: 62px;
   }
   .icon-profile {
-    float: left;
-    margin-left: 29px;
+    position: absolute;
+    top: 57px;
+    left: 18px;
   }
   .leonardoText {
-    margin-left: 3px;
+    width: 122px;
+    position: absolute;
+    margin: -5px 0 0 18px;
     display: inline-block;
+    color: #a7a7a7;
   }
   .icon-wallet {
-    margin: 12px 0 0 15%;
+    margin: 12px 0 0 40%;
   }
   .quit {
-    width: 66px;
-    margin-top: 60px;
+    width: 0px;
+    display: inline-block;
+    margin-left: 20px;
+    position: relative;
   }
   .logoutText {
-    margin: 8px -126px 0 73px;
+    top: 57px;
+    left: 0;
+    position: absolute;
+    margin: 0 0 0 56px;
     display: inline-block;
   }
-  .circle, .general .contentDate .buttonSubmit, .smallGeneralMarginLeft .contentDate .buttonSubmit, .links .contentDate .buttonSubmit {
-    left: 37px;
+  .circle, .general .contentDate .buttonSubmit, .smallGeneralMarginLeft .contentDate .buttonSubmit, .links .contentDate .buttonSubmit, .smallLinksMarginLeft .contentDate .buttonSubmit {
+    left: 26px;
     top: 16px;
+  }
+  .rectangle {
+    display: none;
   }
   ul > li, ol {
     z-index: -1;
+    border-left: none;
+    width: 50px;
+  }
+  ol > .listTwo a:hover .circleTwo {
+    display: none;
+  }
+  ol > .listTwo a:hover .circleOne, ol > .listTwo a:hover .circleTwo {
+    display: none;
+  }
+  .smalltopBarMarginLeft .logoutText, .smalltopBarMarginLeft .notificationText, .smalltopBarMarginLeft .price, .smalltopBarMarginLeft .leonardoText, .smalltopBarMarginLeft .icon-arrow-down-small {
+    display: none;
+  }
+  .icon-profile {
+    margin-top: 0px;
+  }
+  ol > .listTwo {
+    width: 51px;
   }
 }
 
-.general, .smallGeneralMarginLeft, .links {
+.general, .smallGeneralMarginLeft, .links, .smallLinksMarginLeft {
   background-color: #fff;
   width: 1056px;
   margin-left: 206px;
@@ -884,14 +919,14 @@ ol > .listTwo a {
   transition: 1s;
 }
 
-.general h3, .smallGeneralMarginLeft h3, .links h3, .smallGeneralMarginLeft .links h3, .links .smallGeneralMarginLeft h3 {
+.general h3, .smallGeneralMarginLeft h3, .links h3, .smallLinksMarginLeft h3, .smallGeneralMarginLeft .links h3, .links .smallGeneralMarginLeft h3, .smallLinksMarginLeft .links h3, .links .smallLinksMarginLeft h3, .general .smallLinksMarginLeft h3, .smallLinksMarginLeft .general h3, .smallGeneralMarginLeft .smallLinksMarginLeft h3, .smallLinksMarginLeft .smallGeneralMarginLeft h3, .links .smallLinksMarginLeft h3, .smallLinksMarginLeft .links h3, .smallLinksMarginLeft h3 {
   padding: 20px;
   color: #a7a7a7;
   text-transform: uppercase;
   border-bottom: 1px solid #a7a7a7;
 }
 
-.general .date, .smallGeneralMarginLeft .date, .links .date {
+.general .date, .smallGeneralMarginLeft .date, .links .date, .smallLinksMarginLeft .date {
   border: 1px solid #a7a7a7;
   width: 325px;
   height: 40px;
@@ -902,17 +937,17 @@ ol > .listTwo a {
   border-radius: 5px;
 }
 
-.general p, .smallGeneralMarginLeft p, .links p {
+.general p, .smallGeneralMarginLeft p, .links p, .smallLinksMarginLeft p {
   display: inline-block;
   position: relative;
   margin: 0;
 }
 
-.general .dateP, .smallGeneralMarginLeft .dateP, .links .dateP {
+.general .dateP, .smallGeneralMarginLeft .dateP, .links .dateP, .smallLinksMarginLeft .dateP {
   margin: 10px 68px 0 18px;
 }
 
-.general .dateP:after, .smallGeneralMarginLeft .dateP:after, .links .dateP:after {
+.general .dateP:after, .smallGeneralMarginLeft .dateP:after, .links .dateP:after, .smallLinksMarginLeft .dateP:after {
   position: absolute;
   background-color: #a7a7a7;
   content: " ";
@@ -922,16 +957,16 @@ ol > .listTwo a {
   bottom: -6px;
 }
 
-.general .icon, .smallGeneralMarginLeft .icon, .links .icon {
+.general .icon, .smallGeneralMarginLeft .icon, .links .icon, .smallLinksMarginLeft .icon {
   margin: 0 0 -5px 60px;
 }
 
-.general .contentDate, .smallGeneralMarginLeft .contentDate, .links .contentDate {
+.general .contentDate, .smallGeneralMarginLeft .contentDate, .links .contentDate, .smallLinksMarginLeft .contentDate {
   margin-top: 50px;
   position: relative;
 }
 
-.general .contentDate .buttonSubmit, .smallGeneralMarginLeft .contentDate .buttonSubmit, .links .contentDate .buttonSubmit {
+.general .contentDate .buttonSubmit, .smallGeneralMarginLeft .contentDate .buttonSubmit, .links .contentDate .buttonSubmit, .smallLinksMarginLeft .contentDate .buttonSubmit {
   background-color: #ffa200;
   cursor: pointer;
   left: 66%;
@@ -944,46 +979,46 @@ ol > .listTwo a {
   border-radius: 5px;
 }
 
-.general .contentDate .buttonSubmit .vectoricon, .smallGeneralMarginLeft .contentDate .buttonSubmit .vectoricon, .links .contentDate .buttonSubmit .vectoricon {
+.general .contentDate .buttonSubmit .vectoricon, .smallGeneralMarginLeft .contentDate .buttonSubmit .vectoricon, .links .contentDate .buttonSubmit .vectoricon, .smallLinksMarginLeft .contentDate .buttonSubmit .vectoricon {
   margin: 10px;
   width: 20px;
 }
 
-.general .contentDate .buttonSubmit:hover, .smallGeneralMarginLeft .contentDate .buttonSubmit:hover, .links .contentDate .buttonSubmit:hover {
+.general .contentDate .buttonSubmit:hover, .smallGeneralMarginLeft .contentDate .buttonSubmit:hover, .links .contentDate .buttonSubmit:hover, .smallLinksMarginLeft .contentDate .buttonSubmit:hover {
   background-color: #f58220;
 }
 
-.general .borderBottom, .smallGeneralMarginLeft .borderBottom, .links .borderBottom {
+.general .borderBottom, .smallGeneralMarginLeft .borderBottom, .links .borderBottom, .smallLinksMarginLeft .borderBottom {
   border-bottom: 1px solid #a7a7a7;
   padding-top: 50px;
 }
 
-.general .statistic, .smallGeneralMarginLeft .statistic, .links .statistic {
+.general .statistic, .smallGeneralMarginLeft .statistic, .links .statistic, .smallLinksMarginLeft .statistic {
   width: 684px;
   margin: 0 auto;
 }
 
-.general .statistic .borderBottom, .smallGeneralMarginLeft .statistic .borderBottom, .links .statistic .borderBottom {
+.general .statistic .borderBottom, .smallGeneralMarginLeft .statistic .borderBottom, .links .statistic .borderBottom, .smallLinksMarginLeft .statistic .borderBottom {
   border-bottom: 1px solid #a7a7a7;
   padding: 0;
 }
 
-.general .statistic .col-6, .smallGeneralMarginLeft .statistic .col-6, .links .statistic .col-6 {
+.general .statistic .col-6, .smallGeneralMarginLeft .statistic .col-6, .links .statistic .col-6, .smallLinksMarginLeft .statistic .col-6 {
   padding: 10px 40px 10px 10px;
 }
 
-.general .statistic h4, .smallGeneralMarginLeft .statistic h4, .links .statistic h4 {
+.general .statistic h4, .smallGeneralMarginLeft .statistic h4, .links .statistic h4, .smallLinksMarginLeft .statistic h4 {
   color: #a7a7a7;
   display: inline-block;
 }
 
-.general .statistic .h4Number, .smallGeneralMarginLeft .statistic .h4Number, .links .statistic .h4Number {
+.general .statistic .h4Number, .smallGeneralMarginLeft .statistic .h4Number, .links .statistic .h4Number, .smallLinksMarginLeft .statistic .h4Number {
   color: #000;
   float: right;
   font-weight: 400;
 }
 
-.general .imgchart, .smallGeneralMarginLeft .imgchart, .links .imgchart {
+.general .imgchart, .smallGeneralMarginLeft .imgchart, .links .imgchart, .smallLinksMarginLeft .imgchart {
   cursor: pointer;
 }
 
@@ -993,7 +1028,7 @@ ol > .listTwo a {
   transition: 1s;
 }
 
-.links .btn-orange {
+.links .btn-orange, .smallLinksMarginLeft .btn-orange {
   display: block;
   margin: 0 auto;
   background-color: #ffa200;
@@ -1008,11 +1043,11 @@ ol > .listTwo a {
   cursor: pointer;
 }
 
-.links .btn-orange:hover {
+.links .btn-orange:hover, .smallLinksMarginLeft .btn-orange:hover {
   background-color: #f58220;
 }
 
-.links .table {
+.links .table, .smallLinksMarginLeft .table {
   max-width: 700px;
   margin: 20px auto;
   width: 100%;
@@ -1022,7 +1057,7 @@ ol > .listTwo a {
   color: #a7a7a7;
 }
 
-.links .table tr {
+.links .table tr, .smallLinksMarginLeft .table tr {
   min-height: 35px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1040,12 +1075,12 @@ ol > .listTwo a {
   padding-left: 5px;
 }
 
-.links .table tr a {
+.links .table tr a, .smallLinksMarginLeft .table tr a {
   text-decoration: none;
   color: #56819f;
 }
 
-.links .table tr a:hover {
+.links .table tr a:hover, .smallLinksMarginLeft .table tr a:hover {
   color: #f58220;
   -webkit-transition: 0.3s;
   -moz-transition: 0.3s;
@@ -1054,32 +1089,38 @@ ol > .listTwo a {
   transition: 0.3s;
 }
 
-.links .table tr i {
+.links .table tr i, .smallLinksMarginLeft .table tr i {
   float: right;
   margin-right: 15px;
   display: none;
   cursor: pointer;
 }
 
-.links .table tr i:hover {
+.links .table tr i:hover, .smallLinksMarginLeft .table tr i:hover {
   color: #f58220;
 }
 
-.links .table tr:first-child {
+.links .table tr:first-child, .smallLinksMarginLeft .table tr:first-child {
   border-top: 1px solid;
 }
 
-.links .table tr:hover {
+.links .table tr:hover, .smallLinksMarginLeft .table tr:hover {
   background-color: #f1f3f3;
 }
 
-.links .table tr:hover i {
+.links .table tr:hover i, .smallLinksMarginLeft .table tr:hover i {
   -webkit-transition: 0.3s;
   -moz-transition: 0.3s;
   -ms-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
   display: inline-block;
+}
+
+.smallLinksMarginLeft {
+  margin-left: 70px;
+  width: 1192px;
+  transition: 1s;
 }
 
 * {
