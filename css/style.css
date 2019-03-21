@@ -343,10 +343,126 @@ template {
 /* Components */
 /* Sections */
 /* Pages / Views */
+* {
+  box-sizing: border-box;
+}
+
+.clearfix:before, .row:before,
+.clearfix:before, .row:after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+
+body {
+  width: 1280px;
+  background-color: #f5f5f2;
+}
+
+[class*="col-"] {
+  float: left;
+  min-height: 1px;
+  padding: 15px;
+}
+
+.col-1 {
+  width: 8.33%;
+}
+
+.col-2 {
+  width: 16.66%;
+}
+
+.col-3 {
+  width: 25%;
+}
+
+.col-4 {
+  width: 33.33%;
+}
+
+.col-5 {
+  width: 41.66%;
+}
+
+.col-6 {
+  width: 50%;
+}
+
+.col-7 {
+  width: 58.33%;
+}
+
+.col-8 {
+  width: 66.66%;
+}
+
+.col-9 {
+  width: 75%;
+}
+
+.col-10 {
+  width: 83.33%;
+}
+
+.col-11 {
+  width: 91.66%;
+}
+
+.col-12 {
+  width: 100%;
+}
+
+.col-offset-0 {
+  margin-left: 0;
+}
+
+.col-offset-1 {
+  margin-left: 8.33%;
+}
+
+.col-offset-2 {
+  margin-left: 16.66%;
+}
+
+.col-offset-3 {
+  margin-left: 25%;
+}
+
+.col-offset-4 {
+  margin-left: 33.33%;
+}
+
+.col-offset-5 {
+  margin-left: 41.66%;
+}
+
+.col-offset-6 {
+  margin-left: 50%;
+}
+
+.col-offset-7 {
+  margin-left: 58.33%;
+}
+
+.col-offset-8 {
+  margin-left: 66.66%;
+}
+
+.col-offset-9 {
+  margin-left: 75%;
+}
+
+.col-offset-10 {
+  margin-left: 83.33%;
+}
+
+.col-offset-11 {
+  margin-left: 91.66%;
+}
+
 .asideBar {
   position: fixed;
-  display: -webkit-box;
-  display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flexbox;
   display: flex;
@@ -449,16 +565,11 @@ template {
   left: 50px;
   width: 10px;
   height: 10px;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
   border-radius: 50%;
   background-color: green;
 }
 
 .section-logo {
-  display: -webkit-box;
-  display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flexbox;
   display: flex;
@@ -466,7 +577,8 @@ template {
 
 .section-logo .logo {
   margin-top: 5px;
-  justify-content: flex-start;
+  -ms-flex-pack: start;
+      justify-content: flex-start;
 }
 
 .section-logo .fa {
@@ -487,8 +599,6 @@ template {
   transition: 1s;
   width: 50px;
   position: fixed;
-  display: -webkit-box;
-  display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flexbox;
   display: flex;
@@ -552,8 +662,6 @@ template {
   width: 1092px;
   margin-left: 188px;
   background-color: #fff;
-  display: -webkit-box;
-  display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flexbox;
   display: flex;
@@ -581,8 +689,6 @@ template {
 }
 
 ul > li:hover .icon-arrow-down-small:before {
-  -ms-transform: rotate(180deg);
-  -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
 }
 
@@ -665,9 +771,6 @@ ul > li:hover > ol {
   top: 18px;
   width: 8px;
   height: 8px;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
   border-radius: 50%;
   background-color: #f58220;
 }
@@ -726,9 +829,6 @@ ol > .listTwo a {
   display: none;
   width: 8px;
   height: 8px;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
   border-radius: 50%;
   background-color: #f58220;
   margin-left: 30px;
@@ -807,8 +907,6 @@ ol > .listTwo a {
     margin: 55px 0 0 35px;
   }
   ul > li:hover .icon-arrow-down-small:before {
-    -ms-transform: rotate(0deg);
-    -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
   }
   ul > li:hover .price {
@@ -931,9 +1029,6 @@ ol > .listTwo a {
   width: 325px;
   height: 40px;
   margin-left: 344px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
   border-radius: 5px;
 }
 
@@ -973,9 +1068,6 @@ ol > .listTwo a {
   top: 1%;
   width: 40px;
   height: 40px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
   border-radius: 5px;
 }
 
@@ -1036,9 +1128,6 @@ ol > .listTwo a {
   border: none;
   width: 130px;
   padding: 11px 0;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
   border-radius: 10px;
   cursor: pointer;
 }
@@ -1059,18 +1148,14 @@ ol > .listTwo a {
 
 .links .table tr, .smallLinksMarginLeft .table tr {
   min-height: 35px;
-  display: -webkit-box;
-  display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   border-bottom: 1px solid;
-  justify-content: space-between;
-  -webkit-transition: 2s;
-  -moz-transition: 2s;
-  -ms-transition: 2s;
-  -o-transition: 2s;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
   transition: 2s;
   padding-left: 5px;
 }
@@ -1082,10 +1167,6 @@ ol > .listTwo a {
 
 .links .table tr a:hover, .smallLinksMarginLeft .table tr a:hover {
   color: #f58220;
-  -webkit-transition: 0.3s;
-  -moz-transition: 0.3s;
-  -ms-transition: 0.3s;
-  -o-transition: 0.3s;
   transition: 0.3s;
 }
 
@@ -1109,10 +1190,6 @@ ol > .listTwo a {
 }
 
 .links .table tr:hover i, .smallLinksMarginLeft .table tr:hover i {
-  -webkit-transition: 0.3s;
-  -moz-transition: 0.3s;
-  -ms-transition: 0.3s;
-  -o-transition: 0.3s;
   transition: 0.3s;
   display: inline-block;
 }
@@ -1122,123 +1199,4 @@ ol > .listTwo a {
   width: 1192px;
   transition: 1s;
 }
-
-* {
-  box-sizing: border-box;
-}
-
-.clearfix:before, .row:before,
-.clearfix:before, .row:after {
-  content: " ";
-  display: table;
-  clear: both;
-}
-
-body {
-  width: 1280px;
-  background-color: #f5f5f2;
-}
-
-[class*="col-"] {
-  float: left;
-  min-height: 1px;
-  padding: 15px;
-}
-
-.col-1 {
-  width: 8.33%;
-}
-
-.col-2 {
-  width: 16.66%;
-}
-
-.col-3 {
-  width: 25%;
-}
-
-.col-4 {
-  width: 33.33%;
-}
-
-.col-5 {
-  width: 41.66%;
-}
-
-.col-6 {
-  width: 50%;
-}
-
-.col-7 {
-  width: 58.33%;
-}
-
-.col-8 {
-  width: 66.66%;
-}
-
-.col-9 {
-  width: 75%;
-}
-
-.col-10 {
-  width: 83.33%;
-}
-
-.col-11 {
-  width: 91.66%;
-}
-
-.col-12 {
-  width: 100%;
-}
-
-.col-offset-0 {
-  margin-left: 0;
-}
-
-.col-offset-1 {
-  margin-left: 8.33%;
-}
-
-.col-offset-2 {
-  margin-left: 16.66%;
-}
-
-.col-offset-3 {
-  margin-left: 25%;
-}
-
-.col-offset-4 {
-  margin-left: 33.33%;
-}
-
-.col-offset-5 {
-  margin-left: 41.66%;
-}
-
-.col-offset-6 {
-  margin-left: 50%;
-}
-
-.col-offset-7 {
-  margin-left: 58.33%;
-}
-
-.col-offset-8 {
-  margin-left: 66.66%;
-}
-
-.col-offset-9 {
-  margin-left: 75%;
-}
-
-.col-offset-10 {
-  margin-left: 83.33%;
-}
-
-.col-offset-11 {
-  margin-left: 91.66%;
-}
-
 /*# sourceMappingURL=style.css.map */
