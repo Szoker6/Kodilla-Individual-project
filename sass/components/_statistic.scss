@@ -1,0 +1,17 @@
+.statistic {
+    width: 100%;
+    margin: 0 auto;
+    .borderBottom {
+        border-bottom: 1px solid $border-color;
+        padding: 0;
+    } .col-6 {
+        padding: 10px 40px 10px 10px;
+    } h4 {
+        color: $border-color;
+        display: inline-block;
+    } .h4Number {
+        color: #000;
+        float: right;
+        font-weight: 400;
+    } 
+}
