@@ -315,7 +315,7 @@ ol > .listTwo {
   }
 
   .leonardoText {
-    width: 122px;
+    width: 300%;
     position: absolute;
     margin: -5px 0 0 18px;
     display: inline-block;
@@ -351,7 +351,7 @@ ol > .listTwo {
   }
 
   ul > li, ol {
-    z-index: -1;
+    z-index: 5;
     border-left: none;
     width: 50px;
   } 
