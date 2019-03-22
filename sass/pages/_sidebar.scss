@@ -1,8 +1,8 @@
  .asideBar { 
   position: fixed;
   @include flexbox;
-  width: 188px;
-  min-height: 1620px;
+  width: 14,7%;
+  min-height: 2000px;
   background-color: #191919;
   margin: -60px 0 0 0;
   transition: 1s; 
@@ -101,7 +101,7 @@
 
 .expanded {
   transition: 1s;
-  width: 50px; 
+  width: 3.91%; 
   position: fixed;
   @include flexbox;
   min-height: 1700px;
