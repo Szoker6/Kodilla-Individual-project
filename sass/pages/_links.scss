@@ -9,7 +9,7 @@
         background-color: $button-color;
         color: #fff;
         border: none;
-        width: 130px;
+        width: 10%;
         padding: 11px 0;
         @include border-radius (10px);
         cursor: pointer;
@@ -17,9 +17,8 @@
         background-color: $button-hover;
     }
     .table {
-        max-width: 700px;
         margin: 20px auto;
-        width: 100%;
+        width: 55%;
         padding: 15px;
         border-collapse: collapse;
         line-height: 25px;
@@ -60,7 +59,7 @@
 
 .smallLinksMarginLeft {
     @extend .links;
-    margin-left: 70px;
-    width: 1192px;
+    margin-left: 4.5%;
+    width: 94,5%;
     transition: 1s;
 }
