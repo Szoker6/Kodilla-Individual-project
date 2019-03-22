@@ -1,7 +1,7 @@
 .general {
     background-color: #fff;
-    width: 1056px;
-    margin-left: 206px;
+    width: 82.5%;
+    margin-left: 16.5%;
     padding-bottom: 20px;
     transition: 1s;
     h3 {
@@ -10,12 +10,12 @@
         text-transform: uppercase;
         border-bottom: 1px solid $border-color;
     }
-    
+
     .date {
         border: 1px solid $border-color;
-        width: 325px;
+        width: 30.75%;
         height: 40px;
-        margin-left: 344px;
+        margin: 0 37% 0 32.25%;
         @include border-radius (5px);
     } p {
         display: inline-block;
@@ -33,7 +33,7 @@
         bottom: -6px;
     }
     .icon {
-        margin: 0 0 -5px 60px;
+        margin: 0 0 -1.5% 15%;
     }
     .contentDate {
         margin-top: 50px;
@@ -48,7 +48,7 @@
             @include border-radius (5px);
             .vectoricon {
                 margin: 10px;
-                width: 20px;   
+                width: 50%;   
             }
         }.buttonSubmit:hover {
             background-color: $button-hover;
@@ -59,13 +59,11 @@
         padding-top: 50px;
     }
     .statistic {
-        width: 684px;
+        width: 65%;
         margin: 0 auto;
         .borderBottom {
             border-bottom: 1px solid $border-color;
             padding: 0;
-        } .col-6 {
-            padding: 10px 40px 10px 10px;
         } h4 {
             color: $border-color;
             display: inline-block;
@@ -82,7 +80,7 @@
 
 .smallGeneralMarginLeft {
     @extend .general;
-    margin-left: 70px;
-    width: 1192px;
+    margin-left: 4.5%;
+    width: 94,5%;
     transition: 1s;
 }
