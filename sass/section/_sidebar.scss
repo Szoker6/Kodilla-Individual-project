@@ -56,24 +56,29 @@
 }
 
 .sectionManager {
-  float: left;
   h6 {
     position: absolute;
-    top: 510px;
-    left: 90px;
+    top: 69%;
+    left: 6%;
+    /* top: 510px; */
+    /* left: 90px; */
     color: $global-links;
   } h5 {
     position: absolute;
-    margin: 480px -156px;
+    top: 63%;
+    left: 1%;
+    /* margin: 480px -156px; */
     text-transform: uppercase;
     color: #888888;
   } .manager {
     position: absolute;
-    margin: 510px -174px;
+    top: 70%;
+    left: 1%;
+    /* margin: 480px -156px; */
     width: 50px;
 } .circleOnline {
     position: absolute;
-    top: 510px;
+    top: 580px;
     left: 50px;
     @include square (10px);
     @include border-radius (50%);
