@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="vendor/css/Glyphter.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    
   </head>
     <body>
       <!-- topBar -->
@@ -75,7 +74,8 @@
               </div><br> 
               <div class="chart">
                 <h4>Earnings chart</h4>
-                <img class="imgchart" src="images/chart.png">
+                <!--<img class="imgchart" src="images/chart.png">-->
+                <canvas id="myChart"></canvas>
               </div>
             </div>    
           </div>
@@ -175,7 +175,29 @@
         </div>
       </div>  
        <!-- End Links -->
-      <script src="js/script.js"></script>   
+       <!-- Modale -->
+       <div class="overlay" id="overlay">
+        <div class="modal" id="myModal">
+          <div class="modal-content">
+              <div class="modal-header">
+          <h4>Login</h4>
+          </div>
+          <div class="modal-body">
+          <form> 
+              <input type="text" placeholder="login name">
+              <input type="text" placeholder="password">
+              <button class="js--close-modal btn-orange">Enter</button>
+          </form>    
+          </div>      
+        </div>
+      </div>
+       <!-- End Modale -->
+       <!-- Script -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+      <script src="js/chart.js"></script>
+      <script src="js/script.js"></script> 
+      <script src="js/modal.js"></script> 
+      <!-- End Script -->
     </body>
 </html>
 
