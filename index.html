@@ -59,7 +59,7 @@
         <div class="general general-fluid">
             <h3>General statistic</h3>
             <div class="contentDate">
-              <div class="date"><p class="dateP">16.05.2016</p><p>16.05.2016</p><img class="icon" src="images/icon.png"></div>
+              <div class="date"><p class="dateP">16.05.2016</p><p>16.05.2016</p><i class="icon-calendar"></i></div>
               <div class="buttonSubmit"><img class="vectoricon" src="images/vector.png"></div>
               <div class="borderBottom"></div>
             </div>
@@ -180,15 +180,22 @@
         <div class="modal" id="myModal">
           <div class="modal-content">
               <div class="modal-header">
-          <h4>Login</h4>
+              <h4>Login</h4>
           </div>
           <div class="modal-body">
-          <form> 
-              <input type="text" placeholder="login name">
-              <input type="text" placeholder="password">
-              <button class="js--close-modal btn-orange">Enter</button>
-          </form>    
-          </div>      
+              <form action="https://formspree.io/david_neo1@wp.pl" method="POST">
+                <div class="input">
+                  <i class="icon-login"></i>
+                  <input class="inputPadding" type="text" name="user-name" required placeholder=" login name">
+                </div>
+                <div class="input">
+                  <i class="icon-password"></i>
+                  <input class="inputPadding" type="password" name="password" minlength="6" maxlength="15" placeholder=" password" required>
+                </div>
+                  <button type="submit" class="btn-orange">Enter</button>
+              </form>    
+            </div>      
+          </div>
         </div>
       </div>
        <!-- End Modale -->
