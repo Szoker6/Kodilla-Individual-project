@@ -365,11 +365,11 @@ template {
 }
 
 .modal {
-  max-width: 600px;
+  max-width: 720px;
   margin: auto;
   background-color: #ffffff;
   position: relative;
-  padding: 10px;
+  padding: 35px 20px;
   display: none;
 }
 
@@ -391,11 +391,46 @@ template {
 
 .modal-header h4 {
   margin: 0;
+  text-transform: uppercase;
+  color: #a7a7a7;
+  font-weight: 200;
 }
 
 .modal-body {
   border-top: 1px solid #888;
   padding: 50px 20px 20px;
+}
+
+.input {
+  position: relative;
+  display: inline-block;
+}
+
+.input .icon-login, .input .icon-password {
+  position: absolute;
+  left: 3%;
+  top: 20%;
+}
+
+.inputPadding {
+  padding: 6px 0 6px 25px;
+}
+
+button {
+  cursor: pointer;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #ffa200;
+  color: #fff;
+  border: none;
+  display: inline-block;
+  padding: 8px 60px;
+}
+
+button:hover {
+  background-color: #f58220;
 }
 
 /* Sections */
@@ -1397,6 +1432,10 @@ ol > .listTwo a {
   margin: 0;
 }
 
+.general p:hover, .smallGeneralMarginLeft p:hover, .links p:hover, .smallLinksMarginLeft p:hover {
+  color: #56819f;
+}
+
 .general .dateP, .smallGeneralMarginLeft .dateP, .links .dateP, .smallLinksMarginLeft .dateP {
   margin: 10px 68px 0 18px;
 }
@@ -1466,6 +1505,15 @@ ol > .listTwo a {
   color: #000;
   float: right;
   font-weight: 400;
+}
+
+.general .icon-calendar, .smallGeneralMarginLeft .icon-calendar, .links .icon-calendar, .smallLinksMarginLeft .icon-calendar {
+  margin: 0px 0px 0px 60px;
+  cursor: pointer;
+}
+
+.general .icon-calendar:hover, .smallGeneralMarginLeft .icon-calendar:hover, .links .icon-calendar:hover, .smallLinksMarginLeft .icon-calendar:hover {
+  color: #56819f;
 }
 
 .smallGeneralMarginLeft {
