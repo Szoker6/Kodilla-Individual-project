@@ -21,6 +21,8 @@
         display: inline-block;
         position: relative;
         margin: 0;
+    } p:hover {
+        color: $global-links;
     } .dateP {
         margin: 10px 68px 0 18px;
     } .dateP:after {
@@ -72,6 +74,12 @@
             float: right;
             font-weight: 400;
         } 
+    }
+    .icon-calendar {
+        margin: 0px 0px 0px 60px;
+        cursor: pointer;
+    } .icon-calendar:hover {
+        color: $global-links;
     }
 }
 
