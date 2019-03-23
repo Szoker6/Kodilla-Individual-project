@@ -73,15 +73,11 @@
             font-weight: 400;
         } 
     }
-    .imgchart {
-        width: auto;
-        cursor: pointer;
-    }
 }
 
 .smallGeneralMarginLeft {
     @extend .general;
-    margin-left: 4.5%;
-    width: 94,5%;
+    margin-left: 5.5%;
+    width: 93.5%;
     transition: 1s;
 }
