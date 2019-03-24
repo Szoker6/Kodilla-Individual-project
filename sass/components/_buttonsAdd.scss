@@ -1,0 +1,13 @@
+.btn-orange {
+    display: block;
+    margin: 0 auto;
+    background-color: $button-color;
+    color: #fff;
+    border: none;
+    width: 100%;
+    padding: 11px 0;
+    @include border-radius (10px);
+    cursor: pointer;
+} .btn-orange:hover {
+    background-color: $button-hover;
+}

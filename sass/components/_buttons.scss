@@ -1,0 +1,14 @@
+.buttonSubmit {
+    width: 100%; 
+    background-color: $button-color;
+    cursor: pointer;  
+    @include border-radius (5px);
+    .vectoricon {
+        margin: 10px;
+        width: 20px;   
+    }
+} .buttonSubmit:hover {
+    background-color: $button-hover;
+}
+ 
+   

@@ -1,0 +1,16 @@
+.section-logo {
+    width: 100%;
+    @include flexbox;
+    .logo {
+    margin-top: 5px;
+    justify-content: flex-start;
+    } .fa {
+        margin: 15px 40px 0;
+        color: $border-color;
+        cursor: pointer;
+    } .fa-bars {
+      color: #888888;
+    } .fa-bars:hover {
+      color: #fff;
+    }
+  }

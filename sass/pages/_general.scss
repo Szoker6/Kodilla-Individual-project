@@ -1,0 +1,91 @@
+.general {
+    background-color: #fff;
+    width: 82.5%;
+    margin-left: 16.5%;
+    padding-bottom: 20px;
+    transition: 1s;
+    h3 {
+        padding: 20px;
+        color: $border-color;
+        text-transform: uppercase;
+        border-bottom: 1px solid $border-color;
+    }
+
+    .date {
+        border: 1px solid $border-color;
+        width: 30.75%;
+        height: 40px;
+        margin: 0 37% 0 32.25%;
+        @include border-radius (5px);
+    } p {
+        display: inline-block;
+        position: relative;
+        margin: 0;
+    } p:hover {
+        color: $global-links;
+    } .dateP {
+        margin: 10px 68px 0 18px;
+    } .dateP:after {
+        position: absolute;
+        background-color: $border-color;
+        content: " ";
+        width: 1px;
+        height: 30px;
+        left: 125px;
+        bottom: -6px;
+    }
+    .icon {
+        margin: 0 0 -1.5% 15%;
+    }
+    .contentDate {
+        margin-top: 50px;
+        position: relative;
+        .buttonSubmit {
+            @extend .circle;
+            background-color: $button-color;
+            cursor: pointer;
+            left: 66%;
+            top: 1%;
+            @include square (40px);
+            @include border-radius (5px);
+            .vectoricon {
+                margin: 10px;
+                width: 50%;   
+            }
+        }.buttonSubmit:hover {
+            background-color: $button-hover;
+        }
+    } 
+    .borderBottom {
+        border-bottom: 1px solid $border-color;
+        padding-top: 50px;
+    }
+    .statistic {
+        width: 65%;
+        margin: 0 auto;
+        .borderBottom {
+            border-bottom: 1px solid $border-color;
+            padding: 0;
+        } h4 {
+            color: $border-color;
+            display: inline-block;
+        } .h4Number {
+            color: #000;
+            float: right;
+            font-weight: 400;
+        } 
+    }
+    .icon-calendar {
+        margin: 0px 0px 0px 60px;
+        cursor: pointer;
+    } .icon-calendar:hover {
+        color: $global-links;
+    }
+}
+
+.smallGeneralMarginLeft {
+    @extend .general;
+    margin-left: 5.5%;
+    width: 93.5%;
+    transition: 1s;
+}
