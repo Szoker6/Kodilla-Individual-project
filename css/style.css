@@ -340,101 +340,6 @@ template {
   display: none;
 }
 
-/* Components */
-.overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 999;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  justify-content: center;
-  align-items: center;
-  overflow: auto;
-  padding: 30px;
-  display: none;
-}
-
-.overlay.show {
-  display: flex;
-}
-
-.overlay::webkit-scrollbar {
-  display: none;
-}
-
-.modal {
-  max-width: 720px;
-  margin: auto;
-  background-color: #ffffff;
-  position: relative;
-  padding: 35px 20px;
-  display: none;
-}
-
-.modal.show {
-  display: block;
-}
-
-.modal .btn-close {
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding: 5px 10px;
-}
-
-.modal-header {
-  padding: 2px;
-  color: #000;
-}
-
-.modal-header h4 {
-  margin: 0;
-  text-transform: uppercase;
-  color: #a7a7a7;
-  font-weight: 200;
-}
-
-.modal-body {
-  border-top: 1px solid #888;
-  padding: 50px 20px 20px;
-}
-
-.input {
-  position: relative;
-  display: inline-block;
-}
-
-.input .icon-login, .input .icon-password {
-  position: absolute;
-  left: 3%;
-  top: 20%;
-}
-
-.inputPadding {
-  padding: 6px 0 6px 25px;
-}
-
-button {
-  cursor: pointer;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
-  border-radius: 3px;
-  background-color: #ffa200;
-  color: #fff;
-  border: none;
-  display: inline-block;
-  padding: 8px 60px;
-}
-
-button:hover {
-  background-color: #f58220;
-}
-
-/* Sections */
-/* Pages / Views */
 * {
   box-sizing: border-box;
 }
@@ -449,6 +354,15 @@ button:hover {
 body {
   width: 1280px;
   background-color: #f5f5f2;
+}
+
+main {
+  width: calc(100% - 20px);
+  -webkit-transition: 0.3s linear;
+  transition: 0.3s linear;
+  padding: 5px;
+  margin-right: auto;
+  margin-left: 192px;
 }
 
 [class*="col-"] {
@@ -832,6 +746,101 @@ body {
   }
 }
 
+/* Components */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  overflow: auto;
+  padding: 30px;
+  display: none;
+}
+
+.overlay.show {
+  display: flex;
+}
+
+.overlay::webkit-scrollbar {
+  display: none;
+}
+
+.modal {
+  max-width: 720px;
+  margin: auto;
+  background-color: #ffffff;
+  position: relative;
+  padding: 35px 20px;
+  display: none;
+}
+
+.modal.show {
+  display: block;
+}
+
+.modal .btn-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 5px 10px;
+}
+
+.modal-header {
+  padding: 2px;
+  color: #000;
+}
+
+.modal-header h4 {
+  margin: 0;
+  text-transform: uppercase;
+  color: #a7a7a7;
+  font-weight: 200;
+}
+
+.modal-body {
+  border-top: 1px solid #888;
+  padding: 50px 20px 20px;
+}
+
+.input {
+  position: relative;
+  display: inline-block;
+}
+
+.input .icon-login, .input .icon-password {
+  position: absolute;
+  left: 3%;
+  top: 20%;
+}
+
+.inputPadding {
+  padding: 6px 0 6px 25px;
+}
+
+button {
+  cursor: pointer;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #ffa200;
+  color: #fff;
+  border: none;
+  display: inline-block;
+  padding: 8px 60px;
+}
+
+button:hover {
+  background-color: #f58220;
+}
+
+/* Sections */
+/* Pages / Views */
 .asideBar {
   position: fixed;
   display: -webkit-box;
@@ -839,11 +848,13 @@ body {
   display: -moz-flex;
   display: -ms-flexbox;
   display: flex;
-  width: 14,7%;
-  min-height: 2000px;
+  overflow-y: auto;
+  height: 200vh;
+  width: 188px;
   background-color: #191919;
-  margin: -60px 0 0 0;
+  margin: -75px 0 0 -15px;
   transition: 1s;
+  z-index: 1;
 }
 
 .asideBar .asside {
@@ -851,15 +862,11 @@ body {
   padding: 0;
   margin: 0;
   font-size: 18px;
-  height: 2em;
-  line-height: 2em;
   text-align: center;
-  height: 60px;
   width: 100%;
 }
 
 .asideBar .asside li {
-  width: 100%;
   float: none;
   border: none;
   text-align: left;
@@ -878,7 +885,6 @@ body {
 .asideBar .asside li a {
   color: #b6b6b6;
   text-decoration: none;
-  padding: 0 5px;
   line-height: 60px;
   font-size: 16px;
   display: block;
@@ -895,47 +901,74 @@ body {
 
 .asideBar .asside .icon-li {
   color: #000;
-  margin: 0 20px 0 10px;
+  margin: 0 20px 0 20px;
 }
 
-.selectionRectangle {
+.asideBar .asside .section-logo {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.asideBar .asside .section-logo .logo {
+  margin-top: 5px;
+  justify-content: flex-start;
+}
+
+.asideBar .asside .section-logo .fa {
+  margin: 16px 0px 0 12px;
+  color: #a7a7a7;
+  cursor: pointer;
+}
+
+.asideBar .asside .section-logo .fa-bars {
+  color: #888888;
+}
+
+.asideBar .asside .section-logo .fa-bars:hover {
+  color: #fff;
+}
+
+.asideBar .selectionRectangle {
   float: left;
   display: none;
   background-color: #f58220;
   width: 5px;
   height: 5px;
   padding: 40px 0 20px;
-  position: relative;
 }
 
-.sectionManager {
-  width: 100%;
+.asideBar .sectionManager {
+  background-color: #191919;
+  position: fixed;
+  width: 188px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 0;
+  padding: 0 0 30px 0;
 }
 
-.sectionManager h6 {
-  position: absolute;
-  top: 510px;
-  left: 90px;
+.asideBar .sectionManager h6 {
+  margin: -8% -35% 0 0;
   color: #56819f;
 }
 
-.sectionManager h5 {
-  position: absolute;
-  margin: 480px -156px;
+.asideBar .sectionManager h5 {
   text-transform: uppercase;
   color: #888888;
+  margin: 8% 15%;
 }
 
-.sectionManager .manager {
-  position: absolute;
-  margin: 510px -174px;
+.asideBar .sectionManager .manager {
   width: 50px;
+  margin: 0 34% 0 0;
 }
 
-.sectionManager .circleOnline {
-  position: absolute;
-  top: 510px;
-  left: 50px;
+.asideBar .sectionManager .circleOnline {
+  margin: -26% 18% 11% 0;
   width: 10px;
   height: 10px;
   -webkit-border-radius: 50%;
@@ -945,53 +978,26 @@ body {
   background-color: green;
 }
 
-.section-logo {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.section-logo .logo {
-  margin-top: 5px;
-  justify-content: flex-start;
-}
-
-.section-logo .fa {
-  margin: 15px 40px 0;
-  color: #a7a7a7;
-  cursor: pointer;
-}
-
-.section-logo .fa-bars {
-  color: #888888;
-}
-
-.section-logo .fa-bars:hover {
-  color: #fff;
-}
-
 .expanded {
   transition: 1s;
-  width: 3.91%;
-  position: fixed;
+  width: 40px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flexbox;
   display: flex;
-  min-height: 1700px;
   background-color: #191919;
-  margin: -60px 0 0 0;
+  margin: -75px 0 0 -15px;
+  overflow-y: auto;
+  height: 180vh;
 }
 
 .expanded .logo {
   display: none;
 }
 
-.expanded .section-logo .fa {
-  margin: 15px 18px 0;
+.expanded .sectionManager {
+  width: 40px;
 }
 
 .expanded .sectionManager h6 {
@@ -1003,15 +1009,14 @@ body {
 }
 
 .expanded .sectionManager .manager {
-  margin: 480px -40px;
   width: 30px;
+  margin: 25% 0;
 }
 
 .expanded .sectionManager .circleOnline {
-  top: 480px;
-  left: 30px;
   width: 7px;
   height: 7px;
+  margin: -100% 0 0 46%;
 }
 
 .expanded .text {
@@ -1020,6 +1025,7 @@ body {
 
 .expanded .asside .icon-li {
   color: #a7a7a7;
+  margin: 0 6% 0 6%;
 }
 
 .expanded .asside .icon-li:hover {
@@ -1028,24 +1034,49 @@ body {
 
 @media screen and (max-width: 900px) {
   .asideBar {
-    margin: 0;
+    margin: -15px 0 0 -15px;
   }
-  .sectionManager {
+  .asideBar .sectionManager {
     display: none;
   }
 }
 
+@media (min-width: 576px) and (max-width: 767px) {
+  .asideBar {
+    height: 370vh;
+    overflow-y: auto;
+  }
+  .expanded {
+    height: 370vh;
+    overflow-y: auto;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .asideBar {
+    height: 370vh;
+    overflow-y: auto;
+  }
+  .expanded {
+    width: 40px;
+    overflow-y: auto;
+    height: 370vh;
+  }
+}
+
 .topbar, .smalltopBarMarginLeft {
-  z-index: 2;
-  width: 100%;
-  width: 1092px;
-  margin-left: 188px;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  height: 60px;
   background-color: #fff;
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flexbox;
   display: flex;
+  justify-content: flex-end;
+  border-bottom: 1px solid #a7a7a7;
 }
 
 .topbar ul, .smalltopBarMarginLeft ul {
@@ -1053,12 +1084,10 @@ body {
   padding: 0;
   margin: 0;
   font-size: 18px;
-  height: 2em;
   line-height: 2em;
   text-align: center;
   height: 60px;
-  margin-left: 600px;
-  width: 100%;
+  z-index: 2;
 }
 
 .topbar ul a, .smalltopBarMarginLeft ul a {
@@ -1091,6 +1120,7 @@ li {
   width: 188px;
   border-left: 1px solid #a7a7a7;
   height: 60px;
+  border-bottom: 1px solid #a7a7a7;
 }
 
 li:hover {
@@ -1103,7 +1133,6 @@ ol > .listOne, ol > .listTwo {
   width: 189px;
   background-color: #e3e3e3;
   margin: -1px;
-  height: 45px;
   border-left: 1px solid #a7a7a7;
   border-right: 1px solid #a7a7a7;
   border-bottom: 1px solid #a7a7a7;
@@ -1146,7 +1175,7 @@ ul > li:hover > ol {
   margin-right: 20px;
 }
 
-.circle, .general .contentDate .buttonSubmit, .smallGeneralMarginLeft .contentDate .buttonSubmit, .links .contentDate .buttonSubmit, .smallLinksMarginLeft .contentDate .buttonSubmit {
+.circle {
   display: block;
   z-index: 1;
   position: absolute;
@@ -1167,12 +1196,12 @@ ul > li:hover > ol {
   position: relative;
 }
 
-.secondMenuList:hover .circle, .secondMenuList:hover .general .contentDate .buttonSubmit, .general .contentDate .secondMenuList:hover .buttonSubmit, .secondMenuList:hover .smallGeneralMarginLeft .contentDate .buttonSubmit, .smallGeneralMarginLeft .contentDate .secondMenuList:hover .buttonSubmit, .secondMenuList:hover .links .contentDate .buttonSubmit, .links .contentDate .secondMenuList:hover .buttonSubmit, .secondMenuList:hover .smallLinksMarginLeft .contentDate .buttonSubmit, .smallLinksMarginLeft .contentDate .secondMenuList:hover .buttonSubmit, .secondMenuList:hover .leonardoText, .secondMenuList:hover .rectangle, .secondMenuList:hover .icon-profile {
+.secondMenuList:hover .circle, .secondMenuList:hover .leonardoText, .secondMenuList:hover .rectangle, .secondMenuList:hover .icon-profile {
   display: none;
 }
 
 .secondMenuList:hover .icon-notification:before {
-  margin: 0 0 0 -58%;
+  margin: 0px 67px 0 -67px;
 }
 
 .secondMenuList:hover .icon-close {
@@ -1188,7 +1217,7 @@ ul > li:hover > ol {
 }
 
 .icon-notification:before {
-  margin-left: -75%;
+  margin: 0 58% 0 -16%;
   color: #000;
 }
 
@@ -1249,8 +1278,6 @@ ol > .listTwo a {
 }
 
 .smalltopBarMarginLeft {
-  margin-left: 50px;
-  width: 1230px;
   transition: 1s;
 }
 
@@ -1261,11 +1288,11 @@ ol > .listTwo a {
 
 @media screen and (max-width: 900px) {
   .topbar, .smalltopBarMarginLeft {
+    z-index: 3;
     background-color: #191919;
     position: fixed;
-    top: 500px;
-    left: -0%;
-    width: 50px;
+    top: 480px;
+    left: 0;
     margin-left: 0;
   }
   .topbar ul, .smalltopBarMarginLeft ul {
@@ -1273,27 +1300,21 @@ ol > .listTwo a {
     margin-left: 0;
   }
   .topbar ul > li:hover > ol, .smalltopBarMarginLeft ul > li:hover > ol {
-    display: none;
+    z-index: 4;
+    position: absolute;
+    top: 100%;
   }
   .secondMenuList:hover .icon-profile {
     position: absolute;
-    top: 57px;
-    left: 18px;
   }
   .secondMenuList:hover .leonardoText, .secondMenuList:hover .rectangle, .secondMenuList:hover .icon-profile {
     display: inline-block;
   }
   .secondMenuList:hover .icon-notification:before {
-    margin: 0 -34px 0 -42%;
     color: #a7a7a7;
   }
   .secondMenuList:hover .icon-close, .secondMenuList:hover .rectangle {
     display: none;
-  }
-  .secondMenuList:hover .leonardoText {
-    width: 122px;
-    position: absolute;
-    margin: 55px 0 0 35px;
   }
   ul > li:hover .icon-arrow-down-small:before {
     -ms-transform: rotate(0deg);
@@ -1305,13 +1326,25 @@ ol > .listTwo a {
   }
   li {
     background-color: #191919;
+    border-bottom: none;
   }
   li:hover {
+    background-color: #a7a7a7;
+  }
+  .firstMenuList:hover {
     background-color: #191919;
   }
   .secondMenuList {
-    width: 50px;
+    position: absolute;
+    top: 57px;
+    width: 188px;
     border-left: none;
+  }
+  .secondMenuList:hover {
+    background-color: #191919;
+  }
+  .secondMenuList:hover .icon-notification:before {
+    margin: 0 -9px 0px 7px;
   }
   ol > .listTwo {
     display: none;
@@ -1321,149 +1354,154 @@ ol > .listTwo a {
   }
   .icon {
     color: #a7a7a7;
-    margin: 0;
-    padding: 0;
+  }
+  .icon-wallet {
+    margin: 13px 0 0 23px;
+    float: left;
   }
   .price {
     float: left;
     font-size: 16px;
-    margin: -50px 0px 0 68px;
+    margin: 11px 0px 0 26px;
   }
   .icon-arrow-down-small {
-    margin: 0px -234px 0 0;
+    margin: 0;
   }
   .icon-notification:before {
     color: #a7a7a7;
-    margin: 0px 117px 0 14px;
-    position: relative;
+    margin: 0 -9px 0 9px;
   }
   .notificationText {
     display: inline-block;
-    position: absolute;
-    top: -3px;
-    left: 62px;
+    margin: 0 44px 0 34px;
+    position: relative;
   }
   .icon-profile {
     position: absolute;
-    top: 57px;
-    left: 18px;
+    left: -34px;
+    top: 58px;
   }
   .leonardoText {
-    width: 300%;
     position: absolute;
-    margin: -5px 0 0 18px;
-    display: inline-block;
+    left: 38px;
+    top: 58px;
     color: #a7a7a7;
   }
-  .icon-wallet {
-    margin: 12px 0 0 40%;
-  }
   .quit {
-    width: 0px;
-    display: inline-block;
-    margin-left: 20px;
-    position: relative;
+    position: absolute;
+    top: 175px;
+    left: -9px;
+    z-index: -1;
   }
   .logoutText {
-    top: 57px;
-    left: 0;
-    position: absolute;
-    margin: 0 0 0 56px;
     display: inline-block;
-  }
-  .circle, .general .contentDate .buttonSubmit, .smallGeneralMarginLeft .contentDate .buttonSubmit, .links .contentDate .buttonSubmit, .smallLinksMarginLeft .contentDate .buttonSubmit {
-    left: 26px;
-    top: 16px;
+    position: absolute;
+    top: 10px;
+    left: 87px;
   }
   .rectangle {
     display: none;
   }
   ul > li, ol {
-    z-index: 5;
     border-left: none;
-    width: 50px;
-  }
-  ol > .listTwo a:hover .circleTwo {
-    display: none;
-  }
-  ol > .listTwo a:hover .circleOne, ol > .listTwo a:hover .circleTwo {
-    display: none;
+    width: 188px;
   }
   .smalltopBarMarginLeft .logoutText, .smalltopBarMarginLeft .notificationText, .smalltopBarMarginLeft .price, .smalltopBarMarginLeft .leonardoText, .smalltopBarMarginLeft .icon-arrow-down-small {
     display: none;
   }
-  .icon-profile {
-    margin-top: 0px;
+  .smalltopBarMarginLeft .secondMenuList, .smalltopBarMarginLeft .firstMenuList {
+    width: 40px;
   }
-  ol > .listTwo {
-    width: 51px;
+  .smalltopBarMarginLeft .icon-wallet {
+    margin: 0 0 0 12px;
+  }
+  .smalltopBarMarginLeft .icon-notification:before {
+    margin: 0 10px 0 5px;
+  }
+  .smalltopBarMarginLeft .circle {
+    margin: -1px 0px 0 -8px;
+  }
+  .smalltopBarMarginLeft .icon-profile {
+    margin: 0 0 0 46px;
+  }
+  .smalltopBarMarginLeft .quit {
+    margin: 0 0px 0 6px;
+    width: 40px;
+  }
+  .smalltopBarMarginLeft .firstMenuList:hover ol {
+    display: none;
+  }
+  .smalltopBarMarginLeft .secondMenuList:hover .leonardoText {
+    display: none;
   }
 }
 
-.general, .smallGeneralMarginLeft, .links, .smallLinksMarginLeft {
+.general, .smallGeneralMarginLeft, .smallLinksMarginLeft, .links {
   background-color: #fff;
-  width: 82.5%;
-  margin-left: 16.5%;
+  width: 86%;
   padding-bottom: 20px;
+  margin-top: -45px;
   transition: 1s;
 }
 
-.general h3, .smallGeneralMarginLeft h3, .links h3, .smallLinksMarginLeft h3, .smallGeneralMarginLeft .links h3, .links .smallGeneralMarginLeft h3, .smallLinksMarginLeft .links h3, .links .smallLinksMarginLeft h3, .general .smallLinksMarginLeft h3, .smallLinksMarginLeft .general h3, .smallGeneralMarginLeft .smallLinksMarginLeft h3, .smallLinksMarginLeft .smallGeneralMarginLeft h3, .links .smallLinksMarginLeft h3, .smallLinksMarginLeft .links h3, .smallLinksMarginLeft h3 {
+.general h3, .smallGeneralMarginLeft h3, .smallLinksMarginLeft h3, .links h3 {
   padding: 20px;
   color: #a7a7a7;
   text-transform: uppercase;
   border-bottom: 1px solid #a7a7a7;
 }
 
-.general .date, .smallGeneralMarginLeft .date, .links .date, .smallLinksMarginLeft .date {
+.general .date, .smallGeneralMarginLeft .date, .smallLinksMarginLeft .date, .links .date {
+  position: relative;
   border: 1px solid #a7a7a7;
-  width: 30.75%;
+  width: 25%;
   height: 40px;
-  margin: 0 37% 0 32.25%;
+  margin: 0 auto;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
   border-radius: 5px;
 }
 
-.general p, .smallGeneralMarginLeft p, .links p, .smallLinksMarginLeft p {
+.general p, .smallGeneralMarginLeft p, .smallLinksMarginLeft p, .links p {
   display: inline-block;
   position: relative;
-  margin: 0;
+  margin: 12px;
 }
 
-.general p:hover, .smallGeneralMarginLeft p:hover, .links p:hover, .smallLinksMarginLeft p:hover {
+.general p:hover, .smallGeneralMarginLeft p:hover, .smallLinksMarginLeft p:hover, .links p:hover {
   color: #56819f;
 }
 
-.general .dateP, .smallGeneralMarginLeft .dateP, .links .dateP, .smallLinksMarginLeft .dateP {
-  margin: 10px 68px 0 18px;
+.general .dateP, .smallGeneralMarginLeft .dateP, .smallLinksMarginLeft .dateP, .links .dateP {
+  margin: 0 10% 0 5%;
 }
 
-.general .dateP:after, .smallGeneralMarginLeft .dateP:after, .links .dateP:after, .smallLinksMarginLeft .dateP:after {
+.general .dateP:after, .smallGeneralMarginLeft .dateP:after, .smallLinksMarginLeft .dateP:after, .links .dateP:after {
   position: absolute;
   background-color: #a7a7a7;
   content: " ";
   width: 1px;
   height: 30px;
-  left: 125px;
+  right: -30%;
   bottom: -6px;
 }
 
-.general .icon, .smallGeneralMarginLeft .icon, .links .icon, .smallLinksMarginLeft .icon {
-  margin: 0 0 -1.5% 15%;
+.general .icon, .smallGeneralMarginLeft .icon, .smallLinksMarginLeft .icon, .links .icon {
+  margin: 0 0 -1.5% 12%;
 }
 
-.general .contentDate, .smallGeneralMarginLeft .contentDate, .links .contentDate, .smallLinksMarginLeft .contentDate {
-  margin-top: 50px;
+.general .contentDate, .smallGeneralMarginLeft .contentDate, .smallLinksMarginLeft .contentDate, .links .contentDate {
+  margin-top: 25px;
   position: relative;
 }
 
-.general .contentDate .buttonSubmit, .smallGeneralMarginLeft .contentDate .buttonSubmit, .links .contentDate .buttonSubmit, .smallLinksMarginLeft .contentDate .buttonSubmit {
+.general .contentDate .buttonSubmit, .smallGeneralMarginLeft .contentDate .buttonSubmit, .smallLinksMarginLeft .contentDate .buttonSubmit, .links .contentDate .buttonSubmit {
+  position: absolute;
+  left: 63%;
+  top: 12%;
   background-color: #ffa200;
   cursor: pointer;
-  left: 66%;
-  top: 1%;
   width: 40px;
   height: 40px;
   -webkit-border-radius: 5px;
@@ -1472,57 +1510,71 @@ ol > .listTwo a {
   border-radius: 5px;
 }
 
-.general .contentDate .buttonSubmit .vectoricon, .smallGeneralMarginLeft .contentDate .buttonSubmit .vectoricon, .links .contentDate .buttonSubmit .vectoricon, .smallLinksMarginLeft .contentDate .buttonSubmit .vectoricon {
+.general .contentDate .buttonSubmit .vectoricon, .smallGeneralMarginLeft .contentDate .buttonSubmit .vectoricon, .smallLinksMarginLeft .contentDate .buttonSubmit .vectoricon, .links .contentDate .buttonSubmit .vectoricon {
   margin: 10px;
   width: 50%;
 }
 
-.general .contentDate .buttonSubmit:hover, .smallGeneralMarginLeft .contentDate .buttonSubmit:hover, .links .contentDate .buttonSubmit:hover, .smallLinksMarginLeft .contentDate .buttonSubmit:hover {
+.general .contentDate .buttonSubmit:hover, .smallGeneralMarginLeft .contentDate .buttonSubmit:hover, .smallLinksMarginLeft .contentDate .buttonSubmit:hover, .links .contentDate .buttonSubmit:hover {
   background-color: #f58220;
 }
 
-.general .borderBottom, .smallGeneralMarginLeft .borderBottom, .links .borderBottom, .smallLinksMarginLeft .borderBottom {
+.general .borderBottom, .smallGeneralMarginLeft .borderBottom, .smallLinksMarginLeft .borderBottom, .links .borderBottom {
   border-bottom: 1px solid #a7a7a7;
-  padding-top: 50px;
+  padding-top: 25px;
 }
 
-.general .statistic, .smallGeneralMarginLeft .statistic, .links .statistic, .smallLinksMarginLeft .statistic {
+.general .statistic, .smallGeneralMarginLeft .statistic, .smallLinksMarginLeft .statistic, .links .statistic {
   width: 65%;
   margin: 0 auto;
 }
 
-.general .statistic .borderBottom, .smallGeneralMarginLeft .statistic .borderBottom, .links .statistic .borderBottom, .smallLinksMarginLeft .statistic .borderBottom {
+.general .statistic .borderBottom, .smallGeneralMarginLeft .statistic .borderBottom, .smallLinksMarginLeft .statistic .borderBottom, .links .statistic .borderBottom {
   border-bottom: 1px solid #a7a7a7;
   padding: 0;
 }
 
-.general .statistic h4, .smallGeneralMarginLeft .statistic h4, .links .statistic h4, .smallLinksMarginLeft .statistic h4 {
+.general .statistic h4, .smallGeneralMarginLeft .statistic h4, .smallLinksMarginLeft .statistic h4, .links .statistic h4 {
   color: #a7a7a7;
   display: inline-block;
 }
 
-.general .statistic .h4Number, .smallGeneralMarginLeft .statistic .h4Number, .links .statistic .h4Number, .smallLinksMarginLeft .statistic .h4Number {
+.general .statistic .h4Number, .smallGeneralMarginLeft .statistic .h4Number, .smallLinksMarginLeft .statistic .h4Number, .links .statistic .h4Number {
   color: #000;
   float: right;
   font-weight: 400;
 }
 
-.general .icon-calendar, .smallGeneralMarginLeft .icon-calendar, .links .icon-calendar, .smallLinksMarginLeft .icon-calendar {
-  margin: 0px 0px 0px 60px;
+.general .icon-calendar, .smallGeneralMarginLeft .icon-calendar, .smallLinksMarginLeft .icon-calendar, .links .icon-calendar {
+  margin: 0 0 0 6%;
   cursor: pointer;
 }
 
-.general .icon-calendar:hover, .smallGeneralMarginLeft .icon-calendar:hover, .links .icon-calendar:hover, .smallLinksMarginLeft .icon-calendar:hover {
+.general .icon-calendar:hover, .smallGeneralMarginLeft .icon-calendar:hover, .smallLinksMarginLeft .icon-calendar:hover, .links .icon-calendar:hover {
   color: #56819f;
 }
 
-.smallGeneralMarginLeft {
-  margin-left: 5.5%;
-  width: 93.5%;
+.smallGeneralMarginLeft, .smallLinksMarginLeft {
+  margin-left: -11.5%;
+  width: 97.5%;
   transition: 1s;
 }
 
-.links .btn-orange, .smallLinksMarginLeft .btn-orange {
+@media screen and (max-width: 900px) {
+  .general, .smallGeneralMarginLeft, .smallLinksMarginLeft, .links {
+    margin: -60px -0 0 10px;
+  }
+  .general p, .smallGeneralMarginLeft p, .smallLinksMarginLeft p, .links p {
+    font-size: 14px;
+  }
+  .smallGeneralMarginLeft, .smallLinksMarginLeft {
+    margin-left: -12%;
+    width: 100%;
+    transition: 1s;
+  }
+}
+
+.links .btn-orange {
   display: block;
   margin: 0 auto;
   background-color: #ffa200;
@@ -1537,11 +1589,11 @@ ol > .listTwo a {
   cursor: pointer;
 }
 
-.links .btn-orange:hover, .smallLinksMarginLeft .btn-orange:hover {
+.links .btn-orange:hover {
   background-color: #f58220;
 }
 
-.links .table, .smallLinksMarginLeft .table {
+.links .table {
   margin: 20px auto;
   width: 55%;
   padding: 15px;
@@ -1550,7 +1602,7 @@ ol > .listTwo a {
   color: #a7a7a7;
 }
 
-.links .table tr, .smallLinksMarginLeft .table tr {
+.links .table tr {
   min-height: 35px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1568,12 +1620,12 @@ ol > .listTwo a {
   padding-left: 5px;
 }
 
-.links .table tr a, .smallLinksMarginLeft .table tr a {
+.links .table tr a {
   text-decoration: none;
   color: #56819f;
 }
 
-.links .table tr a:hover, .smallLinksMarginLeft .table tr a:hover {
+.links .table tr a:hover {
   color: #f58220;
   -webkit-transition: 0.3s;
   -moz-transition: 0.3s;
@@ -1582,38 +1634,32 @@ ol > .listTwo a {
   transition: 0.3s;
 }
 
-.links .table tr i, .smallLinksMarginLeft .table tr i {
+.links .table tr i {
   float: right;
   margin-right: 15px;
   display: none;
   cursor: pointer;
 }
 
-.links .table tr i:hover, .smallLinksMarginLeft .table tr i:hover {
+.links .table tr i:hover {
   color: #f58220;
 }
 
-.links .table tr:first-child, .smallLinksMarginLeft .table tr:first-child {
+.links .table tr:first-child {
   border-top: 1px solid;
 }
 
-.links .table tr:hover, .smallLinksMarginLeft .table tr:hover {
+.links .table tr:hover {
   background-color: #f1f3f3;
 }
 
-.links .table tr:hover i, .smallLinksMarginLeft .table tr:hover i {
+.links .table tr:hover i {
   -webkit-transition: 0.3s;
   -moz-transition: 0.3s;
   -ms-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
   display: inline-block;
-}
-
-.smallLinksMarginLeft {
-  margin-left: 4.5%;
-  width: 94,5%;
-  transition: 1s;
 }
 
 /*# sourceMappingURL=style.css.map */
