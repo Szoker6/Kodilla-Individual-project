@@ -1,23 +1,21 @@
  .asideBar { 
   position: fixed;
   @include flexbox;
-  width: 14,7%;
-  min-height: 2000px;
+  overflow-y: auto;
+  height: 200vh;
+  width: 188px;
   background-color: #191919;
-  margin: -60px 0 0 0;
+  margin: -75px 0 0 -15px;
   transition: 1s; 
+  z-index: 1;
   .asside {
     list-style-type: none;    
     padding: 0;
     margin: 0;
     font-size: 18px;
-    height: 2em;
-    line-height: 2em;
     text-align: center;
-    height: 60px;
     width: 100%;
     li {
-      width: 100%;
       float: none;
       border: none;
       text-align: left;
@@ -30,7 +28,6 @@
       } a {
         color: #b6b6b6;
         text-decoration: none;
-        padding: 0 5px;
         line-height: 60px;
         font-size: $paragraph-font-size;
         display: block;
@@ -42,81 +39,79 @@
       }
     } .icon-li {
       color: #000;
-      margin: 0 20px 0 10px;
+      margin: 0 20px 0 20px;
+    }
+    .section-logo {
+      @include flexbox;
+      .logo {
+      margin-top: 5px;
+      justify-content: flex-start;
+      } .fa {
+        margin: 16px 0px 0 12px;
+        color: $border-color;
+        cursor: pointer;
+      } .fa-bars {
+        color: #888888;
+      } .fa-bars:hover {
+        color: #fff;
+      }
     }
   } 
-}
-
-.selectionRectangle {
-  float: left;
-  display: none;
-  background-color: $global-selection;
-  width: 5px;
-  height: 5px;
-  padding: 40px 0 20px;
-  position: relative;
-}
-
-.sectionManager {
-  width: 100%;
-  h6 {
-    position: absolute;
-    top: 510px;
-    left: 90px;
-    color: $global-links;
-  } h5 {
-    position: absolute;
-    margin: 480px -156px;
-    text-transform: uppercase;
-    color: #888888;
-  } .manager {
-    position: absolute;
-    margin: 510px -174px;
-    width: 50px;
-} .circleOnline {
-    position: absolute;
-    top: 510px;
-    left: 50px;
-    @include square (10px);
-    @include border-radius (50%);
-    background-color: green;
+  .selectionRectangle {
+    float: left;
+    display: none;
+    background-color: $global-selection;
+    width: 5px;
+    height: 5px;
+    padding: 40px 0 20px;
+  }
+  
+  .sectionManager {
+    background-color: #191919;
+    position: fixed;
+    width: 188px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 0;
+    padding: 0 0 30px 0;
+    h6 {
+      margin: -8% -35% 0 0;
+      color: $global-links;
+    } h5 {
+      text-transform: uppercase;
+      color: #888888;
+      margin: 8% 15%;
+    } .manager {
+      width: 50px;
+      margin: 0 34% 0 0;
+    } .circleOnline {
+      margin: -26% 18% 11% 0;
+      width: 10px;
+      height: 10px;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      border-radius: 50%;
+      background-color: green;
+    }
   }
 }
 
-.section-logo {
-  @include flexbox;
-  .logo {
-  margin-top: 5px;
-  justify-content: flex-start;
-  } .fa {
-      margin: 15px 40px 0;
-      color: $border-color;
-      cursor: pointer;
-  } .fa-bars {
-    color: #888888;
-  } .fa-bars:hover {
-    color: #fff;
-  }
-}
-
-.expanded {
+.expanded { 
   transition: 1s;
-  width: 3.91%; 
-  position: fixed;
-  @include flexbox;
-  min-height: 1700px;
+  width: 40px; 
+  @include flexbox; 
   background-color: #191919;
-  margin: -60px 0 0 0;
+  margin: -75px 0 0 -15px;
+  overflow-y: auto;
+  height: 180vh;
   .logo {
     display: none;
-  }
-
-  .section-logo {
-    .fa {
-   margin: 15px 18px 0;
-  }
- }
+  } 
   .sectionManager {
+    @extend .sectionManager;
+    width: 40px;
     h6 {
       display: none;
     }
@@ -124,13 +119,12 @@
       display: none;
     }
     .manager { 
-      margin: 480px -40px;
       width: 30px;
+      margin: 25% 0;
     }
     .circleOnline {
-      top: 480px;
-      left: 30px;
       @include square (7px);
+      margin: -100% 0 0 46%;
     }   
   }
 
@@ -140,20 +134,43 @@
 
   .asside .icon-li {
     color: #a7a7a7;
+    margin: 0 6% 0 6%;
   } .asside .icon-li:hover {
     color: #fff;
   }
 }
 
 @media screen and (max-width: 900px )  {
-  
+   
   .asideBar { 
-    margin: 0;
+    margin: -15px 0 0 -15px;
+    .sectionManager {
+    display: none;
+    }    
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .asideBar { 
+    height: 370vh;
+    overflow-y: auto;
   }
 
-  .sectionManager {
-  display: none;
-  } 
-    
+  .expanded {
+    height: 370vh;
+    overflow-y: auto;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .asideBar { 
+    height: 370vh;
+    overflow-y: auto;
+  }
+  .expanded {
+    width: 40px; 
+    overflow-y: auto;
+    height: 370vh;
+  }
 }
 
