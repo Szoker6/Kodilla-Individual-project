@@ -1,29 +1,21 @@
 .topbar {
-  z-index: 2;
-  width: 100%;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  height: 60px;
   background-color: #fff;
-  @include flexbox;
-  .icon {
-    margin: 0;
-  }
-  .icon-profile {
-    margin-left: 55px;
-    color: #000;
-  }
-  .icon-wallet {
-    margin: 12px 0 0 8%;
-    float: left;
-  }
+  @include flexbox; 
+  justify-content: flex-end;
+  border-bottom: 1px solid $border-color;
   ul {
-    list-style-type: none;  
+    list-style-type: none;
     padding: 0;
     margin: 0;
     font-size: 18px;
-    height: 2em;
     line-height: 2em;
     text-align: center;
     height: 60px;
-    width: 100%;
+    z-index: 2;
     a {
       color: #b6b6b6;
       text-decoration: none;
@@ -43,7 +35,6 @@ ul > li:hover {
 }
 
 ul > li, ol {
-  z-index: 3;
   float: left;
   list-style-type: none;
   padding: 0;
@@ -53,18 +44,18 @@ ul > li, ol {
   width: 188px;
   border-left: 1px solid $border-color;
   height: 60px;
+  border-bottom: 1px solid $border-color;
   &:hover {
     background-color: #e3e3e3;
-    z-index: 3;
+    z-index: 1;
   }
 }
-  
+
 ol > .listOne {
   float: left;
   width: 189px;
   background-color: #e3e3e3;
   margin: -1px;
-  height: 45px;
   border-left:  1px solid $border-color;
   border-right:  1px solid $border-color;
   border-bottom:  1px solid $border-color;
@@ -81,6 +72,11 @@ ul > li > ol {
 
 ul > li:hover > ol {
   display: block;
+}
+
+.icon-wallet {
+  margin: 12px 0 0 8%;
+  float: left;
 }
 
 .price {
@@ -120,7 +116,7 @@ ul > li:hover > ol {
     }
   } &:hover {
     .icon-notification:before {
-      margin: 0 0 0 -58%;
+      margin: 0px 67px 0 -67px;
     }
   } &:hover {
     .icon-close {
@@ -138,7 +134,7 @@ ul > li:hover > ol {
 }
 
 .icon-notification:before {
-  margin-left: -75%;
+  margin: 0 58% 0 -16%;
   color: #000;
 }
 
@@ -175,12 +171,17 @@ ol > .listTwo {
   margin-left: 38px;
 }
 
+.icon-profile {
+  margin-left: 55px;
+  color: #000;
+}
+
 .icon-close {
   display: none;
 }
 
 .quit {
-  width: 55px;
+  width: 70px;
 }
 
 .notificationText {
@@ -193,8 +194,6 @@ ol > .listTwo {
 
 .smalltopBarMarginLeft {
   @extend .topbar;
-  margin-left: 50px;
-  width: 1230px;
   transition: 1s;
 }
 
@@ -204,53 +203,49 @@ ol > .listTwo {
 }
 
 @media screen and (max-width: 900px )  {
+
   .topbar {
-    
+    overflow-y: scroll; 
+    height: 100%;
+    z-index: 3;
     background-color: #191919;
     position: fixed;
-    top: 500px;
-    left: -0%;
-    width: 50px;
+    top: 480px;
+    left: 0;
     margin-left: 0;
       ul {
         height: 60px;
         margin-left: 0;
     }
     ul > li:hover > ol {
-      display: none;
-    }
-    
+      z-index: 4;
+      position: absolute;
+      top: 100%;
+    }   
   }
 
   .secondMenuList {
     &:hover .icon-profile {
-      position: absolute;
-      top: 57px;
-      left: 18px;
+      position: absolute; 
     }
     &:hover {
       .leonardoText, .rectangle, .icon-profile {
         display: inline-block;
       }
     } &:hover {
-      .icon-notification:before {
-        margin: 0 -34px 0 -42%;
+      .icon-notification:before {  
         color: $border-color;
       }
     } &:hover {
       .icon-close, .rectangle {
         display: none;
       }
-    } &:hover .leonardoText {
-      width: 122px;
-      position: absolute;
-      margin: 55px 0 0 35px;
-    }
+    } 
   }
 
   ul > li:hover {
     .icon-arrow-down-small:before {
-      @include transform(rotate(0deg));
+      @include transform(rotate(0deg));  
     } .price {
       color: $border-color;
       }
@@ -258,15 +253,27 @@ ol > .listTwo {
 
   li { 
     background-color: #191919;
+    border-bottom: none;
   } 
 
   li:hover {
+    background-color: $border-color;
+  }
+
+  .firstMenuList:hover {
     background-color: #191919;
   }
 
   .secondMenuList {
-    width: 50px;
+    position: absolute;
+    top: 57px;
+    width: 188px;
     border-left: none;
+    &:hover {
+      background-color: #191919;
+    } &:hover .icon-notification:before {
+      margin: 0 -9px 0px 7px;
+    }  
   }
 
   ol > .listTwo {
@@ -279,69 +286,59 @@ ol > .listTwo {
 
   .icon {
     color: $border-color;
-    margin: 0;
-    padding: 0;
+  }
+
+  .icon-wallet {
+    margin: 13px 0 0 23px;
+    float: left;
   }
 
   .price {
     float: left;
     font-size: $paragraph-font-size;
-    margin: -50px 0px 0 68px;
+    margin: 11px 0px 0 26px;
   }
 
   .icon-arrow-down-small {
-    margin: 0px -234px 0 0;
+    margin: 0;
   }
 
   .icon-notification:before {
     color: $border-color;
-    margin: 0px 117px 0 14px;
-    position: relative;
+    margin: 0 -9px 0 9px;
   }
 
   .notificationText {
     display: inline-block;
-    position: absolute;
-    top: -3px;
-    left: 62px;
-  }
-
-  .icon-profile {
-    position: absolute;
-    top: 57px;
-    left: 18px;
-  }
-
-  .leonardoText {
-    width: 122px;
-    position: absolute;
-    margin: -5px 0 0 18px;
-    display: inline-block;
-    color: $border-color;
-  }
-
-  .icon-wallet {
-    margin: 12px 0 0 40%;
-  }
-
-  .quit {
-    width: 0px;
-    display: inline-block;
-    margin-left: 20px;
+    margin: 0 44px 0 34px;
     position: relative;
   }
 
-  .logoutText {
-    top: 57px;
-    left: 0;
-    position: absolute;
-    margin: 0 0 0 56px;
-    display: inline-block;
+  .icon-profile {
+    position: absolute; 
+    left: -34px;
+    top: 58px;
   }
 
-  .circle {
-    left: 26px;
-    top: 16px;
+  .leonardoText {
+    position: absolute;
+    left: 38px;
+    top: 58px;
+    color: $border-color;
+  }
+
+  .quit {
+    position: absolute; 
+    top: 175px;
+    left: -9px;
+    z-index: -1;
+  }
+
+  .logoutText {
+    display: inline-block;
+    position: absolute;
+    top: 10px;
+    left: 87px;
   }
 
   .rectangle {
@@ -349,36 +346,48 @@ ol > .listTwo {
   }
 
   ul > li, ol {
-    z-index: -1;
     border-left: none;
-    width: 50px;
+    width: 188px;
   } 
- 
-
-
-ol > .listTwo a:hover {
-  .circleTwo {
-    display: none;
-    }
-  .circleOne {
-    display: none;
-    }
-  }
 
   .smalltopBarMarginLeft {
-   
     .logoutText, .notificationText, .price, .leonardoText, .icon-arrow-down-small {
+      display: none;
+    } 
+
+    .secondMenuList, .firstMenuList {
+      width: 40px;
+    }
+
+    .icon-wallet {
+      margin: 0 0 0 12px;
+    }
+
+    .icon-notification:before {
+      margin: 0 10px 0 5px;
+    }
+
+    .circle {
+      margin: -1px 0px 0 -8px; 
+    }
+
+    .icon-profile {
+      margin: 0 0 0 46px;
+    }
+
+    .quit {
+      margin: 0 0px 0 6px;
+      width: 40px;
+    }
+
+    .firstMenuList:hover ol {
+      display: none;
+    }
+  
+    .secondMenuList:hover .leonardoText {
       display: none;
     }
   }
-  
+}
 
-  .icon-profile {
-    margin-top: 0px;
-  }
-
-    ol > .listTwo {
-      width: 51px;
-    } 
-  }
-  
+ 
