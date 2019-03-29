@@ -58,8 +58,6 @@
 }
 
 .smallLinksMarginLeft {
-    @extend .links;
-    margin-left: 4.5%;
-    width: 94,5%;
-    transition: 1s;
+    @extend .smallGeneralMarginLeft;
+    
 }
