@@ -1,669 +1,804 @@
 .topbar {
-    z-index: 1;
-    top: 0;
-    left: 0;
-    height: 60px;
-    background-color: #fff;
-    @include flexbox; 
-    justify-content: flex-end;
-    border-bottom: 1px solid $border-color;
-    ul {
-      list-style-type: none;
-      padding: 0;
-      margin: 0;
-      font-size: 18px;
-      line-height: 2em;
-      text-align: center;
-      height: 60px;
-      z-index: 2;
-      a {
-        color: #b6b6b6;
-        text-decoration: none;
-        padding: 0 5px;
-        line-height: 60px;
-        font-size: $paragraph-font-size;
-      }
-    }
-  }
-  
-  ul > li:hover {
-    .icon-arrow-down-small:before {
-      @include transform(rotate(180deg));
-    } .price {
-      color: #000;
-      }
-  }
-  
-  ul > li, ol {
-    float: left;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  height: 60px;
+  background-color: #fff;
+  @include flexbox; 
+  justify-content: flex-end;
+  border-bottom: 1px solid $border-color;
+  ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
-  } li { 
-    background-color: #fff;
-    width: 188px;
-    border-left: 1px solid $border-color;
-    height: 60px;
-    border-bottom: 1px solid $border-color;
-    &:hover {
-      background-color: #e3e3e3;
-      z-index: 1;
-    }
-  }
-  
-  ol > .listOne {
-    float: left;
-    width: 189px;
-    background-color: #e3e3e3;
-    margin: -1px;
-    border-left:  1px solid $border-color;
-    border-right:  1px solid $border-color;
-    border-bottom:  1px solid $border-color;
-    a:hover {
+    font-size: 18px;
+    line-height: 2em;
+    text-align: center;
+    z-index: 2;
+    a {
       color: $paragraph-color;
-    } &:last-child {
-      height: 60px;
+      text-decoration: none;
+      padding: 0 5px;
+      line-height: 60px;
+      font-size: $paragraph-font-size;
     }
   }
-  
-  ul > li > ol {
-    display: none;
-  }
-  
-  ul > li:hover > ol {
-    display: block;
-  }
-  
-  .icon-wallet {
-    margin: 12px 0 0 8%;
-    float: left;
-  }
-  
-  .price {
-    float: left;
-    color: #b6b6b6;
-    margin: 11px 13px 0;
-  }
-  
-  .leftmenu {
-    float: left;
-    margin-left: 20px;
-  }
-  
-  .rightmenu {
-    float: right;
-    margin-right: 20px;
-  }
-  
-  .circle {
-    display: block;
+}
+
+ul > li:hover {
+  .icon-arrow-down-small:before {
+    @include transform(rotate(180deg));
+  } .price {
+    color: #000;
+    }
+}
+
+ul > li, ol {
+  float: left;
+  padding: 0;
+  list-style-type: none;
+} li { 
+  width: 188px;
+  border-left: 1px solid $border-color;
+  height: 60px;
+  border-bottom: 1px solid $border-color;
+  &:hover {
+    background-color: #e3e3e3;
     z-index: 1;
-    position: absolute;
-    left: 28px;
-    top: 18px;
-    @include square (8px);
-    @include border-radius (50%);
-    background-color: $global-selection;
   }
-  
-  .secondMenuList {
-    border-left:  1px solid $border-color;
-    width: 234px;
-    position: relative;
-    &:hover {
-      .circle, .leonardoText, .rectangle, .icon-profile {
-        display: none;
-      }
-    } &:hover {
-      .icon-notification:before {
-        margin: 0px 67px 0 -67px;
-      }
-    } &:hover {
-      .icon-close {
-        display: block;
-        color: #000;
-        float: right;
-        margin-right: 15px;
-      }
+}
+
+ol > .listOne {
+  float: left;
+  width: 189px;
+  background-color: #e3e3e3;
+  height: 35px;
+  margin: 0px -1px -1px -1px;
+  border-right:  1px solid $border-color; 
+  a {
+    line-height: 1px;
+  }
+}
+
+ul > li > ol {
+  display: none;
+}
+
+ul > li:hover > ol {
+  display: block;
+}
+
+.icon-wallet {
+  margin: 12px 0 0 8%;
+  float: left;
+}
+
+.price {
+  float: left;
+  color: #b6b6b6;
+  margin: 11px 13px 0;
+}
+
+.leftmenu {
+  float: left;
+  margin-left: 20px;
+  color: #b6b6b6; 
+}
+
+.rightmenu {
+  float: right;
+  margin-right: 20px;
+}
+
+.circle {
+  display: block;
+  z-index: 1;
+  position: absolute;
+  left: 28px;
+  top: 18px;
+  @include square (8px);
+  @include border-radius (50%);
+  background-color: $global-selection;
+}
+
+.secondMenuList {
+  border-left:  1px solid $border-color;
+  width: 234px;
+  position: relative;
+  &:hover {
+    .circle, .leonardoText, .rectangle, .icon-profile {
+      display: none;
+    }
+  } &:hover {
+    .icon-notification:before {
+      margin: 0px 67px 0 -67px;
+    }
+  } &:hover {
+    .icon-close {
+      display: block;
+      color: #000;
+      float: right;
+      margin-right: 15px;
     }
   }
-  
-  .leonardoText {
+}
+
+.leonardoText {
+  color: $global-links;
+  margin-left: 12px;
+}
+
+.icon-notification:before {
+  margin: 0 58% 0 -16%;
+  color: #000;
+}
+
+.rectangle {
+  margin: -60px 0% -26% 24%;
+  width: 1px;
+  height: 60px;
+  background-color: $border-color;
+}
+
+ol > .listTwo {
+  width: 235px;
+  @extend .listOne;
+  :hover {
+    .circleOne {
+      display: inline-block;
+    }
+  } a {
     color: $global-links;
-    margin-left: 12px;
+    @extend .leftmenu;
   }
-  
-  .icon-notification:before {
-    margin: 0 58% 0 -16%;
-    color: #000;
-  }
-  
-  .rectangle {
-    margin: -60px 0% -26% 24%;
-    width: 1px;
-    height: 60px;
-    background-color: $border-color;
-  }
-  
-  ol > .listTwo {
-    width: 235px;
-    @extend .listOne;
-    :hover {
-      .circleOne {
-        display: inline-block;
-      }
-    } a {
-      color: $global-links;
-      @extend .leftmenu;
-    }
-  }
-  
-  .circleOne {
-    display: none;
-    @include square (8px);
-    @include border-radius (50%);
-    background-color: $global-selection;
-    margin-left: 30px;
-  }
-  
-  .circleTwo {
-    @extend .circleOne;
-    margin-left: 38px;
-  }
-  
-  .icon-profile {
-    margin-left: 55px;
-    color: #000;
-  }
-  
-  .icon-close {
-    display: none;
-  }
-  
-  .quit {
-    width: 70px;
-  }
-  
-  .notificationText {
-    display: none;
-  }
-  
-  .logoutText {
-    display: none;
-  }
-  
-  .smalltopBarMarginLeft {
-    @extend .topbar;
-    transition: 1s;
-  }
-  
-  .smalltopBarMarginLeft ul {
-    justify-content: flex-end;
-    transition: 1s; 
-  }
-  
-  .asideBar { 
-    position: fixed;
-    @include flexbox;
-    height: 200vh;
-    width: 188px;
-    background-color: #191919;
-    margin: -75px 0 0 -15px;
-    transition: 1s; 
-    z-index: 1;
-    .asside {
-      list-style-type: none;    
-      padding: 0;
-      margin: 0;
-      font-size: 18px;
-      text-align: center;
-      width: 100%;
-      li {
-        float: none;
-        border: none;
-        text-align: left;
-        background-color: #191919;
-        color: #888888;
-        &:hover {
-          background-color: #282828;      
-        } &:hover .selectionRectangle {
-          display: inline-block;
-        } a {
-          color: #b6b6b6;
-          text-decoration: none;
-          line-height: 60px;
-          font-size: $paragraph-font-size;
-          display: block;
-          margin-bottom: -30px;
-        } a:last-child {
-          border-bottom: 1px solid $border-color;
-        } a:hover { 
-          color: #fff;   
-        }
-      } .icon-li {
-        color: #000;
-        margin: 0 20px 0 20px;
-      }
-      .section-logo {
-        @include flexbox;
-        .logo {
-        margin-top: 5px;
-        justify-content: flex-start;
-        } .fa {
-          margin: 16px 0px 0 11px;
-          color: $border-color;
-          cursor: pointer;
-        } .fa-bars {
-          color: #888888;
-        } .fa-bars:hover {
-          color: #fff;
-        }
-      }
-    } 
-    .selectionRectangle {
-      float: left;
-      display: none;
-      background-color: $global-selection;
-      width: 5px;
-      height: 5px;
-      padding: 40px 0 20px;
-    }
-    
-    .sectionManager {
-      background-color: #191919;
-      position: fixed;
-      width: 188px;
-      display: flex;
-      align-items: center;
-      flex-direction: column;
-      margin: 0;
-      padding: 0 0 30px 0;
-      h6 {
-        margin: -8% -35% 0 0;
-        color: $global-links;
-      } h5 {
-        text-transform: uppercase;
-        color: #888888;
-        margin: 8% 15%;
-      } .manager {
-        width: 50px;
-        margin: 0 34% 0 0;
-      } .circleOnline {
-        margin: -26% 18% 11% 0;
-        width: 10px;
-        height: 10px;
-        -webkit-border-radius: 50%;
-        -moz-border-radius: 50%;
-        -ms-border-radius: 50%;
-        border-radius: 50%;
-        background-color: green;
-      }
-    }
-  }
-  
-  .expanded { 
+}
+
+.circleOne {
+  display: none;
+  @include square (8px);
+  @include border-radius (50%);
+  background-color: $global-selection;
+  margin-left: 30px;
+}
+
+.circleTwo {
+  @extend .circleOne;
+  margin-left: 38px;
+}
+
+.icon-profile {
+  margin-left: 55px;
+  color: #000;
+}
+
+.icon-close {
+  display: none;
+}
+
+.quit {
+  width: 70px;
+}
+
+.notificationText {
+  display: none;
+}
+
+.logoutText {
+  display: none;
+}
+
+.smalltopBarMarginLeft {
+  @extend .topbar;
+  transition: 1s;
+}
+
+.smalltopBarMarginLeft ul {
+  justify-content: flex-end;
+  transition: 1s; 
+}
+
+.asideBar { 
+  position: absolute;
+  @include flexbox;
+  height: 380vh;
+  width: 188px;
+  background-color: #191919;
+  margin: -75px 0 0 -15px;
+  transition: 1s; 
+  .asside {   
+    padding: 0;  
+    font-size: 18px;
     li {
-        width: 40px;
-    }
-    transition: 1s;
-    width: 40px; 
-    @include flexbox; 
-    background-color: #191919;
-    margin: -75px 0 0 -15px;
-    height: 180vh;
-    .logo {
-      display: none;
-    } 
-    .sectionManager {
-      @extend .sectionManager;
-      width: 40px;
-      h6 {
-        display: none;
+      float: none;
+      border: none; 
+      background-color: #191919;
+      &:hover {
+        background-color: #282828;      
+      } &:hover .selectionRectangle {
+        display: inline-block;
+      } a {
+        color: #b6b6b6;
+        text-decoration: none;
+        line-height: 60px;
+        font-size: $paragraph-font-size;
+        display: block;
+      } a:last-child {
+        border-bottom: 1px solid $border-color;
+        padding: 5px;
+      } a:hover { 
+        color: #fff;   
       }
-      h5  {
-        display: none;
+    } .icon-li {
+      color: #000;
+      margin: 0 20px 0;
+    }
+    .section-logo {
+      @include flexbox;
+      .logo {
+      margin-top: -3px;
+      justify-content: flex-start;
+      } .hamburger {
+        font-size: 20px;
+      }.fa {
+        margin: 8px 0px 0 55px;
+        color: $border-color;
+        cursor: pointer;
+      }.fa-bars:hover {
+        color: #fff;
       }
-      .manager { 
-        width: 30px;
-        margin: 25% 0;
-      }
-      .circleOnline {
-        @include square (7px);
-        margin: -100% 0 0 46%;
-      }   
     }
-  
-    .text {
-      display: none;
-    }
-  
-    .asside .icon-li {
-      color: #a7a7a7;
-      margin: 0 0 0 23%;
-    } .asside .icon-li:hover {
-      color: #fff;
-    }
+  } 
+  .selectionRectangle {
+    float: left;
+    display: none;
+    background-color: $global-selection;
+    width: 5px;
+    height: 5px;
+    padding: 40px 0 20px;
   }
   
+  .sectionManager {
+    margin-top: 10px;
+    background-color: #191919;
+    position: fixed;
+    width: 188px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    h6 {
+      margin: -8% -35% 0 0;
+      color: $global-links;
+    } h5 {
+      text-transform: uppercase;
+      color: #888888;
+      margin: 8% 15%;
+    } .manager {
+      width: 50px;
+      margin: 0 34% 0 0;
+    } .circleOnline {
+      margin: -26% 18% 11% 0;
+      @include square(10px);
+      @include border-radius(50%);
+      background-color: green;
+    }
+  }
+}
+
+.expanded { 
+    .asside {
+      .section-logo {
+         .fa {
+    margin: 8px 0px 0 11px;
+        }
+      }
+    }      
+  
+  li {
+      width: 40px;
+  }
+  transition: 1s;
+  width: 40px; 
+  @include flexbox; 
+  background-color: #191919;
+  margin: -75px 0 0 -15px;
+  height: 180vh;
+  .logo {
+    display: none;
+  }
+  .sectionManager {
+    @extend .sectionManager;
+    width: 40px;
+    h6 {
+      display: none;
+    }
+    h5  {
+      display: none;
+    }
+    .manager { 
+      width: 30px;
+      margin: 25% 0;
+    }
+    .circleOnline {
+      @include square (7px);
+      margin: -100% 0 0 46%;
+    }   
+  }
+
+  .text {
+    display: none;
+  }
+
+  .asside .icon-li {
+    color: #a7a7a7;
+    margin: 0 0 0 23%;
+  } .asside .icon-li:hover {
+    color: #fff;
+  }
+}
+
 .general {
-    margin-left: 192px;
-    margin-right: auto;
-    background-color: #fff;
-    padding-bottom: 20px;
-    margin-top: -45px;
-    transition: 1s;
-    h3 {
-        padding: 20px;
-        color: $border-color;
-        text-transform: uppercase;
-        border-bottom: 1px solid $border-color;
-    }
+  margin-left: 192px;
+  margin-right: auto;
+  background-color: #fff;
+  padding-bottom: 20px;
+  margin-top: -30px;
+  transition: 1s;
+  h3 {
+      padding: 25px;
+      color: $border-color;
+      text-transform: uppercase;
+      border-bottom: 1px solid $border-color;
+  }
 
-    .contentDate {
-        margin-top: 25px;
-        .date {
-            position: relative;
-            border: 1px solid $border-color;
-            max-width: 300px;
-            height: 40px;
-            margin: 0 auto;
-            @include border-radius (5px);
-        } p {
-            display: inline-block;
-            position: relative;
-            margin: 12px 10%;
-        } p:hover {
-            color: $global-links;
-        } .dateP {
-            margin: 0 10% 0 8%;
-        } .dateP:after {
-            position: absolute;
-            background-color: $border-color;
-            content: " ";
-            width: 1px;
-            height: 30px;
-            right: -30%;
-            bottom: -6px;
-        }
-        .icon {
-            margin: 0 0 -1.5% 12%;
-        }
-        .buttonSubmit {
-            position: absolute;
-            left: 104%;
-            top: -3.5%;
-            background-color: $button-color;
-            cursor: pointer;
-            @include square (40px);
-            @include border-radius (5px);
-            .vectoricon {
-                margin: 10px;
-                width: 50%;   
-            }
-        }.buttonSubmit:hover {
-            background-color: $button-hover;
-        }
-    } 
+  .contentDate {
+      margin-top: 20px;
+      .date {
+          position: relative;
+          border: 1px solid $border-color;
+          max-width: 300px;
+          height: 40px;
+          margin: 0 auto;
+          @include border-radius (5px);
+      } p {
+          display: inline-block;
+          position: relative;
+          margin: 12px 10%;
+      } p:hover {
+          color: $global-links;
+      } .dateP {
+          margin: 0 10% 0 8%;
+      } .dateP:after {
+          position: absolute;
+          background-color: $border-color;
+          content: " ";
+          width: 1px;
+          height: 30px;
+          right: -30%;
+          bottom: -6px;
+      }
+      .icon {
+          margin: 0 0 -1.5% 12%;
+      }
+      .buttonSubmit {
+          position: absolute;
+          left: 104%;
+          top: -3.5%;
+          background-color: $button-color;
+          cursor: pointer;
+          @include square (40px);
+          @include border-radius (5px);
+          .vectoricon {
+              margin: 10px;
+              width: 50%;   
+          }
+      }.buttonSubmit:hover {
+          background-color: $button-hover;
+      }
+  } 
 
-    .icon-calendar {
-        margin: 0 0 0 6%;
-        cursor: pointer;
-    } .icon-calendar:hover {
-        color: $global-links;
-    }
+  .icon-calendar {
+      margin: 0 0 0 6%;
+      font-size: 12px;
+      cursor: pointer;
+  } .icon-calendar:hover {
+      color: $global-links;
+  }
 
-    .borderBottom {
-        border-bottom: 1px solid $border-color;
-        padding-top: 100px;
-    }
-    .statistic {
-        width: 65%;
-        margin: 0 auto;
-        .borderBottom {
-            border-bottom: 1px solid $border-color;
-            padding: 0;
-        } h4 {
-            color: $border-color;
-            display: inline-block;
-        } .h4Number {
-            color: #000;
-            float: right;
-            font-weight: 400;
-        } 
-    }
+  .borderBottom {
+      border-bottom: 1px solid $border-color;
+      padding-top: 60px;
+  }
+  .statistic {
+      width: 65%;
+      margin: 0 auto;
+      .borderBottom {
+          border-bottom: 1px solid $border-color;
+          padding: 0;
+      } h4 {
+          color: $border-color;
+          display: inline-block;
+      } .h4Number {
+          color: #000;
+          float: right;
+          font-weight: 400;
+      } 
+  }
 }
 
 .smallGeneralMarginLeft {
-    margin-left: 40px;
-    transition: 1s;
+  margin-left: 40px;
+  transition: 1s;
 }
 
 .links {
-    @extend .general;
-    h3 {
-        @extend h3;
-    }
-    .btn-orange {
-        display: block;
-        margin: 0 auto;
-        background-color: $button-color;
-        color: #fff;
-        border: none;
-        width: 130px;
-        padding: 11px 0;
-        @include border-radius (10px);
-        cursor: pointer;
-    } .btn-orange:hover {
-        background-color: $button-hover;
-    }
-    .table {
-        margin: 20px auto;
-        width: 55%;
-        padding: 15px;
-        border-collapse: collapse;
-        line-height: 25px;
-        color: $border-color;
-        tr {
-            min-height: 35px;
-            @include flexbox;
-            flex-wrap: wrap;
-            border-bottom: 1px solid;  
-            justify-content: space-between;
-            @include transition (2s);
-            padding-left: 5px; 
-            td {
-                text-align: center;
-            }
-            a {
-                text-decoration: none;
-                color: $global-links;
-            } a:hover {
-                color: $global-selection;
-                @include transition (0.3s);
-            }
-            i {
-                float: right;
-                margin-right: 15px;
-                display: none;
-                cursor: pointer;
-            } i:hover {
-                color: $global-selection;
-            }
-        } tr:first-child {
-            border-top: 1px solid;
-        } tr:hover {
-            background-color: #f1f3f3;
-        } tr:hover i {
-            @include transition (0.3s);
-            display: inline-block;
-        }
-    }    
+  @extend .general;
+  h3 {
+      @extend h3;
+  }
+  .btn-orange {
+      display: block;
+      margin: 0 auto;
+      background-color: $button-color;
+      color: #fff;
+      border: none;
+      width: 130px;
+      padding: 11px 0;
+      @include border-radius (10px);
+      cursor: pointer;
+  } .btn-orange:hover {
+      background-color: $button-hover;
+  }
+  .table {
+      margin: 20px auto;
+      width: 55%;
+      padding: 15px;
+      border-collapse: collapse;
+      line-height: 25px;
+      color: $border-color;
+      tr {
+          min-height: 35px;
+          @include flexbox;
+          flex-wrap: wrap;
+          border-bottom: 1px solid;  
+          justify-content: space-between;
+          @include transition (2s);
+          padding-left: 5px; 
+          td {
+              text-align: center;
+          }
+          a {
+              text-decoration: none;
+              color: $global-links;
+          } a:hover {
+              color: $global-selection;
+              @include transition (0.3s);
+          }
+          i {
+              float: right;
+              margin-right: 15px;
+              display: none;
+              cursor: pointer;
+          } i:hover {
+              color: $global-selection;
+          }
+      } tr:first-child {
+          border-top: 1px solid;
+      } tr:hover {
+          background-color: #f1f3f3;
+      } tr:hover i {
+          @include transition (0.3s);
+          display: inline-block;
+      }
+  }    
 }
 
 .smallLinksMarginLeft {
-    @extend .smallGeneralMarginLeft;   
+  @extend .smallGeneralMarginLeft;   
 } 
 
-@media (min-width: 992px) and (max-width: 1199px) {
-    
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  justify-content: center;
+  align-items: center;
+  overflow: auto;
+  padding: 30px; 
+  display: none;
 }
 
-@media (min-width: 768px) and (max-width: 991px) {
-   
+.overlay.show {
+  display: flex;
 }
 
-@media (min-width: 576px) and (max-width: 767px) {
-    
+.overlay::webkit-scrollbar {
+  display: none;
+}
+
+.modal {
+  max-width: 720px;
+  margin: auto;
+  background-color: #ffffff;
+  position: relative;
+  padding: 35px 20px;
+  display: none;
+}
+
+.modal.show {
+  display: block;
+}
+
+.modal .btn-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 5px 10px;
+}
+
+.modal-header {
+  padding: 2px;  
+  color: #000;
+  h4 {
+      margin: 0;
+      text-transform: uppercase;
+      color: $border-color;
+      font-weight: 200;
+  }
+}
+
+.modal-body {
+    border-top: 1px solid #888;
+    padding: 50px 20px 20px;
+}
+
+.input {
+  position: relative;
+  display: inline-block;
+  .icon-login {
+    position: absolute;
+    left: 3%;
+    top: 20%;
+  }
+  .icon-password {
+    @extend .icon-login;
+  }
+}
+
+.inputPadding {
+  padding: 6px 0 6px 25px;
+}
+
+button {
+cursor: pointer;
+-webkit-border-radius: 3px;
+-moz-border-radius:    3px;
+-ms-border-radius:     3px;
+border-radius:         3px;
+background-color: #ffa200;
+color: #fff;
+border: none;
+display: inline-block;
+padding: 8px 60px;
+} button:hover {
+background-color: #f58220;
 }
 
 @media screen and (max-width: 900px )  {
-  
-    .topbar {
-      height: 100%;
-      z-index: 3;
-      background-color: #191919;
-      position: fixed;
-      top: 500px;
-      left: 0;
-      margin-left: 0;
-        ul {
-          height: 60px;
-          margin-left: 0;
-      }
-      ul > li:hover > ol {
-        z-index: 4;
-        position: absolute;
-        top: 100%;
-      }   
+
+  .topbar {
+    height: 320vh;
+    z-index: 3;
+    background-color: #191919;
+    position: absolute;
+    top: 500px;
+    left: 0;
+    margin-left: 0;
+      ul {
+        height: 60px;
+        margin-left: 0;
     }
-  
-    .secondMenuList {
-      &:hover .icon-profile {
-        position: absolute; 
-      }
-      &:hover {
-        .leonardoText, .rectangle, .icon-profile {
-          display: inline-block;
-        }
-      } &:hover {
-        .icon-notification:before {  
-          color: $border-color;
-        }
-      } &:hover {
-        .icon-close, .rectangle {
-          display: none;
-        }
-      } 
+    ol > .listOne {
+      z-index: 4;
+      padding: 50px 0 16px 0px;
+      top: 5%;
+    }   
+    
+  }
+
+  .secondMenuList {
+    &:hover .icon-profile {
+      position: absolute; 
     }
-  
-    ul > li:hover {
-      .icon-arrow-down-small:before {
-        @include transform(rotate(0deg));  
-      } .price {
+    &:hover {
+      .leonardoText, .rectangle, .icon-profile {
+        display: inline-block;
+      }
+    } &:hover {
+      .icon-notification:before {  
         color: $border-color;
-        }
-    }
-  
-    li { 
-      background-color: #191919;
-      border-bottom: none;
+      }
+    } &:hover {
+      .icon-close, .rectangle {
+        display: none;
+      }
     } 
-  
-    li:hover {
-      background-color: $border-color;
-    }
-  
-    .firstMenuList:hover {
-      background-color: #191919;
-    }
-  
-    .secondMenuList {
-      position: absolute;
-      top: 57px;
-      width: 188px;
-      border-left: none;
-      &:hover {
-        background-color: #191919;
-      } &:hover .icon-notification:before {
-        margin: 0 -9px 0px 7px;
-      }  
-    }
-  
-    ol > .listTwo {
-      display: none;
-    } 
-  
-    .rectangle {
-      display: none;
-    }
-  
-    .icon {
+  }
+
+  ul > li:hover {
+    .icon-arrow-down-small:before {
+      @include transform(rotate(0deg));  
+    } .price {
       color: $border-color;
+      }
+  }
+
+  li { 
+    background-color: #191919;
+    border-bottom: none;
+  } 
+
+  li:hover {
+    background-color: $border-color;
+  }
+
+  .firstMenuList:hover {
+    background-color: #191919;
+    
+  }
+
+  .secondMenuList {
+    z-index: -1;
+    position: absolute;
+    top: 57px;
+    width: 188px;
+    border-left: none;
+    &:hover {
+      background-color: #191919;
+    } &:hover .icon-notification:before {
+      margin: 0 -9px 0px 7px;
+    }  
+  }
+
+  ol > .listTwo {
+    display: none;
+  } 
+
+  .rectangle {
+    display: none;
+  }
+
+  .icon {
+    color: $border-color;
+  }
+
+  .icon-wallet {
+    margin: 13px 0 0 23px;
+    float: left;
+  }
+
+  .price {
+    float: left;
+    font-size: $paragraph-font-size;
+    margin: 11px 0px 0 26px;
+  }
+
+  .icon-arrow-down-small {
+    margin: 0;
+  }
+
+  .icon-notification:before {
+    color: $border-color;
+    margin: 0 -9px 0 9px;
+  }
+
+  .notificationText {
+    display: inline-block;
+    margin: 0 44px 0 34px;
+    position: relative;
+  }
+
+  .icon-profile {
+    position: absolute; 
+    left: -34px;
+    top: 58px;
+  }
+
+  .leonardoText {
+    position: absolute;
+    left: 38px;
+    top: 58px;
+    color: $border-color;
+  }
+
+  .quit {
+    position: absolute; 
+    top: 175px;
+    left: -9px;
+    z-index: -1;
+  }
+
+  .logoutText {
+    display: inline-block;
+    position: absolute;
+    top: 10px;
+    left: 87px;
+  }
+
+  .rectangle {
+    display: none;
+  }
+
+  ul > li, ol {
+    border-left: none;
+    width: 188px;
+  } 
+
+  .smalltopBarMarginLeft {
+    .logoutText, .notificationText, .price, .leonardoText, .icon-arrow-down-small {
+      display: none;
+    } 
+
+    .secondMenuList, .firstMenuList {
+      width: 40px;
     }
-  
+
     .icon-wallet {
-      margin: 13px 0 0 23px;
-      float: left;
+      margin: 0 0 0 12px;
     }
-  
-    .price {
-      float: left;
-      font-size: $paragraph-font-size;
-      margin: 11px 0px 0 26px;
-    }
-  
-    .icon-arrow-down-small {
-      margin: 0;
-    }
-  
+
     .icon-notification:before {
-      color: $border-color;
-      margin: 0 -9px 0 9px;
+      margin: 0 10px 0 5px;
     }
-  
-    .notificationText {
-      display: inline-block;
-      margin: 0 44px 0 34px;
-      position: relative;
+
+    .circle {
+      margin: -1px 0px 0 -8px; 
     }
-  
+
     .icon-profile {
-      position: absolute; 
-      left: -34px;
-      top: 58px;
+      margin: 0 0 0 46px;
     }
-  
-    .leonardoText {
-      position: absolute;
-      left: 38px;
-      top: 58px;
-      color: $border-color;
-    }
-  
+
     .quit {
-      position: absolute; 
-      top: 175px;
-      left: -9px;
-      z-index: -1;
+      margin: 0 0px 0 6px;
+      width: 40px;
     }
-  
-    .logoutText {
-      display: inline-block;
-      position: absolute;
-      top: 10px;
-      left: 87px;
-    }
-  
-    .rectangle {
+
+    .firstMenuList:hover ol {
       display: none;
     }
   
-    ul > li, ol {
-      border-left: none;
-      width: 188px;
-    } 
-  
-    .smalltopBarMarginLeft {
+    .secondMenuList:hover .leonardoText {
+      display: none;
+    }
+  }
+  .asideBar { 
+      margin: -15px 0 0 -15px;
+      .sectionManager {
+      display: none;
+      }         
+    }
+
+  .general {
+      margin: -60px auto 0 192px;
+      p {
+          font-size: 14px;
+      }
+      .statistic {
+         width: 85%;
+      }
+ }
+ .smallGeneralMarginLeft {
+     margin-left: 40px;
+     transition: 1s;
+ }
+}
+
+@media only screen and (max-width: 575px) {
+  .topbar {
       .logoutText, .notificationText, .price, .leonardoText, .icon-arrow-down-small {
         display: none;
       } 
@@ -701,157 +836,102 @@
         display: none;
       }
     }
-    .asideBar { 
-        margin: -15px 0 0 -15px;
-        .sectionManager {
-        display: none;
-        }    
-      }
-
-    .general {
-        margin: -60px auto 0 192px;
-        p {
-            font-size: 14px;
-        }
-        .statistic {
-           width: 85%;
-        }
-   }
-   .smallGeneralMarginLeft {
-       margin-left: 40px;
-       transition: 1s;
-   }
-}
-
-@media only screen and (max-width: 575px) {
-    .topbar {
-        .logoutText, .notificationText, .price, .leonardoText, .icon-arrow-down-small {
-          display: none;
-        } 
-    
-        .secondMenuList, .firstMenuList {
-          width: 40px;
-        }
-    
-        .icon-wallet {
-          margin: 0 0 0 12px;
-        }
-    
-        .icon-notification:before {
-          margin: 0 10px 0 5px;
-        }
-    
-        .circle {
-          margin: -1px 0px 0 -8px; 
-        }
-    
-        .icon-profile {
-          margin: 0 0 0 46px;
-        }
-    
-        .quit {
-          margin: 0 0px 0 6px;
-          width: 40px;
-        }
-    
-        .firstMenuList:hover ol {
-          display: none;
-        }
-      
-        .secondMenuList:hover .leonardoText {
-          display: none;
-        }
-      }
-        .asideBar {
-            li {
-                width: 40px;
+      .asideBar {
+         .asside {
+            .section-logo {
+               .fa {
+                 margin: 8px 0px 0 11px;
+              }
             }
-            transition: 1s;
-            width: 40px; 
-            @include flexbox; 
-            background-color: #191919;
-            margin: -15px 0 0 -15px;
-            height: 180vh;
-            .logo {
-              display: none;
-            } 
-            .sectionManager {
+          }
+          li {
               width: 40px;
-              h6 {
-                display: none;
-              }
-              h5  {
-                display: none;
-              }
-              .manager { 
-                width: 30px;
-                margin: 25% 0;
-              }
-              .circleOnline {
-                @include square (7px);
-                margin: -100% 0 0 46%;
-              }   
-            }
-          
-            .text {
+          }
+          transition: 1s;
+          width: 40px; 
+          @include flexbox; 
+          background-color: #191919;
+          margin: -15px 0 0 -15px;
+          height: 180vh;
+          .logo {
+            display: none;
+          } 
+          .sectionManager {
+            width: 40px;
+            h6 {
               display: none;
             }
-          
-            .asside .icon-li {
-              color: #a7a7a7;
-              margin: 0 0 0 23%;
-            } .asside .icon-li:hover {
-              color: #fff;
+            h5  {
+              display: none;
             }
-        }
-
-    .general {
-        margin-left: 40px;   
-        p {
-            font-size: 12px;
-        }
-        h3 {
-            display: flex;
-            justify-content: center;
-            font-size: 16px;
-        }
-        .statistic {
-           width: 95%;
-        }
-
-        .icon-calendar {
-            line-height: 34px;
-        }
-
-        .contentDate {
-            p {
-                 margin: 12px 2%;
+            .manager { 
+              width: 30px;
+              margin: 25% 0;
             }
-            .date {  
-                max-width: 250px;
-                height: 35px;  
-                margin: 0;
-                p {
-                    margin: 0 9% 0 6%;
-                } 
-            }
-            .buttonSubmit { 
-                @include square (35px);
-            }      
-        }
+            .circleOnline {
+              @include square (7px);
+              margin: -100% 0 0 46%;
+            }   
+          }
         
-        .chart {
-            h4 {
-                display: flex;
-                justify-content: center;
-            }
-        }
-   }
+          .text {
+            display: none;
+          }
+        
+          .asside .icon-li {
+            color: #a7a7a7;
+            margin: 0 0 0 23%;
+          } .asside .icon-li:hover {
+            color: #fff;
+          }
+      }
 
-   .links {
-        .btn-orange {
-            width: 30%;
-        }
-   }
+  .general {
+      margin-left: 40px;   
+      p {
+          font-size: 12px;
+      }
+      h3 {
+          display: flex;
+          justify-content: center;
+          font-size: 16px;
+      }
+      .statistic {
+         width: 95%;
+      }
+
+      .icon-calendar {
+          line-height: 34px;
+      }
+
+      .contentDate {
+          p {
+               margin: 12px 2%;
+          }
+          .date {  
+              max-width: 200px;
+              height: 35px;  
+              margin: 0 auto;
+              p {
+                  margin: 0 9% 0 6%;
+              } 
+          }
+          .buttonSubmit { 
+              @include square (35px);
+          }      
+      }
+      
+      .chart {
+          h4 {
+              display: flex;
+              justify-content: center;
+          }
+      }
+ }
+
+ .links {
+      .btn-orange {
+          width: 30%;
+      }
+ }
 }
-
