@@ -2,7 +2,7 @@
 <html lang="pl">
   <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>Kodilla-Individual-project</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="vendor/css/Glyphter.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -12,21 +12,21 @@
       <!-- topBar -->
         <nav class="topbar">
           <ul>
-            <li class="firstMenuList"><a href="#"></a><i class="icon icon-wallet"></i><h3 class="price">$1,500.00</h3><i class="icon icon-arrow-down-small arrow-small"></i></a>
+            <li class="firstMenuList"><a href="#"></a><i class="icon icon-wallet"></i><h3 class="price">$1,500.00</h3><i class="icon icon-arrow-down-small arrow-small"></i>
               <ol>
                 <li class="listOne"><a href="#"><span class="leftmenu">GPA</span><span class="rightmenu">$1000</span></a></li>
                 <li class="listOne"><a href="#"><span class="leftmenu">CPL</span><span class="rightmenu">$1100</span></a></li>
-                <li class="listOne"><a href="#"><span class="leftmenu">Turnover</span><span class="rightmenu">$1030</span></a></li>
+                <li class="listOne"><a href="#"><span class="leftmenu">Turnove</span><span class="rightmenu">$1030</span></a></li>
                 <li class="listOne"><a href="#"><span class="leftmenu">Net deposit</span><span class="rightmenu">$1000</span></a></li>
               </ol>
             </li> 
-            <li class="secondMenuList"><div class="circle"></div><a href="#"><i class="icon icon-notification"><span class="notificationText">Notification</span></div></i></a><a href="#"><div class="rectangle"></div><i class="icon icon-profile"></i><span class="leonardoText">Leonardo Dicaprio</span><i class="icon icon-close"></i></a>
+            <li class="secondMenuList"><div class="circle"></div><a href="#"><i class="icon icon-notification"><span class="notificationText">Notification</span></i></a><a href="#"><div class="rectangle"></div><i class="icon icon-profile"></i><span class="leonardoText">Leonardo Dicaprio</span><i class="icon icon-close"></i></a>
               <ol>
                 <li class="listTwo"><a href="#">You`ve get 100 signups<div class="circleOne"></div></a></li>
                 <li class="listTwo"><a href="#">Banner 03 don`t work<div class="circleTwo"></div></a></li>
               </ol>
             </li>
-            <li class="quit"><a href="#"></a><i class="icon icon-quit"><span class="logoutText">Logout</span></i></a></li>
+            <li class="quit"><a href="#"></a><i class="icon icon-quit" id="quit"><span class="logoutText">Logout</span></i></li>
           </ul>
         </nav>
         <!-- End TopBar -->
@@ -36,7 +36,7 @@
             <div class="asideBar">
               <ul class="asside">
                   <div class="section-logo">
-                      <img class="logo logoRes" src="images/logo.png">
+                      <img class="logo" src="images/logo.png" alt="logo">
                       <div class="hamburger">
                         <i class="fa fa-bars"></i>
                         </div>
@@ -50,7 +50,7 @@
                 <li><div class="selectionRectangle"></div><a href="#"><i class="icon-li icon-postback"></i><span class="text">Postback</span></a></li>
                 <div class="sectionManager">
                   <h5>your manager</h5>
-                  <img class="manager managerRes" src="images/manager.png">
+                  <img class="manager managerRes" src="images/manager.png" alt="hamburger">
                   <div class="circleOnline circleOnlineRes"></div>
                   <h6>Mikhael E.</h6>
                 </div>
@@ -63,14 +63,16 @@
         <main>
               <div class="general">
                   <h3>General statistic</h3>
-                  <div class="contentDate">
                       <div class="row">
                         <div class ="col-xl-12 col-lg-12 col-m-12 col-s-12 col-xs-12">
-                          <div class="date"><p class="dateP">16.05.2016</p><p>16.05.2016</p><i class="icon-calendar"></i> <div class="buttonSubmit"><img class="vectoricon" src="images/vector.png"></div></div>                        
-                      </div>
-                        <div class="borderBottom"></div>
-                  </div>
-                </div>
+                            <div class="contentDate">
+                              <div class="date"><p class="dateP">16.05.2016</p><p>16.05.2016</p><i class="icon-calendar"></i> 
+                                <div class="buttonSubmit"><img class="vectoricon" src="images/vector.png" alt="vectorsubmit"></div>
+                              </div>                        
+                            </div>
+                          <div class="borderBottom"></div>
+                        </div>
+                     </div>
                   <div class="statistic">
                     <div class="row">
                       <div class="col-xl-6 col-lg-6 col-m-12 col-s-12 col-xs-12"><h4>Visit Signups</h4><h4 class="h4Number">124</h4><div class="borderBottom"></div></div>
@@ -86,8 +88,7 @@
                       <canvas id="myChart"></canvas>
                     </div>
                   </div>    
-              </div>
-            </div>
+                </div>
             <!-- End General -->
             <!-- Links -->
                 <div class="links">
