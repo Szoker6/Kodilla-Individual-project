@@ -1,0 +1,1 @@
+https://szoker6.github.io/Kodilla-Individual-project/
