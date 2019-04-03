@@ -859,7 +859,6 @@ button:hover {
   padding: 0;
   margin: 0;
   font-size: 18px;
-  line-height: 2em;
   text-align: center;
   z-index: 2;
 }
@@ -880,6 +879,7 @@ ul > li:hover .icon-arrow-down-small:before {
 
 ul > li:hover .price {
   color: #000;
+  margin: 15px 0 0 20px;
 }
 
 ul > li, ol {
@@ -889,10 +889,10 @@ ul > li, ol {
 }
 
 li {
+  transition: 1s;
   width: 188px;
   border-left: 1px solid #a7a7a7;
   height: 60px;
-  border-bottom: 1px solid #a7a7a7;
 }
 
 li:hover {
@@ -907,10 +907,11 @@ ol > .listOne, ol > .listTwo {
   height: 35px;
   margin: 0px -1px -1px -1px;
   border-right: 1px solid #a7a7a7;
+  border-bottom: 1px solid #a7a7a7;
 }
 
 ol > .listOne a, ol > .listTwo a {
-  line-height: 1px;
+  line-height: 5px;
 }
 
 ul > li > ol {
@@ -922,14 +923,14 @@ ul > li:hover > ol {
 }
 
 .icon-wallet {
-  margin: 12px 0 0 8%;
+  margin: 18px 0 0 8%;
   float: left;
 }
 
 .price {
   float: left;
   color: #b6b6b6;
-  margin: 11px 13px 0;
+  margin: 15px 0 0 20px;
 }
 
 .leftmenu, ol > .listTwo a {
@@ -944,11 +945,11 @@ ul > li:hover > ol {
 }
 
 .circle {
-  display: block;
+  display: inline-block;
   z-index: 1;
   position: absolute;
-  left: 28px;
-  top: 18px;
+  left: 22px;
+  top: 17px;
   width: 8px;
   height: 8px;
   -webkit-border-radius: 50%;
@@ -968,31 +969,31 @@ ul > li:hover > ol {
   display: none;
 }
 
-.secondMenuList:hover .icon-notification:before {
-  margin: 0px 67px 0 -67px;
+.secondMenuList .icon-notification:before {
+  position: absolute;
+  left: 14px;
+  top: 19px;
 }
 
 .secondMenuList:hover .icon-close {
   display: block;
-  color: #000;
   float: right;
   margin-right: 15px;
 }
 
 .leonardoText {
   color: #56819f;
-  margin-left: 12px;
-}
-
-.icon-notification:before {
-  margin: 0 58% 0 -16%;
-  color: #000;
+  position: absolute;
+  left: 90px;
+  bottom: 2px;
 }
 
 .rectangle {
-  margin: -60px 0% -26% 24%;
   width: 1px;
   height: 60px;
+  display: inline-block;
+  position: absolute;
+  left: 46px;
   background-color: #a7a7a7;
 }
 
@@ -1025,8 +1026,8 @@ ol > .listTwo a {
 }
 
 .icon-profile {
-  margin-left: 55px;
-  color: #000;
+  position: absolute;
+  left: 65px;
 }
 
 .icon-close {
@@ -1064,7 +1065,8 @@ ol > .listTwo a {
   height: 380vh;
   width: 188px;
   background-color: #191919;
-  margin: -75px 0 0 -15px;
+  top: 0;
+  left: 0;
   transition: 1s;
 }
 
@@ -1074,6 +1076,7 @@ ol > .listTwo a {
 }
 
 .asideBar .asside li {
+  transition: 1s;
   float: none;
   border: none;
   background-color: #191919;
@@ -1093,6 +1096,7 @@ ol > .listTwo a {
   line-height: 60px;
   font-size: 16px;
   display: block;
+  transition: 1s;
 }
 
 .asideBar .asside li a:last-child {
@@ -1105,7 +1109,7 @@ ol > .listTwo a {
 }
 
 .asideBar .asside .icon-li {
-  color: #000;
+  color: #b6b6b6;
   margin: 0 20px 0;
 }
 
@@ -1128,6 +1132,7 @@ ol > .listTwo a {
 
 .asideBar .asside .section-logo .fa {
   margin: 8px 0px 0 55px;
+  transition: 1s;
   color: #a7a7a7;
   cursor: pointer;
 }
@@ -1146,9 +1151,10 @@ ol > .listTwo a {
 }
 
 .asideBar .sectionManager {
-  margin-top: 10px;
+  transition: 1s;
+  margin-top: 20px;
   background-color: #191919;
-  position: fixed;
+  position: absolute;
   width: 188px;
   display: flex;
   align-items: center;
@@ -1156,7 +1162,9 @@ ol > .listTwo a {
 }
 
 .asideBar .sectionManager h6 {
-  margin: -8% -35% 0 0;
+  position: absolute;
+  top: 35px;
+  right: 30px;
   color: #56819f;
 }
 
@@ -1172,7 +1180,9 @@ ol > .listTwo a {
 }
 
 .asideBar .sectionManager .circleOnline {
-  margin: -26% 18% 11% 0;
+  position: absolute;
+  top: 48px;
+  left: 75px;
   width: 10px;
   height: 10px;
   -webkit-border-radius: 50%;
@@ -1183,7 +1193,6 @@ ol > .listTwo a {
 }
 
 .expanded {
-  transition: 1s;
   width: 40px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1191,15 +1200,16 @@ ol > .listTwo a {
   display: -ms-flexbox;
   display: flex;
   background-color: #191919;
-  margin: -75px 0 0 -15px;
   height: 180vh;
 }
 
 .expanded .asside .section-logo .fa {
   margin: 8px 0px 0 11px;
+  transition: 1s;
 }
 
 .expanded li {
+  transition: 1s;
   width: 40px;
 }
 
@@ -1209,6 +1219,7 @@ ol > .listTwo a {
 
 .expanded .sectionManager {
   width: 40px;
+  transition: 1s;
 }
 
 .expanded .sectionManager h6 {
@@ -1227,7 +1238,9 @@ ol > .listTwo a {
 .expanded .sectionManager .circleOnline {
   width: 7px;
   height: 7px;
-  margin: -100% 0 0 46%;
+  position: absolute;
+  left: 25px;
+  top: 8px;
 }
 
 .expanded .text {
@@ -1248,11 +1261,11 @@ ol > .listTwo a {
   margin-right: auto;
   background-color: #fff;
   padding-bottom: 20px;
-  margin-top: -30px;
   transition: 1s;
 }
 
 .general h3, .links h3 {
+  margin: 0;
   padding: 25px;
   color: #a7a7a7;
   text-transform: uppercase;
@@ -1264,9 +1277,9 @@ ol > .listTwo a {
 }
 
 .general .contentDate .date, .links .contentDate .date {
-  position: relative;
+  display: flex;
   border: 1px solid #a7a7a7;
-  max-width: 300px;
+  max-width: 290px;
   height: 40px;
   margin: 0 auto;
   -webkit-border-radius: 5px;
@@ -1275,39 +1288,11 @@ ol > .listTwo a {
   border-radius: 5px;
 }
 
-.general .contentDate p, .links .contentDate p {
-  display: inline-block;
-  position: relative;
-  margin: 12px 10%;
-}
-
-.general .contentDate p:hover, .links .contentDate p:hover {
-  color: #56819f;
-}
-
-.general .contentDate .dateP, .links .contentDate .dateP {
-  margin: 0 10% 0 8%;
-}
-
-.general .contentDate .dateP:after, .links .contentDate .dateP:after {
-  position: absolute;
-  background-color: #a7a7a7;
-  content: " ";
-  width: 1px;
-  height: 30px;
-  right: -30%;
-  bottom: -6px;
-}
-
-.general .contentDate .icon, .links .contentDate .icon {
-  margin: 0 0 -1.5% 12%;
-}
-
-.general .contentDate .buttonSubmit, .links .contentDate .buttonSubmit {
-  position: absolute;
-  left: 104%;
-  top: -3.5%;
+.general .contentDate .date .buttonSubmit, .links .contentDate .date .buttonSubmit {
+  margin: -2px 27px;
   background-color: #ffa200;
+  cursor: pointer;
+  padding: 20px 10px;
   cursor: pointer;
   width: 40px;
   height: 40px;
@@ -1317,17 +1302,40 @@ ol > .listTwo a {
   border-radius: 5px;
 }
 
-.general .contentDate .buttonSubmit .vectoricon, .links .contentDate .buttonSubmit .vectoricon {
-  margin: 10px;
-  width: 50%;
+.general .contentDate .date .buttonSubmit .vectoricon, .links .contentDate .date .buttonSubmit .vectoricon {
+  margin: -8px 0 5px 0;
 }
 
-.general .contentDate .buttonSubmit:hover, .links .contentDate .buttonSubmit:hover {
+.general .contentDate .date .buttonSubmit:hover, .links .contentDate .date .buttonSubmit:hover {
   background-color: #f58220;
 }
 
+.general .contentDate p, .links .contentDate p {
+  display: inline-block;
+  position: relative;
+  margin: 11px 10%;
+}
+
+.general .contentDate p:hover, .links .contentDate p:hover {
+  color: #56819f;
+}
+
+.general .contentDate .dateP, .links .contentDate .dateP {
+  margin: 12px 10% 0 8%;
+}
+
+.general .contentDate .dateP:after, .links .contentDate .dateP:after {
+  position: absolute;
+  background-color: #a7a7a7;
+  content: " ";
+  width: 1px;
+  height: 30px;
+  right: -30%;
+  bottom: 3px;
+}
+
 .general .icon-calendar, .links .icon-calendar {
-  margin: 0 0 0 6%;
+  margin: 12px 0 0 3%;
   font-size: 12px;
   cursor: pointer;
 }
@@ -1369,17 +1377,18 @@ ol > .listTwo a {
 
 .links .btn-orange {
   display: block;
-  margin: 0 auto;
+  margin: 10px auto;
   background-color: #ffa200;
   color: #fff;
   border: none;
-  width: 130px;
-  padding: 11px 0;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  border-radius: 10px;
+  padding: 10px 30px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
   cursor: pointer;
+  font-size: 22px;
+  font-weight: 100;
 }
 
 .links .btn-orange:hover {
@@ -1610,9 +1619,6 @@ button:hover {
   .secondMenuList:hover {
     background-color: #191919;
   }
-  .secondMenuList:hover .icon-notification:before {
-    margin: 0 -9px 0px 7px;
-  }
   ol > .listTwo {
     display: none;
   }
@@ -1623,48 +1629,45 @@ button:hover {
     color: #a7a7a7;
   }
   .icon-wallet {
-    margin: 13px 0 0 23px;
+    margin: 13px 0 0 12px;
     float: left;
   }
   .price {
     float: left;
     font-size: 16px;
-    margin: 11px 0px 0 26px;
   }
   .icon-arrow-down-small {
     margin: 0;
   }
-  .icon-notification:before {
-    color: #a7a7a7;
-    margin: 0 -9px 0 9px;
-  }
   .notificationText {
     display: inline-block;
-    margin: 0 44px 0 34px;
+    margin: 0 0 0 28px;
     position: relative;
   }
   .icon-profile {
     position: absolute;
-    left: -34px;
-    top: 58px;
+    left: 14px;
+    top: 60px;
   }
   .leonardoText {
     position: absolute;
+    margin-left: 10px;
     left: 38px;
     top: 58px;
     color: #a7a7a7;
   }
   .quit {
     position: absolute;
-    top: 175px;
-    left: -9px;
+    top: 138px;
+    left: 14px;
     z-index: -1;
+    width: 0px;
   }
   .logoutText {
     display: inline-block;
     position: absolute;
-    top: 10px;
-    left: 87px;
+    top: 60px;
+    left: 60px;
   }
   .rectangle {
     display: none;
@@ -1679,21 +1682,8 @@ button:hover {
   .smalltopBarMarginLeft .secondMenuList, .smalltopBarMarginLeft .firstMenuList {
     width: 40px;
   }
-  .smalltopBarMarginLeft .icon-wallet {
-    margin: 0 0 0 12px;
-  }
-  .smalltopBarMarginLeft .icon-notification:before {
-    margin: 0 10px 0 5px;
-  }
-  .smalltopBarMarginLeft .circle {
-    margin: -1px 0px 0 -8px;
-  }
   .smalltopBarMarginLeft .icon-profile {
-    margin: 0 0 0 46px;
-  }
-  .smalltopBarMarginLeft .quit {
-    margin: 0 0px 0 6px;
-    width: 40px;
+    margin: 0 5px 0 0;
   }
   .smalltopBarMarginLeft .firstMenuList:hover ol {
     display: none;
@@ -1701,24 +1691,17 @@ button:hover {
   .smalltopBarMarginLeft .secondMenuList:hover .leonardoText {
     display: none;
   }
-  .asideBar {
-    margin: -15px 0 0 -15px;
-  }
   .asideBar .sectionManager {
     display: none;
   }
-  .general, .links {
-    margin: -60px auto 0 192px;
+  .general .contentDate .date, .links .contentDate .date {
+    max-width: 260px;
   }
   .general p, .links p {
     font-size: 14px;
   }
   .general .statistic, .links .statistic {
     width: 85%;
-  }
-  .smallGeneralMarginLeft, .smallLinksMarginLeft {
-    margin-left: 40px;
-    transition: 1s;
   }
 }
 
@@ -1727,22 +1710,6 @@ button:hover {
     display: none;
   }
   .topbar .secondMenuList, .smalltopBarMarginLeft .secondMenuList, .topbar .firstMenuList, .smalltopBarMarginLeft .firstMenuList {
-    width: 40px;
-  }
-  .topbar .icon-wallet, .smalltopBarMarginLeft .icon-wallet {
-    margin: 0 0 0 12px;
-  }
-  .topbar .icon-notification:before, .smalltopBarMarginLeft .icon-notification:before {
-    margin: 0 10px 0 5px;
-  }
-  .topbar .circle, .smalltopBarMarginLeft .circle {
-    margin: -1px 0px 0 -8px;
-  }
-  .topbar .icon-profile, .smalltopBarMarginLeft .icon-profile {
-    margin: 0 0 0 46px;
-  }
-  .topbar .quit, .smalltopBarMarginLeft .quit {
-    margin: 0 0px 0 6px;
     width: 40px;
   }
   .topbar .firstMenuList:hover ol, .smalltopBarMarginLeft .firstMenuList:hover ol {
@@ -1760,7 +1727,6 @@ button:hover {
     display: -ms-flexbox;
     display: flex;
     background-color: #191919;
-    margin: -15px 0 0 -15px;
     height: 180vh;
   }
   .asideBar .asside .section-logo .fa {
@@ -1771,24 +1737,6 @@ button:hover {
   }
   .asideBar .logo {
     display: none;
-  }
-  .asideBar .sectionManager {
-    width: 40px;
-  }
-  .asideBar .sectionManager h6 {
-    display: none;
-  }
-  .asideBar .sectionManager h5 {
-    display: none;
-  }
-  .asideBar .sectionManager .manager {
-    width: 30px;
-    margin: 25% 0;
-  }
-  .asideBar .sectionManager .circleOnline {
-    width: 7px;
-    height: 7px;
-    margin: -100% 0 0 46%;
   }
   .asideBar .text {
     display: none;
@@ -1815,22 +1763,10 @@ button:hover {
     width: 95%;
   }
   .general .icon-calendar, .links .icon-calendar {
-    line-height: 34px;
-  }
-  .general .contentDate p, .links .contentDate p {
-    margin: 12px 2%;
+    margin: 10px 0 0 -2%;
   }
   .general .contentDate .date, .links .contentDate .date {
     max-width: 200px;
-    height: 35px;
-    margin: 0 auto;
-  }
-  .general .contentDate .date p, .links .contentDate .date p {
-    margin: 0 9% 0 6%;
-  }
-  .general .contentDate .buttonSubmit, .links .contentDate .buttonSubmit {
-    width: 35px;
-    height: 35px;
   }
   .general .chart h4, .links .chart h4 {
     display: flex;
