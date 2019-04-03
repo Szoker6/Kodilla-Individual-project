@@ -12,7 +12,6 @@
     padding: 0;
     margin: 0;
     font-size: 18px;
-    line-height: 2em;
     text-align: center;
     z-index: 2;
     a {
@@ -30,6 +29,7 @@ ul > li:hover {
     @include transform(rotate(180deg));
   } .price {
     color: #000;
+    margin: 15px 0 0 20px
     }
 }
 
@@ -38,10 +38,10 @@ ul > li, ol {
   padding: 0;
   list-style-type: none;
 } li { 
+  transition: 1s;
   width: 188px;
   border-left: 1px solid $border-color;
   height: 60px;
-  border-bottom: 1px solid $border-color;
   &:hover {
     background-color: #e3e3e3;
     z-index: 1;
@@ -55,8 +55,9 @@ ol > .listOne {
   height: 35px;
   margin: 0px -1px -1px -1px;
   border-right:  1px solid $border-color; 
+  border-bottom: 1px solid $border-color;
   a {
-    line-height: 1px;
+    line-height: 5px;
   }
 }
 
@@ -69,14 +70,14 @@ ul > li:hover > ol {
 }
 
 .icon-wallet {
-  margin: 12px 0 0 8%;
+  margin: 18px 0 0 8%;
   float: left;
 }
 
 .price {
   float: left;
   color: #b6b6b6;
-  margin: 11px 13px 0;
+  margin: 15px 0 0 20px
 }
 
 .leftmenu {
@@ -91,11 +92,11 @@ ul > li:hover > ol {
 }
 
 .circle {
-  display: block;
+  display: inline-block; 
   z-index: 1;
   position: absolute;
-  left: 28px;
-  top: 18px;
+  left: 22px;
+  top: 17px;
   @include square (8px);
   @include border-radius (50%);
   background-color: $global-selection;
@@ -109,14 +110,13 @@ ul > li:hover > ol {
     .circle, .leonardoText, .rectangle, .icon-profile {
       display: none;
     }
-  } &:hover {
-    .icon-notification:before {
-      margin: 0px 67px 0 -67px;
-    }
+  } .icon-notification:before {
+    position: absolute;
+    left: 14px;
+    top: 19px;
   } &:hover {
     .icon-close {
       display: block;
-      color: #000;
       float: right;
       margin-right: 15px;
     }
@@ -125,18 +125,17 @@ ul > li:hover > ol {
 
 .leonardoText {
   color: $global-links;
-  margin-left: 12px;
-}
-
-.icon-notification:before {
-  margin: 0 58% 0 -16%;
-  color: #000;
+  position: absolute;
+    left: 90px;
+    bottom: 2px;
 }
 
 .rectangle {
-  margin: -60px 0% -26% 24%;
   width: 1px;
   height: 60px;
+  display: inline-block;
+  position: absolute;
+  left: 46px;
   background-color: $border-color;
 }
 
@@ -167,8 +166,8 @@ ol > .listTwo {
 }
 
 .icon-profile {
-  margin-left: 55px;
-  color: #000;
+  position: absolute;
+  left: 65px;
 }
 
 .icon-close {
@@ -203,12 +202,14 @@ ol > .listTwo {
   height: 380vh;
   width: 188px;
   background-color: #191919;
-  margin: -75px 0 0 -15px;
+  top: 0;
+  left: 0;
   transition: 1s; 
   .asside {   
     padding: 0;  
     font-size: 18px;
     li {
+      transition: 1s;
       float: none;
       border: none; 
       background-color: #191919;
@@ -222,6 +223,7 @@ ol > .listTwo {
         line-height: 60px;
         font-size: $paragraph-font-size;
         display: block;
+        transition: 1s;
       } a:last-child {
         border-bottom: 1px solid $border-color;
         padding: 5px;
@@ -229,7 +231,7 @@ ol > .listTwo {
         color: #fff;   
       }
     } .icon-li {
-      color: #000;
+      color: #b6b6b6;
       margin: 0 20px 0;
     }
     .section-logo {
@@ -241,6 +243,7 @@ ol > .listTwo {
         font-size: 20px;
       }.fa {
         margin: 8px 0px 0 55px;
+        transition: 1s;
         color: $border-color;
         cursor: pointer;
       }.fa-bars:hover {
@@ -258,15 +261,18 @@ ol > .listTwo {
   }
   
   .sectionManager {
-    margin-top: 10px;
+    transition: 1s;
+    margin-top: 20px;
     background-color: #191919;
-    position: fixed;
+    position: absolute;
     width: 188px;
     display: flex;
     align-items: center;
     flex-direction: column;
     h6 {
-      margin: -8% -35% 0 0;
+      position: absolute;
+      top: 35px;
+      right: 30px;
       color: $global-links;
     } h5 {
       text-transform: uppercase;
@@ -276,7 +282,9 @@ ol > .listTwo {
       width: 50px;
       margin: 0 34% 0 0;
     } .circleOnline {
-      margin: -26% 18% 11% 0;
+      position: absolute;
+      top: 48px;
+      left: 75px;
       @include square(10px);
       @include border-radius(50%);
       background-color: green;
@@ -289,18 +297,19 @@ ol > .listTwo {
       .section-logo {
          .fa {
     margin: 8px 0px 0 11px;
+    transition: 1s;
         }
       }
     }      
   
   li {
-      width: 40px;
+    transition: 1s;
+    width: 40px;
   }
-  transition: 1s;
+  
   width: 40px; 
   @include flexbox; 
   background-color: #191919;
-  margin: -75px 0 0 -15px;
   height: 180vh;
   .logo {
     display: none;
@@ -308,6 +317,7 @@ ol > .listTwo {
   .sectionManager {
     @extend .sectionManager;
     width: 40px;
+    transition: 1s;
     h6 {
       display: none;
     }
@@ -320,7 +330,9 @@ ol > .listTwo {
     }
     .circleOnline {
       @include square (7px);
-      margin: -100% 0 0 46%;
+      position: absolute;
+      left: 25px;
+      top: 8px;
     }   
   }
 
@@ -341,32 +353,46 @@ ol > .listTwo {
   margin-right: auto;
   background-color: #fff;
   padding-bottom: 20px;
-  margin-top: -30px;
   transition: 1s;
   h3 {
-      padding: 25px;
-      color: $border-color;
-      text-transform: uppercase;
-      border-bottom: 1px solid $border-color;
+    margin: 0;
+    padding: 25px;
+    color: $border-color;
+    text-transform: uppercase;
+    border-bottom: 1px solid $border-color;
   }
 
   .contentDate {
       margin-top: 20px;
       .date {
-          position: relative;
+          display: flex;
           border: 1px solid $border-color;
-          max-width: 300px;
+          max-width: 290px;
           height: 40px;
           margin: 0 auto;
           @include border-radius (5px);
+          .buttonSubmit {
+            margin: -2px 27px;
+            background-color: #ffa200;
+            cursor: pointer;
+            padding: 20px 10px;          
+            cursor: pointer;
+            @include square (40px);
+            @include border-radius (5px);
+            .vectoricon {
+              margin: -8px 0 5px 0;
+            } &:hover {
+              background-color: $button-hover;
+            } 
+          }
       } p {
           display: inline-block;
           position: relative;
-          margin: 12px 10%;
+          margin: 11px 10%;
       } p:hover {
           color: $global-links;
       } .dateP {
-          margin: 0 10% 0 8%;
+          margin: 12px 10% 0 8%;
       } .dateP:after {
           position: absolute;
           background-color: $border-color;
@@ -374,30 +400,12 @@ ol > .listTwo {
           width: 1px;
           height: 30px;
           right: -30%;
-          bottom: -6px;
-      }
-      .icon {
-          margin: 0 0 -1.5% 12%;
-      }
-      .buttonSubmit {
-          position: absolute;
-          left: 104%;
-          top: -3.5%;
-          background-color: $button-color;
-          cursor: pointer;
-          @include square (40px);
-          @include border-radius (5px);
-          .vectoricon {
-              margin: 10px;
-              width: 50%;   
-          }
-      }.buttonSubmit:hover {
-          background-color: $button-hover;
+          bottom: 3px;
       }
   } 
 
   .icon-calendar {
-      margin: 0 0 0 6%;
+      margin: 12px 0 0 3%;
       font-size: 12px;
       cursor: pointer;
   } .icon-calendar:hover {
@@ -437,14 +445,16 @@ ol > .listTwo {
   }
   .btn-orange {
       display: block;
-      margin: 0 auto;
+      margin: 10px auto;
       background-color: $button-color;
       color: #fff;
       border: none;
-      width: 130px;
-      padding: 11px 0;
-      @include border-radius (10px);
+      padding: 10px 30px;
+      @include border-radius (5px);
       cursor: pointer;
+        font-size: 22px;
+        font-weight: 100;  
+      
   } .btn-orange:hover {
       background-color: $button-hover;
   }
@@ -574,10 +584,7 @@ ol > .listTwo {
 
 button {
 cursor: pointer;
--webkit-border-radius: 3px;
--moz-border-radius:    3px;
--ms-border-radius:     3px;
-border-radius:         3px;
+@include border-radius (3px);
 background-color: #ffa200;
 color: #fff;
 border: none;
@@ -658,9 +665,7 @@ background-color: #f58220;
     border-left: none;
     &:hover {
       background-color: #191919;
-    } &:hover .icon-notification:before {
-      margin: 0 -9px 0px 7px;
-    }  
+    } 
   }
 
   ol > .listTwo {
@@ -676,56 +681,53 @@ background-color: #f58220;
   }
 
   .icon-wallet {
-    margin: 13px 0 0 23px;
+    margin: 13px 0 0 12px;
     float: left;
   }
 
   .price {
     float: left;
     font-size: $paragraph-font-size;
-    margin: 11px 0px 0 26px;
   }
 
   .icon-arrow-down-small {
     margin: 0;
   }
 
-  .icon-notification:before {
-    color: $border-color;
-    margin: 0 -9px 0 9px;
-  }
 
   .notificationText {
     display: inline-block;
-    margin: 0 44px 0 34px;
+    margin: 0 0 0 28px;
     position: relative;
   }
 
   .icon-profile {
     position: absolute; 
-    left: -34px;
-    top: 58px;
+    left: 14px;
+    top: 60px;
   }
 
   .leonardoText {
     position: absolute;
+    margin-left: 10px;
     left: 38px;
     top: 58px;
     color: $border-color;
   }
 
   .quit {
-    position: absolute; 
-    top: 175px;
-    left: -9px;
+    position: absolute;
+    top: 138px;
+    left: 14px;
     z-index: -1;
+    width: 0px;
   }
 
   .logoutText {
     display: inline-block;
     position: absolute;
-    top: 10px;
-    left: 87px;
+    top: 60px;
+    left: 60px;
   }
 
   .rectangle {
@@ -746,25 +748,8 @@ background-color: #f58220;
       width: 40px;
     }
 
-    .icon-wallet {
-      margin: 0 0 0 12px;
-    }
-
-    .icon-notification:before {
-      margin: 0 10px 0 5px;
-    }
-
-    .circle {
-      margin: -1px 0px 0 -8px; 
-    }
-
     .icon-profile {
-      margin: 0 0 0 46px;
-    }
-
-    .quit {
-      margin: 0 0px 0 6px;
-      width: 40px;
+      margin: 0 5px 0 0;
     }
 
     .firstMenuList:hover ol {
@@ -775,25 +760,25 @@ background-color: #f58220;
       display: none;
     }
   }
-  .asideBar { 
-      margin: -15px 0 0 -15px;
+
+  .asideBar {  
       .sectionManager {
       display: none;
       }         
     }
 
   .general {
-      margin: -60px auto 0 192px;
+    .contentDate { 
+      .date {  
+          max-width: 260px;   
+      } 
+  }
       p {
           font-size: 14px;
       }
       .statistic {
          width: 85%;
       }
- }
- .smallGeneralMarginLeft {
-     margin-left: 40px;
-     transition: 1s;
  }
 }
 
@@ -806,28 +791,7 @@ background-color: #f58220;
       .secondMenuList, .firstMenuList {
         width: 40px;
       }
-  
-      .icon-wallet {
-        margin: 0 0 0 12px;
-      }
-  
-      .icon-notification:before {
-        margin: 0 10px 0 5px;
-      }
-  
-      .circle {
-        margin: -1px 0px 0 -8px; 
-      }
-  
-      .icon-profile {
-        margin: 0 0 0 46px;
-      }
-  
-      .quit {
-        margin: 0 0px 0 6px;
-        width: 40px;
-      }
-  
+
       .firstMenuList:hover ol {
         display: none;
       }
@@ -847,32 +811,15 @@ background-color: #f58220;
           li {
               width: 40px;
           }
+
           transition: 1s;
           width: 40px; 
           @include flexbox; 
           background-color: #191919;
-          margin: -15px 0 0 -15px;
           height: 180vh;
           .logo {
             display: none;
           } 
-          .sectionManager {
-            width: 40px;
-            h6 {
-              display: none;
-            }
-            h5  {
-              display: none;
-            }
-            .manager { 
-              width: 30px;
-              margin: 25% 0;
-            }
-            .circleOnline {
-              @include square (7px);
-              margin: -100% 0 0 46%;
-            }   
-          }
         
           .text {
             display: none;
@@ -901,24 +848,13 @@ background-color: #f58220;
       }
 
       .icon-calendar {
-          line-height: 34px;
+        margin: 10px 0 0 -2%;
       }
 
       .contentDate {
-          p {
-               margin: 12px 2%;
-          }
           .date {  
-              max-width: 200px;
-              height: 35px;  
-              margin: 0 auto;
-              p {
-                  margin: 0 9% 0 6%;
-              } 
-          }
-          .buttonSubmit { 
-              @include square (35px);
-          }      
+              max-width: 200px; 
+          }   
       }
       
       .chart {
