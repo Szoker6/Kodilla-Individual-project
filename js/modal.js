@@ -22,6 +22,12 @@ logoutbutton.addEventListener('click', function() {
     }
   })
 
+  document.querySelector('#overlay').addEventListener('click', function(e) {
+  if(e.target === this) {
+    closeModal()
+  }
+})
+
 
 
   
