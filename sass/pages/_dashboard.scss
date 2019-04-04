@@ -43,7 +43,7 @@ ul > li, ol {
   border-left: 1px solid $border-color;
   height: 60px;
   &:hover {
-    background-color: #e3e3e3;
+    background-color: #f5f5f2;
     z-index: 1;
   }
 }
@@ -51,13 +51,13 @@ ul > li, ol {
 ol > .listOne {
   float: left;
   width: 189px;
-  background-color: #e3e3e3;
+  background-color: #f5f5f2;
   height: 35px;
   margin: 0px -1px -1px -1px;
   border-right:  1px solid $border-color; 
   border-bottom: 1px solid $border-color;
   a {
-    line-height: 5px;
+    line-height: 30px;
   }
 }
 
@@ -232,17 +232,18 @@ ol > .listTwo {
       }
     } .icon-li {
       color: #b6b6b6;
-      margin: 0 20px 0;
+      margin: 0 20px 0 10px;
     }
     .section-logo {
       @include flexbox;
-      .logo {
+      display: flex;
       margin-top: -3px;
-      justify-content: flex-start;
-      } .hamburger {
+      justify-content: center;
+      align-items: center;
+       .hamburger {
         font-size: 20px;
       }.fa {
-        margin: 8px 0px 0 55px;
+        margin: 2px 0px 0 42px;
         transition: 1s;
         color: $border-color;
         cursor: pointer;
@@ -296,7 +297,7 @@ ol > .listTwo {
     .asside {
       .section-logo {
          .fa {
-    margin: 8px 0px 0 11px;
+    margin: 2px 0 0 0;
     transition: 1s;
         }
       }
@@ -342,7 +343,7 @@ ol > .listTwo {
 
   .asside .icon-li {
     color: #a7a7a7;
-    margin: 0 0 0 23%;
+    margin: 0 0 0 18%;
   } .asside .icon-li:hover {
     color: #fff;
   }
@@ -363,50 +364,55 @@ ol > .listTwo {
   }
 
   .contentDate {
-      margin-top: 20px;
+    padding: 35px;
+    display: flex;
+    justify-content: center;
       .date {
           display: flex;
           border: 1px solid $border-color;
-          max-width: 290px;
-          height: 40px;
-          margin: 0 auto;
           @include border-radius (5px);
-          .buttonSubmit {
-            margin: -2px 27px;
-            background-color: #ffa200;
-            cursor: pointer;
-            padding: 20px 10px;          
-            cursor: pointer;
-            @include square (40px);
-            @include border-radius (5px);
-            .vectoricon {
-              margin: -8px 0 5px 0;
-            } &:hover {
-              background-color: $button-hover;
-            } 
-          }
-      } p {
+        } p {
           display: inline-block;
           position: relative;
-          margin: 11px 10%;
-      } p:hover {
+          display: flex;
+          padding: 10px 30px;
+          margin: 0;    
+       } p:hover {
           color: $global-links;
-      } .dateP {
-          margin: 12px 10% 0 8%;
-      } .dateP:after {
+        } .dateP {
+         position: relative;
+         display: flex;
+         padding: 10px 30px;
+         margin: 0;
+        } .dateP:after {
           position: absolute;
           background-color: $border-color;
           content: " ";
           width: 1px;
           height: 30px;
-          right: -30%;
+          right: 0%;
           bottom: 3px;
-      }
+        }
+        .buttonSubmit {
+          display: flex;
+          background-color: #ffa200;
+          cursor: pointer;
+          padding: 10px 10px;          
+          cursor: pointer;
+          @include border-radius (5px);
+          margin: 0 10px;
+          .vectoricon {
+          } &:hover {
+            background-color: $button-hover;
+          } 
+        }
   } 
 
   .icon-calendar {
-      margin: 12px 0 0 3%;
-      font-size: 12px;
+      display: flex;
+      align-items: center;
+      font-size: 16px;
+      margin: 0 10px;
       cursor: pointer;
   } .icon-calendar:hover {
       color: $global-links;
@@ -414,7 +420,7 @@ ol > .listTwo {
 
   .borderBottom {
       border-bottom: 1px solid $border-color;
-      padding-top: 60px;
+      padding-top: 20px;
   }
   .statistic {
       width: 65%;
@@ -601,7 +607,7 @@ background-color: #f58220;
     z-index: 3;
     background-color: #191919;
     position: absolute;
-    top: 500px;
+    top: 510px;
     left: 0;
     margin-left: 0;
       ul {
@@ -610,13 +616,18 @@ background-color: #f58220;
     }
     ol > .listOne {
       z-index: 4;
-      padding: 50px 0 16px 0px;
-      top: 5%;
-    }   
+      padding: 25px 0 15px 0px;
+      a {
+        line-height: 1px;
+      } &:hover {
+        background-color: #f5f5f2;
+      }  
+    } 
     
   }
 
   .secondMenuList {
+    transition: 0.1s;
     &:hover .icon-profile {
       position: absolute; 
     }
@@ -632,8 +643,10 @@ background-color: #f58220;
       .icon-close, .rectangle {
         display: none;
       }
-    } 
-  }
+    } &:hover {
+      background-color: #191919;
+    }
+  } 
 
   ul > li:hover {
     .icon-arrow-down-small:before {
@@ -644,7 +657,6 @@ background-color: #f58220;
   }
 
   li { 
-    background-color: #191919;
     border-bottom: none;
   } 
 
@@ -663,9 +675,7 @@ background-color: #f58220;
     top: 57px;
     width: 188px;
     border-left: none;
-    &:hover {
-      background-color: #191919;
-    } 
+    
   }
 
   ol > .listTwo {
@@ -697,7 +707,7 @@ background-color: #f58220;
 
   .notificationText {
     display: inline-block;
-    margin: 0 0 0 28px;
+    margin: 0 70px 0 60px;
     position: relative;
   }
 
@@ -720,13 +730,17 @@ background-color: #f58220;
     top: 138px;
     left: 14px;
     z-index: -1;
-    width: 0px;
+  }
+
+  .icon-quit {
+    position: absolute;
+    top: 55px;
+    left: 0;
   }
 
   .logoutText {
     display: inline-block;
     position: absolute;
-    top: 60px;
     left: 60px;
   }
 
@@ -743,7 +757,7 @@ background-color: #f58220;
     .logoutText, .notificationText, .price, .leonardoText, .icon-arrow-down-small {
       display: none;
     } 
-
+    
     .secondMenuList, .firstMenuList {
       width: 40px;
     }
@@ -768,11 +782,6 @@ background-color: #f58220;
     }
 
   .general {
-    .contentDate { 
-      .date {  
-          max-width: 260px;   
-      } 
-  }
       p {
           font-size: 14px;
       }
@@ -801,37 +810,33 @@ background-color: #f58220;
       }
     }
       .asideBar {
-         .asside {
-            .section-logo {
-               .fa {
-                 margin: 8px 0px 0 11px;
-              }
+        .asside {
+          .section-logo {
+              .fa {
+                margin: 2px 0 0 0;
             }
           }
-          li {
-              width: 40px;
+          .icon-li {
+            margin: 0 0 0 18%;
           }
+        }
+        li {
+            width: 40px;
+        }
 
-          transition: 1s;
-          width: 40px; 
-          @include flexbox; 
-          background-color: #191919;
-          height: 180vh;
-          .logo {
-            display: none;
-          } 
-        
-          .text {
-            display: none;
-          }
-        
-          .asside .icon-li {
-            color: #a7a7a7;
-            margin: 0 0 0 23%;
-          } .asside .icon-li:hover {
-            color: #fff;
-          }
-      }
+        transition: 1s;
+        width: 40px; 
+        @include flexbox; 
+        background-color: #191919;
+        height: 180vh;
+        .logo {
+          display: none;
+        } 
+      
+        .text {
+          display: none;
+        }
+    }
 
   .general {
       margin-left: 40px;   
@@ -848,13 +853,16 @@ background-color: #f58220;
       }
 
       .icon-calendar {
-        margin: 10px 0 0 -2%;
+       font-size: 12px;
       }
 
       .contentDate {
-          .date {  
-              max-width: 200px; 
-          }   
+        p {
+          padding: 15px 20px 0px;
+        }
+        .dateP {
+          padding: 15px 20px 0px;
+        }
       }
       
       .chart {
@@ -871,3 +879,5 @@ background-color: #f58220;
       }
  }
 }
+
+
