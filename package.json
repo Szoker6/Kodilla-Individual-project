@@ -12,6 +12,7 @@
     "init:gitignore": "curl https://raw.githubusercontent.com/github/gitignore/master/Node.gitignore -o .gitignore",
     "build": "npm-run-all build:* test",
     "build:clean": "rimraf css/*",
+    "build:imagemin-cli": "imagemin images/* --out-dir=build",
     "build:sass": "node-sass --output-style compact -o css sass",
     "build:autoprefixer": "autoprefixer-cli css/style.css css/stylecomponents.css",
     "build:autoprefixer2": "autoprefixer-cli css/stylecomponents.css",
@@ -22,20 +23,21 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Szoker6/learning-git-2.git"
+    "url": "git+https://szoker6.github.io/Kodilla-Individual-project/"
   },
   "keywords": [],
-  "author": "",
+  "author": "Dawid Margraf",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Szoker6/learning-git-2/issues"
+    "url": "https://szoker6.github.io/Kodilla-Individual-project/"
   },
-  "homepage": "https://github.com/Szoker6/learning-git-2#readme",
+  "homepage": "https://szoker6.github.io/Kodilla-Individual-project/",
   "devDependencies": {
     "autoprefixer-cli": "^1.0.0",
     "browser-sync": "^2.26.3",
     "checker": "^0.5.2",
     "globstar": "^1.0.0",
+    "imagemin-cli": "^4.0.1",
     "mkdirp": "^0.5.1",
     "node-sass": "^4.11.0",
     "npm-run-all": "^4.1.5",
