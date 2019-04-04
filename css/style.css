@@ -290,11 +290,11 @@ ul > li, ol { float: left; padding: 0; list-style-type: none; }
 
 li { transition: 1s; width: 188px; border-left: 1px solid #a7a7a7; height: 60px; }
 
-li:hover { background-color: #e3e3e3; z-index: 1; }
+li:hover { background-color: #f5f5f2; z-index: 1; }
 
-ol > .listOne, ol > .listTwo { float: left; width: 189px; background-color: #e3e3e3; height: 35px; margin: 0px -1px -1px -1px; border-right: 1px solid #a7a7a7; border-bottom: 1px solid #a7a7a7; }
+ol > .listOne, ol > .listTwo { float: left; width: 189px; background-color: #f5f5f2; height: 35px; margin: 0px -1px -1px -1px; border-right: 1px solid #a7a7a7; border-bottom: 1px solid #a7a7a7; }
 
-ol > .listOne a, ol > .listTwo a { line-height: 5px; }
+ol > .listOne a, ol > .listTwo a { line-height: 30px; }
 
 ul > li > ol { display: none; }
 
@@ -362,15 +362,13 @@ ol > .listTwo a { color: #56819f; }
 
 .asideBar .asside li a:hover { color: #fff; }
 
-.asideBar .asside .icon-li { color: #b6b6b6; margin: 0 20px 0; }
+.asideBar .asside .icon-li { color: #b6b6b6; margin: 0 20px 0 10px; }
 
-.asideBar .asside .section-logo { display: -moz-flex; display: -ms-flexbox; display: flex; }
-
-.asideBar .asside .section-logo .logo { margin-top: -3px; -ms-flex-pack: start; justify-content: flex-start; }
+.asideBar .asside .section-logo { display: -moz-flex; display: -ms-flexbox; display: flex; display: flex; margin-top: -3px; -ms-flex-pack: center; justify-content: center; -ms-flex-align: center; align-items: center; }
 
 .asideBar .asside .section-logo .hamburger { font-size: 20px; }
 
-.asideBar .asside .section-logo .fa { margin: 8px 0px 0 55px; transition: 1s; color: #a7a7a7; cursor: pointer; }
+.asideBar .asside .section-logo .fa { margin: 2px 0px 0 42px; transition: 1s; color: #a7a7a7; cursor: pointer; }
 
 .asideBar .asside .section-logo .fa-bars:hover { color: #fff; }
 
@@ -388,7 +386,7 @@ ol > .listTwo a { color: #56819f; }
 
 .expanded { width: 40px; display: -moz-flex; display: -ms-flexbox; display: flex; background-color: #191919; height: 180vh; }
 
-.expanded .asside .section-logo .fa { margin: 8px 0px 0 11px; transition: 1s; }
+.expanded .asside .section-logo .fa { margin: 2px 0 0 0; transition: 1s; }
 
 .expanded li { transition: 1s; width: 40px; }
 
@@ -406,7 +404,7 @@ ol > .listTwo a { color: #56819f; }
 
 .expanded .text { display: none; }
 
-.expanded .asside .icon-li { color: #a7a7a7; margin: 0 0 0 23%; }
+.expanded .asside .icon-li { color: #a7a7a7; margin: 0 0 0 18%; }
 
 .expanded .asside .icon-li:hover { color: #fff; }
 
@@ -414,29 +412,27 @@ ol > .listTwo a { color: #56819f; }
 
 .general h3, .links h3 { margin: 0; padding: 25px; color: #a7a7a7; text-transform: uppercase; border-bottom: 1px solid #a7a7a7; }
 
-.general .contentDate, .links .contentDate { margin-top: 20px; }
+.general .contentDate, .links .contentDate { padding: 35px; display: -ms-flexbox; display: flex; -ms-flex-pack: center; justify-content: center; }
 
-.general .contentDate .date, .links .contentDate .date { display: -ms-flexbox; display: flex; border: 1px solid #a7a7a7; max-width: 290px; height: 40px; margin: 0 auto; border-radius: 5px; }
+.general .contentDate .date, .links .contentDate .date { display: -ms-flexbox; display: flex; border: 1px solid #a7a7a7; border-radius: 5px; }
 
-.general .contentDate .date .buttonSubmit, .links .contentDate .date .buttonSubmit { margin: -2px 27px; background-color: #ffa200; cursor: pointer; padding: 20px 10px; cursor: pointer; width: 40px; height: 40px; border-radius: 5px; }
-
-.general .contentDate .date .buttonSubmit .vectoricon, .links .contentDate .date .buttonSubmit .vectoricon { margin: -8px 0 5px 0; }
-
-.general .contentDate .date .buttonSubmit:hover, .links .contentDate .date .buttonSubmit:hover { background-color: #f58220; }
-
-.general .contentDate p, .links .contentDate p { display: inline-block; position: relative; margin: 11px 10%; }
+.general .contentDate p, .links .contentDate p { display: inline-block; position: relative; display: -ms-flexbox; display: flex; padding: 10px 30px; margin: 0; }
 
 .general .contentDate p:hover, .links .contentDate p:hover { color: #56819f; }
 
-.general .contentDate .dateP, .links .contentDate .dateP { margin: 12px 10% 0 8%; }
+.general .contentDate .dateP, .links .contentDate .dateP { position: relative; display: -ms-flexbox; display: flex; padding: 10px 30px; margin: 0; }
 
-.general .contentDate .dateP:after, .links .contentDate .dateP:after { position: absolute; background-color: #a7a7a7; content: " "; width: 1px; height: 30px; right: -30%; bottom: 3px; }
+.general .contentDate .dateP:after, .links .contentDate .dateP:after { position: absolute; background-color: #a7a7a7; content: " "; width: 1px; height: 30px; right: 0%; bottom: 3px; }
 
-.general .icon-calendar, .links .icon-calendar { margin: 12px 0 0 3%; font-size: 12px; cursor: pointer; }
+.general .contentDate .buttonSubmit, .links .contentDate .buttonSubmit { display: -ms-flexbox; display: flex; background-color: #ffa200; cursor: pointer; padding: 10px 10px; cursor: pointer; border-radius: 5px; margin: 0 10px; }
+
+.general .contentDate .buttonSubmit:hover, .links .contentDate .buttonSubmit:hover { background-color: #f58220; }
+
+.general .icon-calendar, .links .icon-calendar { display: -ms-flexbox; display: flex; -ms-flex-align: center; align-items: center; font-size: 16px; margin: 0 10px; cursor: pointer; }
 
 .general .icon-calendar:hover, .links .icon-calendar:hover { color: #56819f; }
 
-.general .borderBottom, .links .borderBottom { border-bottom: 1px solid #a7a7a7; padding-top: 60px; }
+.general .borderBottom, .links .borderBottom { border-bottom: 1px solid #a7a7a7; padding-top: 20px; }
 
 .general .statistic, .links .statistic { width: 65%; margin: 0 auto; }
 
@@ -500,31 +496,35 @@ button { cursor: pointer; border-radius: 3px; background-color: #ffa200; color: 
 
 button:hover { background-color: #f58220; }
 
-@media screen and (max-width: 900px) { .topbar, .smalltopBarMarginLeft { height: 320vh; z-index: 3; background-color: #191919; position: absolute; top: 500px; left: 0; margin-left: 0; }
+@media screen and (max-width: 900px) { .topbar, .smalltopBarMarginLeft { height: 320vh; z-index: 3; background-color: #191919; position: absolute; top: 510px; left: 0; margin-left: 0; }
   .topbar ul, .smalltopBarMarginLeft ul { height: 60px; margin-left: 0; }
-  .topbar ol > .listOne, .smalltopBarMarginLeft ol > .listOne, .topbar ol > .listTwo, .smalltopBarMarginLeft ol > .listTwo { z-index: 4; padding: 50px 0 16px 0px; top: 5%; }
+  .topbar ol > .listOne, .smalltopBarMarginLeft ol > .listOne, .topbar ol > .listTwo, .smalltopBarMarginLeft ol > .listTwo { z-index: 4; padding: 25px 0 15px 0px; }
+  .topbar ol > .listOne a, .smalltopBarMarginLeft ol > .listOne a, .topbar ol > .listTwo a, .smalltopBarMarginLeft ol > .listTwo a { line-height: 1px; }
+  .topbar ol > .listOne:hover, .smalltopBarMarginLeft ol > .listOne:hover, .topbar ol > .listTwo:hover, .smalltopBarMarginLeft ol > .listTwo:hover { background-color: #f5f5f2; }
+  .secondMenuList { transition: 0.1s; }
   .secondMenuList:hover .icon-profile { position: absolute; }
   .secondMenuList:hover .leonardoText, .secondMenuList:hover .rectangle, .secondMenuList:hover .icon-profile { display: inline-block; }
   .secondMenuList:hover .icon-notification:before { color: #a7a7a7; }
   .secondMenuList:hover .icon-close, .secondMenuList:hover .rectangle { display: none; }
+  .secondMenuList:hover { background-color: #191919; }
   ul > li:hover .icon-arrow-down-small:before { transform: rotate(0deg); }
   ul > li:hover .price { color: #a7a7a7; }
-  li { background-color: #191919; border-bottom: none; }
+  li { border-bottom: none; }
   li:hover { background-color: #a7a7a7; }
   .firstMenuList:hover { background-color: #191919; }
   .secondMenuList { z-index: -1; position: absolute; top: 57px; width: 188px; border-left: none; }
-  .secondMenuList:hover { background-color: #191919; }
   ol > .listTwo { display: none; }
   .rectangle { display: none; }
   .icon { color: #a7a7a7; }
   .icon-wallet { margin: 13px 0 0 12px; float: left; }
   .price { float: left; font-size: 16px; }
   .icon-arrow-down-small { margin: 0; }
-  .notificationText { display: inline-block; margin: 0 0 0 28px; position: relative; }
+  .notificationText { display: inline-block; margin: 0 70px 0 60px; position: relative; }
   .icon-profile { position: absolute; left: 14px; top: 60px; }
   .leonardoText { position: absolute; margin-left: 10px; left: 38px; top: 58px; color: #a7a7a7; }
-  .quit { position: absolute; top: 138px; left: 14px; z-index: -1; width: 0px; }
-  .logoutText { display: inline-block; position: absolute; top: 60px; left: 60px; }
+  .quit { position: absolute; top: 138px; left: 14px; z-index: -1; }
+  .icon-quit { position: absolute; top: 55px; left: 0; }
+  .logoutText { display: inline-block; position: absolute; left: 60px; }
   .rectangle { display: none; }
   ul > li, ol { border-left: none; width: 188px; }
   .smalltopBarMarginLeft .logoutText, .smalltopBarMarginLeft .notificationText, .smalltopBarMarginLeft .price, .smalltopBarMarginLeft .leonardoText, .smalltopBarMarginLeft .icon-arrow-down-small { display: none; }
@@ -533,7 +533,6 @@ button:hover { background-color: #f58220; }
   .smalltopBarMarginLeft .firstMenuList:hover ol { display: none; }
   .smalltopBarMarginLeft .secondMenuList:hover .leonardoText { display: none; }
   .asideBar .sectionManager { display: none; }
-  .general .contentDate .date, .links .contentDate .date { max-width: 260px; }
   .general p, .links p { font-size: 14px; }
   .general .statistic, .links .statistic { width: 85%; } }
 
@@ -542,17 +541,17 @@ button:hover { background-color: #f58220; }
   .topbar .firstMenuList:hover ol, .smalltopBarMarginLeft .firstMenuList:hover ol { display: none; }
   .topbar .secondMenuList:hover .leonardoText, .smalltopBarMarginLeft .secondMenuList:hover .leonardoText { display: none; }
   .asideBar { transition: 1s; width: 40px; display: -moz-flex; display: -ms-flexbox; display: flex; background-color: #191919; height: 180vh; }
-  .asideBar .asside .section-logo .fa { margin: 8px 0px 0 11px; }
+  .asideBar .asside .section-logo .fa { margin: 2px 0 0 0; }
+  .asideBar .asside .icon-li { margin: 0 0 0 18%; }
   .asideBar li { width: 40px; }
   .asideBar .logo { display: none; }
   .asideBar .text { display: none; }
-  .asideBar .asside .icon-li { color: #a7a7a7; margin: 0 0 0 23%; }
-  .asideBar .asside .icon-li:hover { color: #fff; }
   .general, .links { margin-left: 40px; }
   .general p, .links p { font-size: 12px; }
   .general h3, .links h3 { display: -ms-flexbox; display: flex; -ms-flex-pack: center; justify-content: center; font-size: 16px; }
   .general .statistic, .links .statistic { width: 95%; }
-  .general .icon-calendar, .links .icon-calendar { margin: 10px 0 0 -2%; }
-  .general .contentDate .date, .links .contentDate .date { max-width: 200px; }
+  .general .icon-calendar, .links .icon-calendar { font-size: 12px; }
+  .general .contentDate p, .links .contentDate p { padding: 15px 20px 0px; }
+  .general .contentDate .dateP, .links .contentDate .dateP { padding: 15px 20px 0px; }
   .general .chart h4, .links .chart h4 { display: -ms-flexbox; display: flex; -ms-flex-pack: center; justify-content: center; }
   .links .btn-orange { width: 30%; } }
