@@ -14,8 +14,6 @@
     "build:clean": "rimraf css/*",
     "build:imagemin-cli": "imagemin images/* --out-dir=build",
     "build:sass": "node-sass --output-style compact -o css sass",
-    "build:autoprefixer": "autoprefixer-cli css/style.css css/stylecomponents.css",
-    "build:autoprefixer2": "autoprefixer-cli css/stylecomponents.css",
     "build-dev:sass": "node-sass --output-style expanded --source-map true -o css sass",
     "watch": "npm-run-all build -p watch:*",
     "watch:browsersync": "node_modules/.bin/browser-sync start --server --files css/*.css *.html",
@@ -23,15 +21,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://szoker6.github.io/Kodilla-Individual-project/"
+    "url": "git+https://github.com/Szoker6/Kodilla-Individual-project"
   },
   "keywords": [],
   "author": "Dawid Margraf",
   "license": "ISC",
   "bugs": {
-    "url": "https://szoker6.github.io/Kodilla-Individual-project/"
+    "url": "https://github.com/Szoker6/Kodilla-Individual-project"
   },
-  "homepage": "https://szoker6.github.io/Kodilla-Individual-project/",
+  "homepage": "https://github.com/Szoker6/Kodilla-Individual-project",
   "devDependencies": {
     "autoprefixer-cli": "^1.0.0",
     "browser-sync": "^2.26.3",
